@@ -1,2 +1,2 @@
-# SD24
-Bahan belajar untuk mata kuliah Struktur Data, Teknik Informatika ITS, 2024
+# Struktur Data 2024
+Bleh

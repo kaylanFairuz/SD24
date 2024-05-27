@@ -5,6 +5,8 @@
         - [1. Self-loop Edges dan Parallel Edges](#p1)
         - [2. Simple Graph](#p2)
         - [3. Walk, Path, dan Trail](#p3)
+        - [4. Connected Graph](#p4)
+        - [5. Cyclic Graph](#p5)
     - [Representasi Graf](#representation)
         - [1. Edge List](#r1)
         - [2. Adjacency Matrix](#r2)
@@ -79,6 +81,40 @@ Jika digeneralisasi, untuk **_simple directed graph_** dengan `𝑛` vertices (d
 Sebuah graf disebut **_dense_** jika jumlah _edge_-nya mendekati nilai maksimal, dan sebaliknya disebut **_sparse_** jika jumlah edgenya mendekati jumlah _vertex_. Jumlah _edge_ akan memengaruhi jenis struktur data yang digunakan untuk menyimpan graf.
 
 #### 3. Walk, Path, dan Trail <a name="p3"></a>
+**Walk**: Sebuah urutan _vertices_ dimana setiap _vertex_ yang berurut terhubung oleh sebuah _edge_. Pada _directed graph_, setiap _edge_ yang dilalui harus searah. `<𝐴, 𝐵, 𝐹, 𝐻, 𝐸, 𝐵, 𝐴, 𝐷>` adalah sebuah _walk_.
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/walk.png"/>
+</p>
+
+**Path**: Sebuah _walk_ dimana tidak ada _vertex_ yang dikunjungi lebih dari sekali (akibatnya **tidak ada** _edge_ yang dikunjungi lebih dari sekali juga).<br>
+`<𝐴, 𝐵, 𝐹, 𝐻>` adalah sebuah _path_.
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/path.png"/>
+</p>
+
+**Trail**: Sebuah _walk_ dimana tidak ada _edge_ yang dikunjungi lebih dari sekali (tetapi **bisa ada** _vertex_ yang dikunjungi lebih dari sekali).<br>
+`<𝐴, 𝐵, 𝐸, 𝐻, 𝐷, 𝐴, 𝐶>` adalah sebuah _trail_.
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/trail.png"/>
+</p>
+
+#### 4. Connected Graph <a name="p4"></a>
+**Connected**: Sebuah urutan _vertices_ dimana setiap _vertex_ yang berurut terhubung oleh sebuah _edge_. Pada _directed graph_, setiap _edge_ yang dilalui harus searah.
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/walk.png"/>
+</p>
+
+**Strongly Connected Graph**: Sebuah _walk_ dimana tidak ada _vertex_ yang dikunjungi lebih dari sekali (akibatnya **tidak ada** _edge_ yang dikunjungi lebih dari sekali juga).
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/path.png"/>
+</p>
+
+**Weakly Connected Graph**: Sebuah _walk_ dimana tidak ada _edge_ yang dikunjungi lebih dari sekali (tetapi **bisa ada** _vertex_ yang dikunjungi lebih dari sekali).
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/trail.png"/>
+</p>
+
+#### 5. Cyclic Graph <a name="p5"></a>
 **Walk**: Sebuah urutan _vertices_ dimana setiap _vertex_ yang berurut terhubung oleh sebuah _edge_. Pada _directed graph_, setiap _edge_ yang dilalui harus searah. `<𝐴, 𝐵, 𝐹, 𝐻, 𝐸, 𝐵, 𝐴, 𝐷>` adalah sebuah _walk_.
 <p align="center">
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/walk.png"/>

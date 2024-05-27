@@ -1,6 +1,6 @@
 # Juma
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/blob/main/Struktur%20Data%202024/Modul%201/assets/juma.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%201/assets/juma.png"/>
 </p>
 
 #### Deskripsi: 

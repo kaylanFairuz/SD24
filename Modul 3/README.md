@@ -20,7 +20,7 @@ Secara matematis, sebuah graf `G` adalah pasangan terurut dari sekumpulan _verti
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/graph-types.png"/>
 </p>
 
-Perhatikan contoh _undirected graph_ berikut. _Vertices_ pada graf tersebut dapat dinyatakan dengan `V = {v1, v2, v3, v4, v5, v6, v7, v8}`, sedangkan _edges_ pada graf tersebut dinyatakan dengan pasangan tidak terurut dari _vertices_-nya, yaitu `E = {{v1, v2}, {v1, v3},` `{v1, v4}, {v2, v5}, {v2, v6}, {v3, v7}, {v4, v8}, {v7, v8}, {v6, v8}, {v5, v8}}`.
+Perhatikan contoh _undirected graph_ berikut. _Vertices_ pada graf tersebut dapat dinyatakan dengan `V = {v1, v2, v3, v4, v5, v6, v7, v8}`, sedangkan _edges_ pada graf tersebut dinyatakan dengan pasangan tidak terurut dari _vertices_-nya, yaitu `E = {{v1, v2}, {v1, v3}, {v1, v4},` `{v2, v5}, {v2, v6}, {v3, v7}, {v4, v8}, {v7, v8}, {v6, v8}, {v5, v8}}`.
 
 <br>
 <p align="center">

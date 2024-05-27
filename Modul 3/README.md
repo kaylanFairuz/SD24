@@ -1,6 +1,7 @@
 # Graf
 - [**Pengenalan Graf**](#intro)
     - [Definisi Graf](#define)
+    - [Properti Graf](#properties)
     - [Representasi Graf](#representation)
         - [1. Edge List](#r1)
         - [2. Adjacency Matrix](#r2)
@@ -40,6 +41,10 @@ Pada graf tersebut, _weight_ setiap _edge_ menyatakan panjang jalan yang menghub
 <p align="center">
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/weighted-graph_example-2.png"/>
 </p>
+
+### Properti Khusus Graf <a name="properties"></a>
+#### 1. Self-loop Edges dan Parallel Edges
+Sebuah _edge_ dikatakan _self-loop_ jika _origin vertex_ dan _destination vertex_ dari _edge_ tersebut sama. 
 
 ### Representasi Graf <a name="representation"></a>
 Terdapat 3 cara yang sering digunakan untuk merepresentasikan graf. Akan digunakan _undirected graph_ berikut untuk contoh dibawah.

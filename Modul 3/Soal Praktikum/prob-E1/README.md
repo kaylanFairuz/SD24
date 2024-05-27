@@ -2,7 +2,7 @@
 
 #### Deskripsi: 
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/blob/main/Struktur%20Data%202024/Modul%203/assets/thank-you-cover.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/thank-you-cover.png"/>
 </p>
 
 Haqqy sedang meneruskan perjalanan menggapai bintang, ditengah perjalanan Haqqy diminta seseorang untuk menghitung pulau-pulau.

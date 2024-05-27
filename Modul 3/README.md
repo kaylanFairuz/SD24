@@ -15,29 +15,29 @@ Secara matematis, sebuah graf `G` adalah pasangan terurut dari sekumpulan _verti
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/blob/main/Struktur%20Data%202024/Modul%203/assets/edge-types.png" width="505" height="150"/><br>
-  <img src="https://github.com/kaylanFairuz/Archive/blob/main/Struktur%20Data%202024/Modul%203/assets/graph-types.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/edge-types.png" width="505" height="150"/><br>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/graph-types.png"/>
 </p>
 
 Perhatikan contoh _undirected graph_ berikut. _Vertices_ pada graf tersebut dapat dinyatakan dengan `V = {v1, v2, v3, v4, v5, v6, v7, v8}`, sedangkan _edges_ pada graf tersebut dinyatakan dengan pasangan tidak terurut dari _vertices_-nya, yaitu `E = {{v1, v2}, {v1, v3},` `{v1, v4}, {v2, v5}, {v2, v6}, {v3, v7}, {v4, v8}, {v7, v8}, {v6, v8}, {v5, v8}}`.
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/blob/main/Struktur%20Data%202024/Modul%203/assets/graph_example-1.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/graph_example-1.png"/>
 </p>
 
 Selain bersifat **_directed_** dan **_undirected_**, graf juga dapat bersifat **_weighted_** dan **_unweighted_**. Sebuah **_weighted graph_** adalah graf dimana setiap _edge_ memiliki bobot nilai atau _weight_. Sedangkan sebuah **_unweighted graph_** adalah graf dimana _weight_ dari setiap _edge_ bernilai sama atau umumnya bernilai 1. Salah satu contoh dari _weighted graph_ yang paling umum adalah graf yang menunjukkan hubungan antar kota, seperti contoh berikut.
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/blob/main/Struktur%20Data%202024/Modul%203/assets/weighted-graph_example-1.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/weighted-graph_example-1.png"/>
 </p>
 
 Pada graf tersebut, _weight_ setiap _edge_ menyatakan panjang jalan yang menghubungkan dua kota dalam km. Dengan adanya _weight_, rute terbaik belum tentu rute dengan _edges_ paling sedikit. Perhatikan gambar di bawah. Rute kuning umumnya merupakan rute terbaik karena hanya melalui 2 _edges_, sedangkan rute hijau dan merah sama baiknya karena masing-masing melalui 3 _edges_. Akan tetapi, dalam kasus ini, rute hijau adalah rute terbaik karena memiliki total _weight_ terkecil.
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/blob/main/Struktur%20Data%202024/Modul%203/assets/weighted-graph_example-2.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/weighted-graph_example-2.png"/>
 </p>
 
 ### Representasi Graf <a name="representation"></a>
@@ -45,7 +45,7 @@ Terdapat 3 cara yang sering digunakan untuk merepresentasikan graf. Akan digunak
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/blob/main/Struktur%20Data%202024/Modul%203/assets/graph_example-2.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/graph_example-2.png"/>
 </p>
 
 #### 1. Edge List <a name="r1"></a>
@@ -64,7 +64,7 @@ struct Edge
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/blob/main/Struktur%20Data%202024/Modul%203/assets/edge-list_example.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/edge-list_example.png"/>
 </p>
 
 
@@ -78,7 +78,7 @@ Adjacency Matrix adalah representasi graf yang menggunakan matrix berukuran `|V|
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/blob/main/Struktur%20Data%202024/Modul%203/assets/adjacency-matrix_example.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/adjacency-matrix_example.png"/>
 </p>
 
 #### 3. Adjacency List <a name="r3"></a>
@@ -88,7 +88,7 @@ Adjacency Matrix adalah representasi graf yang dilakukan dengan hanya menyimpan 
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/blob/main/Struktur%20Data%202024/Modul%203/assets/adjacency-list_example.png" width="274" height="386"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/adjacency-list_example.png" width="274" height="386"/>
 </p>
 
 ### Traversal Graf <a name="traversal"></a>

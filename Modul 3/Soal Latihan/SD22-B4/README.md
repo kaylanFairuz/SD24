@@ -44,7 +44,7 @@ Kasus #2: 7
 
 #### Explanation 0:
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/blob/main/Struktur%20Data%202024/Modul%203/assets/sd22-b4-explanation-0.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/sd22-b4-explanation-0.png"/>
 </p>
 
 One of the optimal ways for the first test case is:

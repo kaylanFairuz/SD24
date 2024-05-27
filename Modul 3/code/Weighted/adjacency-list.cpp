@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define VERTICES 5
-
 struct graph{
     long vertexCount, edgeCount;
     vector<vector<pair<long, long>>> adjList;
@@ -12,7 +10,7 @@ struct graph{
         edgeCount = 0;
 
         for(int i=0; i<vertexCount; i++){
-            adjList.push_back({}); // inserts V ammount of empty vector
+            adjList.push_back({});
         }
     }
 
@@ -71,7 +69,7 @@ struct graph{
 
 int main(){
     graph g;
-    g.init(VERTICES);
+    g.init(5);
     g.add_edge(0, 1, 10);
     g.add_edge(0, 2, 20);
     g.add_edge(0, 3, 30);

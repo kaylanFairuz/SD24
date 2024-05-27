@@ -44,7 +44,10 @@ Pada graf tersebut, _weight_ setiap _edge_ menyatakan panjang jalan yang menghub
 
 ### Properti Khusus Graf <a name="properties"></a>
 #### 1. Self-loop Edges dan Parallel Edges
-Sebuah _edge_ dikatakan _self-loop_ jika _origin vertex_ dan _destination vertex_ dari _edge_ tersebut sama. 
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/ph.png"/>
+</p>
+Sebuah _edge_ dikatakan _self-loop_ jika _origin vertex_ dan _destination vertex_ dari _edge_ tersebut sama. Contoh dari kasus yang memerlukan jenis _edge_ adalah untuk merepresentasikan hubungan antara satu _webpage_ dengan _webpage_ lainnya. Pada kebanyakan _webpage_, terdapat link untuk melakukan navigasi dari satu bagian _web_ ke bagian _web_ lainnya. Jika link yang sama ditekan dua kali, maka tidak akan terjadi perubahan.
 
 ### Representasi Graf <a name="representation"></a>
 Terdapat 3 cara yang sering digunakan untuk merepresentasikan graf. Akan digunakan _undirected graph_ berikut untuk contoh dibawah.

@@ -44,10 +44,26 @@ Pada graf tersebut, _weight_ setiap _edge_ menyatakan panjang jalan yang menghub
 
 ### Properti Khusus Graf <a name="properties"></a>
 #### 1. Self-loop Edges dan Parallel Edges
+**Self-loop edges**: Sebuah _edge_ yang _origin vertex_ dan _destination vertex_ dari _edge_ tersebut sama.
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/ph.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/self-loop-edges.png"/>
 </p>
-Sebuah _edge_ dikatakan _self-loop_ jika _origin vertex_ dan _destination vertex_ dari _edge_ tersebut sama. Contoh dari kasus yang memerlukan jenis _edge_ adalah untuk merepresentasikan hubungan antara satu _webpage_ dengan _webpage_ lainnya. Pada kebanyakan _webpage_, terdapat link untuk melakukan navigasi dari satu bagian _web_ ke bagian _web_ lainnya. Jika link yang sama ditekan dua kali, maka tidak akan terjadi perubahan.
+
+Contoh dari kasus yang memerlukan jenis _edge_ ini adalah representasi hubungan antara satu _webpage_ dengan _webpage_ lainnya sebagai graf. Pada kebanyakan _webpage_, terdapat link untuk melakukan navigasi dari satu bagian _web_ ke bagian _web_ lainnya. Jika link yang sama ditekan dua kali, maka tidak akan terjadi perubahan.
+
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/self-loop-edges_example.png"/>
+</p>
+
+**Parallel edges**: Sebuah _edge_ yang muncul lebih dari sekali dalam sebuah graf, disebut juga _multi-edge_.
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/parallel-edges.png"/>
+</p>
+
+Contoh dari kasus yang memerlukan jenis _edge_ ini adalah representasi dari jalur penerbangan pesawat dengan graf. Pada umumnya, terdapat lebih dari satu pesawat yang melakukan penerbangan dari satu kota ke kota lainnya. Dengan kata lain, _edge_ yang sama dapat menyimpan harga penerbangan yang berbeda. Sehingga dapat dicari pesawat apa saja yang harus diambil untuk berpergian dengan harga termurah.
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/parallel-edges_example.png"/>
+</p>
 
 ### Representasi Graf <a name="representation"></a>
 Terdapat 3 cara yang sering digunakan untuk merepresentasikan graf. Akan digunakan _undirected graph_ berikut untuk contoh dibawah.

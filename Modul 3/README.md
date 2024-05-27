@@ -4,7 +4,7 @@
     - [Properti Graf](#properties)
         - [1. Self-loop Edges dan Parallel Edges](#p1)
         - [2. Simple Graph](#p2)
-        - [3. Path](#p3)
+        - [3. Walk, Path, dan Trail](#p3)
     - [Representasi Graf](#representation)
         - [1. Edge List](#r1)
         - [2. Adjacency Matrix](#r2)
@@ -24,7 +24,7 @@ Secara matematis, sebuah graf `𝐺` adalah pasangan terurut dari sekumpulan _ve
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/graph-types.png"/>
 </p>
 
-Perhatikan contoh _undirected graph_ berikut. _Vertices_ pada graf tersebut dapat dinyatakan dengan `𝑉 = {𝑣1, 𝑣2, 𝑣3, 𝑣4, 𝑣5, 𝑣6, 𝑣7, 𝑣8}`, sedangkan _edges_ pada graf tersebut dinyatakan dengan pasangan tidak terurut dari _vertices_-nya, yaitu `𝐸 = {{𝑣1, 𝑣2}, {𝑣1, 𝑣3}, {𝑣1, 𝑣4},` `{𝑣2, 𝑣5}, {𝑣2, 𝑣6}, {𝑣3, 𝑣7}, {𝑣4, 𝑣8}, {𝑣7, 𝑣8}, {𝑣6, 𝑣8}, {𝑣5, 𝑣8}}`
+Perhatikan contoh _undirected graph_ berikut. _Vertices_ pada graf tersebut dapat dinyatakan dengan `𝑉 = {𝑣1, 𝑣2, 𝑣3, 𝑣4, 𝑣5, 𝑣6, 𝑣7, 𝑣8}`, sedangkan _edges_ pada graf tersebut dinyatakan dengan pasangan tidak terurut dari _vertices_-nya, yaitu `𝐸 = {{𝑣1, 𝑣2}, {𝑣1, 𝑣3}, {𝑣1, 𝑣4},` `{𝑣2, 𝑣5}, {𝑣2, 𝑣6}, {𝑣3, 𝑣7}, {𝑣4, 𝑣8}, {𝑣7, 𝑣8}, {𝑣6, 𝑣8}, {𝑣5, 𝑣8}}`. Selain itu jumlah dari _vertex_ dan _edge_ dapat dituliskan masing-masing sebagai `|𝑉| = 8` dan `|𝐸| = 10` 
 
 <br>
 <p align="center">
@@ -69,13 +69,32 @@ Contoh dari kasus yang memerlukan jenis _edge_ ini adalah representasi dari jalu
 </p>
 
 #### 2. Simple Graph <a name="p2"></a>
-_Simple graph_ adalah graf yang tidak memiliki jenis _edges_ khusus diatas (_self-loop_ dan _parallel_). Dalam sebuah _simple directed graph_ kita dapat mencari jumlah maksimal _edges_ yang dapat dibentuk jika jumlah _vertices_-nya diketahui. Perhatikan contoh berikut untuk graph dengan `𝑛 = 4` _vertices_. Jumlah _edge_ minimal dicapai saat setiap _vertex_ tidak memiliki satupun _edge_, yaitu 0. Sedangkan jumlah _edge_ maksimal dicapai saat setiap _vertex_ terhubung dengan _vertex_ lainnya. Karena ada 4 _vertex_, maka setiap _vertex_ akan memiliki 3 atau (4 - 1) _edges_ untuk terhubung dengan setiap vertex lainnya. 
+**_Simple graph_** adalah graf yang tidak memiliki jenis _edge_ khusus diatas (_self-loop_ dan _parallel_). Dalam sebuah _simple directed graph_ kita dapat mencari jumlah maksimal _edge_ yang dapat dibentuk jika jumlah _vertices_-nya diketahui. Perhatikan contoh berikut untuk graph dengan `𝑛 = 4` _vertices_. Jumlah _edge_ minimal dicapai saat setiap _vertex_ tidak memiliki satupun _edge_, yaitu 0. Sedangkan jumlah _edge_ maksimal dicapai saat setiap _vertex_ terhubung dengan _vertex_ lainnya. Karena ada 4 _vertex_, maka setiap _vertex_ akan memiliki 3 atau (4 - 1) _edges_ untuk terhubung dengan setiap vertex lainnya. 
 <p align="center">
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/number-of-edges.png"/>
 </p>
 
-Jika digeneralisasi, untuk **_simple directed graph_** dengan `𝑛` vertices (dimana `𝑛 ≥ 0`) maka jumlah _edges_ `|𝐸|` pada graf tersebut berada pada interval `0 ≤ |𝐸| ≤ 𝑛(𝑛-1)`. Untuk **_simple undirected graph_**, jumlah maksimal akan berkurang sebanyak setengahnya, karena setiap 2 pasangan dianggap menjadi 1, atau `0 ≤ |𝐸| ≤ 𝑛(𝑛-1)/2`.
-#### 3. Simple Graph <a name="p3"></a>
+Jika digeneralisasi, untuk **_simple directed graph_** dengan `𝑛` vertices (dimana `𝑛 ≥ 0`) maka jumlah _edge_ `|𝐸|` pada graf tersebut berada pada interval `0 ≤ |𝐸| ≤ 𝑛(𝑛-1)`. Untuk **_simple undirected graph_** dari graf yang sama, jumlah maksimal akan berkurang sebanyak setengahnya, karena setiap 2 pasangan dianggap menjadi 1, atau `0 ≤ |𝐸| ≤ 𝑛(𝑛-1)/2`.
+
+Sebuah graf disebut **_dense_** jika jumlah _edge_-nya mendekati nilai maksimal, dan sebaliknya disebut **_sparse_** jika jumlah edgenya mendekati jumlah _vertex_. Jumlah _edge_ akan memengaruhi jenis struktur data yang digunakan untuk menyimpan graf.
+
+#### 3. Walk, Path, dan Trail <a name="p3"></a>
+**Walk**: Sebuah urutan _vertices_ dimana setiap _vertex_ yang berurut terhubung oleh sebuah _edge_. Pada _directed graph_, setiap _edge_ yang dilalui harus searah. `<𝐴, 𝐵, 𝐹, 𝐻, 𝐸, 𝐵, 𝐴, 𝐷>` adalah sebuah _walk_.
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/walk.png"/>
+</p>
+
+**Path**: Sebuah _walk_ dimana tidak ada _vertex_ yang dikunjungi lebih dari sekali (akibatnya **tidak ada** _edge_ yang dikunjungi lebih dari sekali juga).<br>
+`<𝐴, 𝐵, 𝐹, 𝐻>` adalah sebuah _path_.
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/path.png"/>
+</p>
+
+**Trail**: Sebuah _walk_ dimana tidak ada _edge_ yang dikunjungi lebih dari sekali (tetapi **bisa ada** _vertex_ yang dikunjungi lebih dari sekali).<br>
+`<𝐴, 𝐵, 𝐸, 𝐻, 𝐷, 𝐴, 𝐶>` adalah sebuah _trail_.
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/trail.png"/>
+</p>
 
 ### Representasi Graf <a name="representation"></a>
 Terdapat 3 cara yang sering digunakan untuk merepresentasikan graf. Akan digunakan _undirected graph_ berikut untuk contoh dibawah.

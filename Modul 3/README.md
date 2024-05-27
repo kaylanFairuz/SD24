@@ -2,6 +2,9 @@
 - [**Pengenalan Graf**](#intro)
     - [Definisi Graf](#define)
     - [Properti Graf](#properties)
+        - [1. Self-loop Edges dan Parallel Edges](#p1)
+        - [2. Simple Graph](#p2)
+        - [3. Path](#p3)
     - [Representasi Graf](#representation)
         - [1. Edge List](#r1)
         - [2. Adjacency Matrix](#r2)
@@ -13,7 +16,7 @@
 ### Definisi Graf <a name="define"></a>
 Graf adalah sekumpulan _vertices_ (singular: _vertex_) atau _nodes_ yang dihubungkan oleh nol atau lebih _edges_. Berbeda dari _tree_ dimana terdapat aturan dalam hubungan antara _nodes_ (setiap _node_ hanya memiliki satu _parent_ dan sebagainya), graf tidak memiliki aturan apapun. Sebuah _tree_ juga merupakan sebuah graf, lebih tepatnya sebuah kelompok khusus dari graf.
 
-Secara matematis, sebuah graf `G` adalah pasangan terurut dari sekumpulan _vertices_ `V` dan sekumpulan _edges_ `E`, atau dengan kata lain `G = (V, E)`. Pasangan terurut ditandai dengan kurung biasa `()` dimana `(a, b) != (b, a)`, sedangkan pasangan tidak terurut ditandai dengan kurung kurawal `{}` dimana `{a, b} == {b, a}`. Terdapat dua jenis _edge_ dalam sebuah graf, yaitu **_directed_** dan **_undirected_** (perhatikan gambar di bawah). Sebuah graf yang **hanya** memiliki _directed edges_ disebut **_directed graph_** atau kadang-kadang disebut _digraph_, sedangkan graf yang **hanya** memiliki _undirected edges_ disebut **_undirected graph_**
+Secara matematis, sebuah graf `𝐺` adalah pasangan terurut dari sekumpulan _vertices_ `𝑉` dan sekumpulan _edges_ `𝐸`, atau `𝐺 = (𝑉, 𝐸)`. Pasangan terurut ditandai dengan kurung biasa `()` dimana `(𝑎, 𝑏) != (𝑏, 𝑎)`, sedangkan pasangan tidak terurut ditandai dengan kurung kurawal `{}` dimana `{𝑎, 𝑏} == {𝑏, 𝑎}`. Terdapat dua jenis _edge_ dalam sebuah graf, yaitu **_directed_** dan **_undirected_** (perhatikan gambar di bawah). Sebuah graf yang **hanya** memiliki _directed edges_ disebut **_directed graph_** atau kadang-kadang disebut _digraph_, sedangkan graf yang **hanya** memiliki _undirected edges_ disebut **_undirected graph_**
 
 <br>
 <p align="center">
@@ -21,7 +24,7 @@ Secara matematis, sebuah graf `G` adalah pasangan terurut dari sekumpulan _verti
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/graph-types.png"/>
 </p>
 
-Perhatikan contoh _undirected graph_ berikut. _Vertices_ pada graf tersebut dapat dinyatakan dengan `V = {v1, v2, v3, v4, v5, v6, v7, v8}`, sedangkan _edges_ pada graf tersebut dinyatakan dengan pasangan tidak terurut dari _vertices_-nya, yaitu `E = {{v1, v2}, {v1, v3}, {v1, v4},` `{v2, v5}, {v2, v6}, {v3, v7}, {v4, v8}, {v7, v8}, {v6, v8}, {v5, v8}}`.
+Perhatikan contoh _undirected graph_ berikut. _Vertices_ pada graf tersebut dapat dinyatakan dengan `𝑉 = {𝑣1, 𝑣2, 𝑣3, 𝑣4, 𝑣5, 𝑣6, 𝑣7, 𝑣8}`, sedangkan _edges_ pada graf tersebut dinyatakan dengan pasangan tidak terurut dari _vertices_-nya, yaitu `𝐸 = {{𝑣1, 𝑣2}, {𝑣1, 𝑣3}, {𝑣1, 𝑣4},` `{𝑣2, 𝑣5}, {𝑣2, 𝑣6}, {𝑣3, 𝑣7}, {𝑣4, 𝑣8}, {𝑣7, 𝑣8}, {𝑣6, 𝑣8}, {𝑣5, 𝑣8}}`
 
 <br>
 <p align="center">
@@ -43,7 +46,7 @@ Pada graf tersebut, _weight_ setiap _edge_ menyatakan panjang jalan yang menghub
 </p>
 
 ### Properti Khusus Graf <a name="properties"></a>
-#### 1. Self-loop Edges dan Parallel Edges
+#### 1. Self-loop Edges dan Parallel Edges <a name="p1"></a>
 **Self-loop edges**: Sebuah _edge_ yang _origin vertex_ dan _destination vertex_ dari _edge_ tersebut sama.
 <p align="center">
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/self-loop-edges.png"/>
@@ -64,6 +67,15 @@ Contoh dari kasus yang memerlukan jenis _edge_ ini adalah representasi dari jalu
 <p align="center">
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/parallel-edges_example.png"/>
 </p>
+
+#### 2. Simple Graph <a name="p2"></a>
+_Simple graph_ adalah graf yang tidak memiliki jenis _edges_ khusus diatas (_self-loop_ dan _parallel_). Dalam sebuah _simple directed graph_ kita dapat mencari jumlah maksimal _edges_ yang dapat dibentuk jika jumlah _vertices_-nya diketahui. Perhatikan contoh berikut untuk graph dengan `𝑛 = 4` _vertices_. Jumlah _edge_ minimal dicapai saat setiap _vertex_ tidak memiliki satupun _edge_, yaitu 0. Sedangkan jumlah _edge_ maksimal dicapai saat setiap _vertex_ terhubung dengan _vertex_ lainnya. Karena ada 4 _vertex_, maka setiap _vertex_ akan memiliki 3 atau (4 - 1) _edges_ untuk terhubung dengan setiap vertex lainnya. 
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/number-of-edges.png"/>
+</p>
+
+Jika digeneralisasi, untuk **_simple directed graph_** dengan `𝑛` vertices (dimana `𝑛 ≥ 0`) maka jumlah _edges_ `|𝐸|` pada graf tersebut berada pada interval `0 ≤ |𝐸| ≤ 𝑛(𝑛-1)`. Untuk **_simple undirected graph_**, jumlah maksimal akan berkurang sebanyak setengahnya, karena setiap 2 pasangan dianggap menjadi 1, atau `0 ≤ |𝐸| ≤ 𝑛(𝑛-1)/2`.
+#### 3. Simple Graph <a name="p3"></a>
 
 ### Representasi Graf <a name="representation"></a>
 Terdapat 3 cara yang sering digunakan untuk merepresentasikan graf. Akan digunakan _undirected graph_ berikut untuk contoh dibawah.

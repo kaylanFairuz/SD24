@@ -113,7 +113,7 @@ void post_order(int num[], int index, int length)
 ### S11. Sum of Levels <a name="s11"></a>
 Consider the following case:
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q11-1.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q11.jpg"/>
 </p>
 
 When the root (10) is placed, there are 2 null pointers. If we choose to insert a node to the left (6), the left null pointer will be replaced by the 6, but 2 new null pointers are made (with root 6), making the total added by 1. If instead we choose to insert a node to the right (18), the right null pointer will be replaced by the 18, but 2 new null pointers are made (with root 18), making the total added by 1. In either case, for every insertion we make, we will always make 1 new null pointer. 

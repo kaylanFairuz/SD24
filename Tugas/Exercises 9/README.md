@@ -405,7 +405,7 @@ Sorted array:
 
 Final array bst[]:
 
-40 20 78 12 34 46 90 2 15 23 37 45 53 87 91
+**40 20 78 12 34 46 90 2 15 23 37 45 53 87 91**
 <p align="center">
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q16.png"/>
 </p>

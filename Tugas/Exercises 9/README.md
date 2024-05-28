@@ -66,6 +66,11 @@ binary search tree:
 
 ## Solutions <a name="ss"></a>
 ### S10. Draw Binary Search Tree <a name="s10"></a>
+Insertion sequence:
+
+56 30 61 39 47 35 75 13 21 64 26 73 18
+
+
 ### S11. Sum of Levels <a name="s11"></a>
 ### S12. Draw Binary Search Tree From Traversal I <a name="s12"></a>
 ### S13. Draw Binary Search Tree From Traversal II <a name="s13"></a>

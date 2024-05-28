@@ -262,7 +262,7 @@ In-order: **G** | D | **P K E** | N | **F A** | T | **L**
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q13-2.png"/>
 </p>
 
-In-order: G | D | **P K E** | N | **F A** | T | L *<br>
+In-order: G | D | **P K E** | N | **F A** | T | L <br>
 (_G must be the left leaf of D, while L must be the right leaf of T_)<br>
 Pre-order: N | D | G | **K P E** | T | **F A** | L
 <p align="center">
@@ -278,7 +278,7 @@ In-order: G | D | **P** | K | **E** | N | F | **A** | T | L
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q13-4.png"/>
 </p>
 
-In-order: G | D | P | K | E | N | F | A | T | L *<br>
+In-order: G | D | P | K | E | N | F | A | T | L <br>
 (_P and E must be the leaves of K, while A must be the right leaf of F_)<br>
 Pre-order: N | D | G | K | P | E | T | F | A | L
 <p align="center">
@@ -286,5 +286,83 @@ Pre-order: N | D | G | K | P | E | T | F | A | L
 </p>
 
 ### S14. Binary Tree Traversal <a name="s14"></a>
+**Implementation of Pre-order function in C/C++**
+```cpp
+// typedef struct tree_node
+// {
+//     int key;
+//     struct tree_node *left, *right;
+// } TreeNode;
+
+TreeNode *pre_order(TreeNode *root, int value)
+{
+    if (root != NULL)
+    {
+        if (value == root->key)
+            return root;
+        TreeNode *left_branch = pre_order(root->left, value);
+        if (left_branch != NULL)
+            return left_branch;
+        TreeNode *right_branch = pre_order(root->right, value);
+        if (right_branch != NULL)
+            return right_branch;
+    }
+
+    return NULL;
+}
+```
+
+**Implementation of In-order function in C/C++**
+```cpp
+// typedef struct tree_node
+// {
+//     int key;
+//     struct tree_node *left, *right;
+// } TreeNode;
+
+TreeNode *in_order(TreeNode *root, int value)
+{
+    if (root != NULL)
+    {
+        TreeNode *left_branch = in_order(root->left, value);
+        if (left_branch != NULL)
+            return left_branch;
+        if (value == root->key)
+            return root;
+        TreeNode *right_branch = in_order(root->right, value);
+        if (right_branch != NULL)
+            return right_branch;
+    }
+
+    return NULL;
+}
+```
+
+**Implementation of Post-order function in C/C++**
+```cpp
+// typedef struct tree_node
+// {
+//     int key;
+//     struct tree_node *left, *right;
+// } TreeNode;
+
+TreeNode *post_order(TreeNode *root, int value)
+{
+    if (root != NULL)
+    {
+        TreeNode *left_branch = post_order(root->left, value);
+        if (left_branch != NULL)
+            return left_branch;
+        TreeNode *right_branch = post_order(root->right, value);
+        if (right_branch != NULL)
+            return right_branch;
+        if (value == root->key)
+            return root;
+    }
+
+    return NULL;
+}
+```
+
 ### S15. Binary Search Tree Traversal <a name="s15"></a>
 ### S16. Complete Binary Search Tree <a name="s16"></a>

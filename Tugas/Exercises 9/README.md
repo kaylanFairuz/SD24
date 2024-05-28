@@ -195,15 +195,17 @@ int level_sum(TreeNode *root)
 ### S12. Draw Binary Tree From Traversal I <a name="s12"></a>
 At post-order traversal, the root is always visited last, while at in-order, the root is always visited in the middle:
 
-Post-order: **G P D K F N T A L** | E (_E is the root_)<br>
+Post-order: **G P D K F N T A L** | E <br>
+(_E is the root_)<br>
 In-order: **G D P K** | E | **N F A T L**
 <p align="center">
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-1.png"/>
 </p>
 
-Members of {G, D, P, K} and members of {N, F, A, T, L} must each belong to a different subtree:
+Members of {G, D, P, K} belong to the left subtree of {E} and members of {N, F, A, T, L} belong to the right subtree of {E}:
 
-Post-order: **G P D** | K | **F N T A** | L | E (_K and L are each the root of their subtree_)<br>
+Post-order: **G P D** | K | **F N T A** | L | E <br>
+(_K and L are each the root of their subtree_)<br>
 In-order: **G D P** | K | E | **N F A T** | L 
 <p align="center">
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-2.png"/>
@@ -211,7 +213,8 @@ In-order: **G D P** | K | E | **N F A T** | L
 
 Members of {G, D, P} belong to the left subtree of {K} while members of {N, F, A, T} belong to the left subtree of {L}:
 
-Post-order: **G P** | D | K | **F N T** | A | L | E (_D and A are each the root of their subtree_)<br>
+Post-order: **G P** | D | K | **F N T** | A | L | E <br>
+(_D and A are each the root of their subtree_)<br>
 In-order: **G** | D | **P** | K | E | **N F** | A | **T** | L 
 <p align="center">
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-3.png"/>
@@ -219,25 +222,69 @@ In-order: **G** | D | **P** | K | E | **N F** | A | **T** | L
 
 Members of {F, N} must belong to the left subtree of {A}:
 
-In-order: G | D | P | K | E | **N F** | A | T | L (_G and P must be the leaves of D, while T must be the right leaf of A_)<br>
+In-order: G | D | P | K | E | **N F** | A | T | L <br>
+(_G and P must be the leaves of D, while T must be the right leaf of A_)<br>
 Post-order: G | P | D | K | **F N** | T | A | L | E
 <p align="center">
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-4.png"/>
 </p>
 
-Post-order: G | P | D | K | **F** | N | T | A | L | E (_N must be the root of the left subtree of A_)<br>
+Post-order: G | P | D | K | **F** | N | T | A | L | E<br>
+(_N must be the root of the left subtree of A_)<br>
 In-order: G | D | P | K | E | N | **F** | A | T | L 
 <p align="center">
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-5.png"/>
 </p>
 
-In-order: G | D | P | K | E | N | F | A | T | L (_F must be the right leaf of N_)<br>
+In-order: G | D | P | K | E | N | F | A | T | L <br>
+(_F must be the right leaf of N_)<br>
 Post-order: G | P | D | K | F | N | T | A | L | E
 <p align="center">
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-6.png"/>
 </p>
 
 ### S13. Draw Binary Tree From Traversal II <a name="s13"></a>
+At pre-order traversal, the root is always visited first, while at in-order, the root is always visited in the middle:
+
+Pre-order: N | **D G K P E T F A L** <br>
+(_N is the root_)<br>
+In-order: **G D P K E** | N | **F A T L**
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q13-1.png"/>
+</p>
+
+Members of {G, D, P, K, E} belong to the left subtree of {N} and members of {F, A, T, L} belong to the right subtree of {N}:
+
+Pre-order: N | D | **G K P E** | T | **F A L** <br>
+(_D and T are each the root of their subtree_)<br>
+In-order: **G** | D | **P K E** | N | **F A** | T | **L**
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q13-2.png"/>
+</p>
+
+In-order: G | D | **P K E** | N | **F A** | T | L *<br>
+(_G must be the left leaf of D, while L must be the right leaf of T_)<br>
+Pre-order: N | D | G | **K P E** | T | **F A** | L
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q13-3.png"/>
+</p>
+
+Members of {P, K, E} belong to the right subtree of {D} and members of {F, A} belong to the left subtree of {T}:
+
+Pre-order: N | D | G | K | **P E** | T | F | **A** | L <br>
+(_K and F are each the root of their subtree_)<br>
+In-order: G | D | **P** | K | **E** | N | F | **A** | T | L
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q13-4.png"/>
+</p>
+
+In-order: G | D | P | K | E | N | F | A | T | L *<br>
+(_P and E must be the leaves of K, while A must be the right leaf of F_)<br>
+Pre-order: N | D | G | K | P | E | T | F | A | L
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q13-5.png"/>
+</p>
+
 ### S14. Binary Tree Traversal <a name="s14"></a>
 ### S15. Binary Search Tree Traversal <a name="s15"></a>
 ### S16. Complete Binary Search Tree <a name="s16"></a>

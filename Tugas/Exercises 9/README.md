@@ -84,7 +84,7 @@ To get the insertion order, we can traverse the tree by each level (otherwise kn
 
 Final Insertion Order: **47 26 73 18 35 61 75 13 21 30 39 56 64**
 
-We can base our recursive function by the following rules:
+We can base our recursive function to the following rules:
 > In general, if the tree is represented by an array T[1..n], the following are true:<br>
 > • T[1] is the root.<br>
 > • The left subtree of T[i] is T[2i] if 2i <= n and null otherwise.<br>

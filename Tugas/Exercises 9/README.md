@@ -394,3 +394,18 @@ int search_int(TreeNode *root, int value)
 ```
 
 ### S16. Complete Binary Search Tree <a name="s16"></a>
+We can reverse engineer the solution by doing the following.
+- Sort the array
+- Choose the middle element of the array and make it root
+- Do iteratively for every left and right subarray
+
+Sorted array:
+
+2 12 15 20 23 34 37 40 45 46 53 78 87 90 91.
+
+Final array bst[]:
+
+40 20 78 12 34 46 90 2 15 23 37 45 53 87 91
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q16.png"/>
+</p>

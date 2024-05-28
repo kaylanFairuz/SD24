@@ -346,6 +346,33 @@ TreeNode *in_order(TreeNode *root, int value)
 //     struct tree_node *left, *right;
 // } TreeNode;
 
+TreeNode *post_order(TreeNode *root, int value)
+{
+    if (root != NULL)
+    {
+        TreeNode *left_branch = post_order(root->left, value);
+        if (left_branch != NULL)
+            return left_branch;
+        TreeNode *right_branch = post_order(root->right, value);
+        if (right_branch != NULL)
+            return right_branch;
+        if (value == root->key)
+            return root;
+    }
+
+    return NULL;
+}
+```
+
+### S15. Binary Search Tree Traversal <a name="s15"></a>
+**Implementation of function in C/C++**
+```cpp
+// typedef struct tree_node
+// {
+//     int key;
+//     struct tree_node *left, *right;
+// } TreeNode;
+
 int search_int(TreeNode *root, int value)
 {
     if (root == NULL)
@@ -364,18 +391,6 @@ int search_int(TreeNode *root, int value)
         return search_int(root->right, value);
     }
 }
-```
-
-### S15. Binary Search Tree Traversal <a name="s15"></a>
-**Implementation of function in C/C++**
-```cpp
-// typedef struct tree_node
-// {
-//     int key;
-//     struct tree_node *left, *right;
-// } TreeNode;
-
-
 ```
 
 ### S16. Complete Binary Search Tree <a name="s16"></a>

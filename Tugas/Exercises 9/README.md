@@ -4,18 +4,18 @@
 - [**Questions**](#qs)
     - [Q10. Draw Binary Search Tree](#q10)
     - [Q11. Sum of Levels](#q11)
-    - [Q12. Draw Binary Search Tree From Traversal I](#q12)
-    - [Q13. Draw Binary Search Tree From Traversal II](#q13)
-    - [Q14. Binary Search Tree Traversal](#q14)
-    - [Q15. Smallest Number Greater Than Key](#q15)
+    - [Q12. Draw Binary Tree From Traversal I](#q12)
+    - [Q13. Draw Binary Tree From Traversal II](#q13)
+    - [Q14. Binary Tree Traversal](#q14)
+    - [Q15. Binary Search Tree Traversal](#q15)
     - [Q16. Complete Binary Search Tree](#q16)
 - [**Solutions**](#ss)
     - [S10. Draw Binary Search Tree](#s10)
     - [S11. Sum of Levels](#s11)
-    - [S12. Draw Binary Search Tree From Traversal I](#s12)
-    - [S13. Draw Binary Search Tree From Traversal II](#s13)
-    - [S14. Binary Search Tree Traversal](#s14)
-    - [S15. Smallest Number Greater Than Key](#s15)
+    - [S12. Draw Binary Tree From Traversal I](#s12)
+    - [S13. Draw Binary Tree From Traversal II](#s13)
+    - [S14. Binary Tree Traversal](#s14)
+    - [S15. Binary Search Tree Traversal](#s15)
     - [S16. Complete Binary Search Tree](#s16)
 
 ## Questions <a name="qs"></a>
@@ -40,22 +40,22 @@ Write a recursive function that, given the root of a binary tree, returns `𝐼`
 
 Write a nonrecursive function that, given the root of a binary tree, returns `𝐼`.
 
-### Q12. Draw Binary Search Tree From Traversal I <a name="q12"></a>
+### Q12. Draw Binary Tree From Traversal I <a name="q12"></a>
 Draw the binary tree whose in-order and post-order traversals of the nodes are as follows:
 
     In-order: G D P K E N F A T L<br>
     Post-order: G P D K F N T A L E
 
-### Q13. Draw Binary Search Tree From Traversal II <a name="q13"></a>
+### Q13. Draw Binary Tree From Traversal II <a name="q13"></a>
 Draw the binary tree whose in-order and pre-order traversals of the nodes are as follows:
 
     In-order: G D P K E N F A T L<br>
     Pre-order: N D G K P E T F A L
 
-### Q14. Binary Search Tree Traversal <a name="q14"></a>
+### Q14. Binary Tree Traversal <a name="q14"></a>
 Write a recursive function that, given the root of a binary tree and a key, searches for the key using (i) a pre-order, (ii) an in-order, and (iii) a post-order traversal. If found, return the node containing the key; otherwise, return `null`.
 
-### Q15. Smallest Number Greater Than Key <a name="q15"></a>
+### Q15. Binary Search Tree Traversal <a name="q15"></a>
 Each node of a binary search tree contains three fields—`left`, `right`, and `data`—with their usual meanings; `data` is a positive integer field. Write an **efficient** function that, given the root of the tree and `key`, returns the smallest number in the tree that is greater than `key`. If there is no such number, return `-1`.
 
 ### Q16. Complete Binary Search Tree <a name="q16"></a>
@@ -187,11 +187,57 @@ int level_sum(TreeNode *root)
 
         current_level++;
     }
+
+    return sum;
 }
 ```
 
-### S12. Draw Binary Search Tree From Traversal I <a name="s12"></a>
-### S13. Draw Binary Search Tree From Traversal II <a name="s13"></a>
-### S14. Binary Search Tree Traversal <a name="s14"></a>
-### S15. Smallest Number Greater Than Key <a name="s15"></a>
+### S12. Draw Binary Tree From Traversal I <a name="s12"></a>
+At post-order traversal, the root is always visited last, while at in-order, the root is always visited in the middle:
+
+Post-order: **G P D K F N T A L** | E (_E is the root_)<br>
+In-order: **G D P K** | E | **N F A T L**
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-1.png"/>
+</p>
+
+Members of {G, D, P, K} and members of {N, F, A, T, L} must each belong to a different subtree:
+
+Post-order: **G P D** | K | **F N T A** | L | E (_K and L are each the root of their subtree_)<br>
+In-order: **G D P** | K | E | **N F A T** | L 
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-2.png"/>
+</p>
+
+Members of {G, D, P} belong to the left subtree of {K} while members of {N, F, A, T} belong to the left subtree of {L}:
+
+Post-order: **G P** | D | K | **F N T** | A | L | E (_D and A are each the root of their subtree_)<br>
+In-order: **G** | D | **P** | K | E | **N F** | A | **T** | L 
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-3.png"/>
+</p>
+
+Members of {F, N} must belong to the left subtree of {A}:
+
+In-order: G | D | P | K | E | **N F** | A | T | L (_G and P must be the leaves of D, while T must be the right leaf of A_)<br>
+Post-order: G | P | D | K | **F N** | T | A | L | E
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-4.png"/>
+</p>
+
+Post-order: G | P | D | K | **F** | N | T | A | L | E (_N must be the root of the left subtree of A_)<br>
+In-order: G | D | P | K | E | N | **F** | A | T | L 
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-5.png"/>
+</p>
+
+In-order: G | D | P | K | E | N | F | A | T | L (_F must be the right leaf of N_)<br>
+Post-order: G | P | D | K | F | N | T | A | L | E
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-6.png"/>
+</p>
+
+### S13. Draw Binary Tree From Traversal II <a name="s13"></a>
+### S14. Binary Tree Traversal <a name="s14"></a>
+### S15. Binary Search Tree Traversal <a name="s15"></a>
 ### S16. Complete Binary Search Tree <a name="s16"></a>

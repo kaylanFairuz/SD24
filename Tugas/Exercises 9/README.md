@@ -76,6 +76,20 @@ Almost complete binary search tree:
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q10-2.png"/>
 </p>
 
+To get the insertion order, we can traverse the tree by each level (otherwise known as _level order traversal_):
+- Level 0: 47
+- Level 1: 26 73
+- Level 2: 18 35 61 75
+- Level 3: 13 21 30 39 56 64
+
+Final Insertion Order: **47 26 73 18 35 61 75 13 21 30 39 56 64**
+
+Implementation of printing in post-order in C++:
+```cpp
+int[num] 16
+```
+
+Assuming that the almost complete tree is stored in a one-dimensional array num[1, ..., 13], write a recursive function for printing the integers in post-order.
 
 ### S11. Sum of Levels <a name="s11"></a>
 ### S12. Draw Binary Search Tree From Traversal I <a name="s12"></a>

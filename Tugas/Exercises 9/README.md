@@ -1,6 +1,6 @@
 # Exercises 9
 > Tugas ke-7 mata kuliah Struktur Data 2024<br>
-> Referensi: _Noel Kalicharan - Advanced Topics in C_<br>
+> Reference: _Noel Kalicharan - Advanced Topics in C_<br>
 - [**Questions**](#qs)
     - [Q10. Draw Binary Search Tree](#q10)
     - [Q11. Sum of Levels](#q11)
@@ -66,9 +66,15 @@ binary search tree:
 
 ## Solutions <a name="ss"></a>
 ### S10. Draw Binary Search Tree <a name="s10"></a>
-Insertion sequence:
+Binary search tree:
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q10-1.png"/>
+</p>
 
-56 30 61 39 47 35 75 13 21 64 26 73 18
+Almost complete binary search tree:
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q10-2.png"/>
+</p>
 
 
 ### S11. Sum of Levels <a name="s11"></a>

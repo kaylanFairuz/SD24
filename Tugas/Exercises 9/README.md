@@ -66,7 +66,7 @@ binary search tree:
 
 ## Solutions <a name="ss"></a>
 ### S10. Draw Binary Search Tree <a name="s10"></a>
-Binary search tree:
+Binary search tree using given order of insertion:
 <p align="center">
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q10-1.png"/>
 </p>
@@ -111,6 +111,85 @@ void post_order(int num[], int index, int length)
 ```
 
 ### S11. Sum of Levels <a name="s11"></a>
+Consider the following case:
+<p align="center">
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q11-1.png"/>
+</p>
+
+When the root (10) is placed, there are 2 null pointers. If we choose to insert a node to the left (6), the left null pointer will be replaced by the 6, but 2 new null pointers are made (with root 6), making the total added by 1. If instead we choose to insert a node to the right (18), the right null pointer will be replaced by the 18, but 2 new null pointers are made (with root 18), making the total added by 1. In either case, for every insertion we make, we will always make 1 new null pointer. 
+
+It can be summarized that if we have a binary tree with `𝑛` nodes, the number of null pointer or imaginary external nodes it will have is `2 + (𝑛-1)` (2 node from the first insertion, and 1 node for the next n-1 insertion) or `𝑛+1`.
+
+Assume a binary tree with `n` nodes has `I` as the sum of the nodes and `E` as the sum of the imaginary external nodes. Traversing from the root, there are three cases.
+1. Node has no child, thus there are 2 imaginary external nodes and `E` will be increased by 2.
+2. Node has one leaf, thus there is 1 imaginary external node and 1 internal node and both sum will be increased by 1.
+3. Node has two leaf, thus there is 2 node and `I` will be increased by 2.
+In case 2 and 3, eventually we will go back to case 1, where we add `E` by 2. In conclusion, each internal node will give 2 additional values to `E`, and since there are `n` nodes, we can write the relation as `E = I + 2n`. **(Proof by Property of Binary Trees)**
+
+Assume that `E = I + 2n` holds true for all `n ≥ 0`. Base case: `n = 0`, then `E = I = 0`, and `E = I + 2n = 0`. We will prove that `E = I + 2n` for all binary tree that has `m+1` nodes. Suppose the binary tree `T` have `m+1` node. Removing a leaf from the tree will result in a binary tree `T'` that has `m` node. Suppose the leaf that was removed was at level `d`, thus it follows that `E = E' + d + 2` and `I = I' + d`. Therefore:
+
+$E = E' + d + 2$<br>
+$E = I' + 2m + d + 2$<br>
+$E = I - d + 2m + d + 2$<br>
+$E = I + 2m + 2$<br>
+$E = I + 2(m + 1)$ **(Proof by Induction)** <br>
+
+**Recursive Implementation of finding `I` in C/C++**
+```c
+// typedef struct tree_node
+// {
+//     int key;
+//     struct tree_node *left, *right;
+// } TreeNode;
+
+int level_sum(TreeNode* node, int level)
+{
+    if (node == NULL)
+        return 0;
+ 
+    return node->data * level + level_sum(node->left, level + 1, sum) + level_sum(node->right, level + 1, sum);
+}
+```
+
+**Non-recursive Implementation of finding `I` in C++**
+```cpp
+// struct TreeNode
+// {
+//     int data;
+//     TreeNode *left, *right;
+// };
+
+int level_sum(TreeNode *root)
+{
+    queue<TreeNode *> q;
+
+    int sum = 0;
+    int current_level = 0;
+
+    q.push(root);
+
+    while (!q.empty())
+    {
+        int current_level_nodes = q.size();
+
+        for (int i = 0; i < current_level_nodes; i++)
+        {
+            TreeNode *current = q.front();
+            q.pop();
+            sum += current->data * current_level;
+
+            if (current->left != NULL)
+                q.push(current->left);
+
+            if (current->right != NULL)
+                q.push(current->right);
+        }
+
+        current_level++;
+    }
+}
+```
+
 ### S12. Draw Binary Search Tree From Traversal I <a name="s12"></a>
 ### S13. Draw Binary Search Tree From Traversal II <a name="s13"></a>
 ### S14. Binary Search Tree Traversal <a name="s14"></a>

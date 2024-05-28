@@ -28,7 +28,7 @@ There is one almost complete BST for the previous keys. Draw it.
 
 List the keys in an order that will produce the almost complete BST.
 
-Assuming that the almost complete tree is stored in a one-dimensional array num[1, ..., 13], write a recursive function for printing the integers in post-order.
+Assuming that the almost complete tree is stored in a one-dimensional array num[1..13], write a recursive function for printing the integers in post-order.
 
 ### Q11. Sum of Levels <a name="q11"></a>
 An imaginary “external” node is attached to each null pointer of a binary tree of `𝑛` nodes. How many external nodes are there?
@@ -59,7 +59,7 @@ Write a recursive function that, given the root of a binary tree and a key, sear
 Each node of a binary search tree contains three fields—`left`, `right`, and `data`—with their usual meanings; `data` is a positive integer field. Write an **efficient** function that, given the root of the tree and `key`, returns the smallest number in the tree that is greater than `key`. If there is no such number, return `-1`.
 
 ### Q16. Complete Binary Search Tree <a name="q16"></a>
-Store the following integers in an array bst[1, ..., 15] such that bst represents a complete
+Store the following integers in an array bst[1..15] such that bst represents a complete
 binary search tree: 
 
 34 23 45 46 37 78 90 2 40 20 87 53 12 15 91.
@@ -84,12 +84,31 @@ To get the insertion order, we can traverse the tree by each level (otherwise kn
 
 Final Insertion Order: **47 26 73 18 35 61 75 13 21 30 39 56 64**
 
-Implementation of printing in post-order in C++:
-```cpp
-int[num] 16
-```
+We can base our recursive function by the following rules:
+> In general, if the tree is represented by an array T[1..n], the following are true:<br>
+> • T[1] is the root.<br>
+> • The left subtree of T[i] is T[2i] if 2i <= n and null otherwise.<br>
+> • The right subtree of T[i] is T[2i+1] if 2i+1 <= n and null otherwise.<br>
+> • The parent of T[i] is T[i/2] (integer division).
+>
+> _*Chapter 9: Introduction to Binary Trees, Page 233_
 
-Assuming that the almost complete tree is stored in a one-dimensional array num[1, ..., 13], write a recursive function for printing the integers in post-order.
+**Implementation of recursive function in C/C++**:
+```cpp
+// int num[] = {47, 26, 73, 18, 35, 61, 75, 13, 21, 30, 39, 56, 64};
+// int length = sizeof(num) / sizeof(num[0]);
+// 1-based index is used, thus the function should be called with: post_order(num, 1, length)
+
+void post_order(int num[], int index, int length)
+{
+    if (index <= length)
+    {
+        post_order(num, index * 2, length);      // visit left subtree
+        post_order(num, index * 2 + 1, length);  // visit right subtree
+        printf("%d ", num[index - 1]);           // visit root (print key)
+    }
+}
+```
 
 ### S11. Sum of Levels <a name="s11"></a>
 ### S12. Draw Binary Search Tree From Traversal I <a name="s12"></a>

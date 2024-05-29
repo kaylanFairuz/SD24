@@ -33,38 +33,45 @@ Hitung jumlah kepulauan dengan melakukan DFS terhadap seluruh node, pastikan jik
 
 ### Implementasi
 ```cpp
-vector<long> dfs()
-{
-    vector<bool> visited(vertexCount, false);
-    long islandSize = 0;
-    for (int i = 0; i < vertexCount; i++)
-    {
-        if (!visited[i])
-        {
-            stack<long> st;
-            st.push(i);
-            visited[i] = true;
+// struct graph
+// {
+//    long vertexCount, edgeCount;
+//    vector<vector<long>> adjList;
 
-            while (!st.empty())
-            {
-                long temp = st.top();
-                st.pop();
-                provincesSize++;
+      vector<long> dfs()
+      {
+          vector<bool> visited(vertexCount, false);
+          long islandSize = 0;
+          for (int i = 0; i < vertexCount; i++)
+          {
+              if (!visited[i])
+              {
+                  stack<long> st;
+                  st.push(i);
+                  visited[i] = true;
+      
+                  while (!st.empty())
+                  {
+                      long temp = st.top();
+                      st.pop();
+                      provincesSize++;
+      
+                      for (auto vertex : adjList[temp])
+                      {
+                          if (!visited[vertex])
+                          {
+                              st.push(vertex);
+                              visited[vertex] = true;
+                          }
+                      }
+                  }
+      
+                  islandSize++;
+              }
+          }
+      
+          return islandSize;
+      }
 
-                for (auto vertex : adjList[temp])
-                {
-                    if (!visited[vertex])
-                    {
-                        st.push(vertex);
-                        visited[vertex] = true;
-                    }
-                }
-            }
-
-            islandSize++;
-        }
-    }
-
-    return islandSize;
-}
+// }
 ```

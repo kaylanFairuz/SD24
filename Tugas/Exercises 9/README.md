@@ -66,29 +66,54 @@ binary search tree:
 
 ## Solutions <a name="ss"></a>
 ### S10. Draw Binary Search Tree <a name="s10"></a>
-Binary search tree using given order of insertion: 56 30 61 39 47 35 75 13 21 64 26 73 18.
+- Binary search tree using given order of insertion: 56 30 61 39 47 35 75 13 21 64 26 73 18.
 <p align="center">
   <img src="../assets/e9-q10-1.png"/>
 </p>
 
-#### Trial and Error Approach
-Almost complete binary search tree:
-<p align="center">
-  <img src="../assets/e9-q10-2.png"/>
-</p>
+- Almost complete binary search tree using previous keys.
+  #### Trial and Error Approach
+  By creating the tree from scratch, we can eventually get
+  <p align="center">
+      <img src="../assets/e9-q10-2.png"/>
+  </p>
+  
+  To get the insertion order, we can traverse the tree by each level (otherwise known as _level order traversal_):
+  - Level 0: 47
+  - Level 1: 26 73
+  - Level 2: 18 35 61 75
+  - Level 3: 13 21 30 39 56 64
 
-To get the insertion order, we can traverse the tree by each level (otherwise known as _level order traversal_):
-- Level 0: 47
-- Level 1: 26 73
-- Level 2: 18 35 61 75
-- Level 3: 13 21 30 39 56 64
+  Final Insertion Order: **47 26 73 18 35 61 75 13 21 30 39 56 64**
 
-Final Insertion Order: **47 26 73 18 35 61 75 13 21 30 39 56 64**
+  #### Systematic Approach
+  First we must sort our array into: 13 18 21 26 30 35 39 47 56 61 64 73 75.
+  
+  Then we can do the following to create an almost complete binary search tree from a sorted array:
+  - Assume a 1-based indexing for the array
+  - Let the number at $2^n$th index—the greatest power of 2 strictly smaller than the size of the array—be the root.
+  - Repeat the process for the left and right subtrees.
 
-#### Systematic Approach
-First we must sort our array into: 13 18 21	26 30 35 39 47 56 61 64 73 75.
-Then we can do the following
-- a
+  First, we will take the root to be 47 at index 8 (8th index of the tree).								
+  <p align="center">
+      <img src="../assets/e9-q10-3.png"/>
+  </p>
+  
+  Then, we will take the index 4 (4th index of left subtree) and index 12 (4th index of right subtree).
+  <p align="center">
+      <img src="../assets/e9-q10-4.png"/>
+  </p>
+  
+  After that, we will take index 2, 6, 10 respectively, and also index 13.
+  <p align="center">
+      <img src="../assets/e9-q10-5.png"/>
+  </p>
+
+  Finally, we will take the remaining index: 1, 3, 5, 7, 9, and 11.
+  <p align="center">
+      <img src="../assets/e9-q10-6.png"/>
+  </p>
+  
 
 We can base our recursive function to the following rules:
 > In general, if the tree is represented by an array T[1..n], the following are true:<br>

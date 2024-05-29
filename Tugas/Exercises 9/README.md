@@ -71,6 +71,7 @@ Binary search tree using given order of insertion:
   <img src="../assets/e9-q10-1.png"/>
 </p>
 
+#### Trial and Error Approach
 Almost complete binary search tree:
 <p align="center">
   <img src="../assets/e9-q10-2.png"/>
@@ -83,6 +84,8 @@ To get the insertion order, we can traverse the tree by each level (otherwise kn
 - Level 3: 13 21 30 39 56 64
 
 Final Insertion Order: **47 26 73 18 35 61 75 13 21 30 39 56 64**
+
+#### 
 
 We can base our recursive function to the following rules:
 > In general, if the tree is represented by an array T[1..n], the following are true:<br>

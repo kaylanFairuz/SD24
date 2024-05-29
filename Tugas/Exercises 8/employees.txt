@@ -1,0 +1,7 @@
+STF425, Julie Johnson, Secretary, 623-3321, 2500, 600
+COM319, Ian McLean, Programmer, 676-1319, 3200, 800
+SYS777, Jean Kendall, Systems Analyst, 671-2025, 4200, 1100
+JNR591, Lincoln Kadoo, Operator, 657-0266, 2800, 700
+MSN815, Camille Kelly, Clerical Assistant, 652-5345, 2100, 500
+STF273, Anella Bayne, Data Entry Manager, 632-5324, 3500, 850
+SYS925, Riaz Ali, Senior Programmer, 636-8679, 4800, 1300

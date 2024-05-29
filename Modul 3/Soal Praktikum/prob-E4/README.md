@@ -1,6 +1,6 @@
 # Isekai Warkop
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/dSD24/blob/main/Modul%203/assets/isekai-warkop-cover.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/isekai-warkop-cover.png"/>
 </p>
 
 #### Deskripsi: 
@@ -60,7 +60,7 @@ dengan jalan yang ada_.
 
 Graph Case 1:
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/dSD24/blob/main/Modul%203/assets/isekai-warkop-explanation-1.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/isekai-warkop-explanation-1.png"/>
 </p>
 
 **Case 2**: Waktu yang minimum adalah 12 (membangun 6 warkop)
@@ -69,5 +69,5 @@ Graph Case 1:
 
 Graph Case 2:
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/dSD24/blob/main/Modul%203/assets/isekai-warkop-explanation-2.png"/>
+  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/isekai-warkop-explanation-2.png"/>
 </p>

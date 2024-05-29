@@ -153,6 +153,11 @@ void post_order(int num[], int index, int length)
 Consider a binary tree of n nodes. Each node will have 2 pointers (may or may not be null). So the tree will have 2n pointers. Excluding the root node, every node must have a pointer pointing to it, i.e., n-1 not-null pointers. So, the number of null pointers = 2n - (n-1) = n+1.
 
 #### Sum of original nodes levels and external nodes level in a binary tree
+_1_. _Proof by Property of Binary Tree_
+
+
+
+_2_. _Proof by Induction_
 
 Assume that `E - I = 2n` holds true for all `n ≥ 0` where n is the number of nodes of the binary tree. Base case: `n = 0`, then `E - I = 2n = 0`. We will prove that `E - I = + 2n` for all binary tree that has `m+1` nodes. Suppose the binary tree `T` have `m+1` node. Removing a leaf from the tree will result in a binary tree `T'` that has `m` node. Suppose the leaf that was removed was at level `d`, thus it follows that `E = E' + d + 2` and `I = I' + d`. Therefore:
 

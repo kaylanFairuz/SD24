@@ -66,53 +66,67 @@ binary search tree:
 
 ## Solutions <a name="ss"></a>
 ### S10. Draw Binary Search Tree <a name="s10"></a>
-- Binary search tree using given order of insertion: 56 30 61 39 47 35 75 13 21 64 26 73 18.
+#### Binary search tree using given order of insertion: 56 30 61 39 47 35 75 13 21 64 26 73 18.
 <p align="center">
     <img src="../assets/e9-q10-1.png"/>
 </p>
 
-- Almost complete binary search tree using previous keys.
-  #### Trial and Error Approach
-  By creating the tree from scratch, we can eventually get
-  <p align="center">
-      <img src="../assets/e9-q10-2.png"/>
-  </p>
-  
-  To get the insertion order, we can traverse the tree by each level (otherwise known as _level order traversal_):
-  - Level 0: 47
-  - Level 1: 26 73
-  - Level 2: 18 35 61 75
-  - Level 3: 13 21 30 39 56 64
+#### Almost complete binary search tree using previous keys.
 
-  Final Insertion Order: **47 26 73 18 35 61 75 13 21 30 39 56 64**
+_1_. _Trial and Error Approach_
 
-  #### Systematic Approach
-  First we must sort our array into: 13 18 21 26 30 35 39 47 56 61 64 73 75.
+By creating the tree from scratch, we can eventually get
+<p align="center">
+    <img src="../assets/e9-q10-2.png"/>
+</p>
   
-  Then we can do the following to create an almost complete binary search tree from a sorted array:
-  - Assume a 1-based indexing for the array
-  - Let the number at $2^n$—the greatest power of 2 strictly smaller than the size of the array—th index be the root.
-  - Repeat the process for the left and right subtrees.
+To get the insertion order, we can traverse the tree by each level (otherwise known as _level order traversal_):
+- Level 0: 47
+- Level 1: 26 73
+- Level 2: 18 35 61 75
+- Level 3: 13 21 30 39 56 64
 
-  First, we will take the root to be 47 at index 8 (8th index of the tree).								
-  <img src="../assets/e9-q10-3.png"/>
-  
-  Then, we will take the index 4 (4th index of left subtree) and index 12 (4th index of right subtree).
-  <img src="../assets/e9-q10-4.png"/>
-  
-  After that, we will take index 2, 6, 10 respectively, and also index 13.
-  <img src="../assets/e9-q10-5.png"/>
+Final Insertion Order: **47 26 73 18 35 61 75 13 21 30 39 56 64**
 
-  Finally, we will take the remaining index: 1, 3, 5, 7, 9, and 11.
-  <img src="../assets/e9-q10-6.png"/>
-  
+_2_. _Systematic Approach_
+First we must sort our array into: 13 18 21 26 30 35 39 47 56 61 64 73 75.
 
-We can base our recursive function to the following rules:
+Then we can do the following to create an almost complete binary search tree from a sorted array:
+- Assume a 1-based indexing for the array
+- Let the number at $2^n$—the greatest power of 2 strictly smaller than the size of the array—th index be the root.
+- Repeat the process for the left and right subtrees.
+
+First, we will take the root to be 47 at index 8 (8th index of the tree).								
+<img src="../assets/e9-q10-3.png"/>
+
+Then, we will take the index 4 (4th index of left subtree) and index 12 (4th index of right subtree).
+<img src="../assets/e9-q10-4.png"/>
+
+After that, we will take index 2, 6, 10 respectively, and also index 13.
+<img src="../assets/e9-q10-5.png"/>
+
+Finally, we will take the remaining index: 1, 3, 5, 7, 9, and 11.
+<img src="../assets/e9-q10-6.png"/>
+
+Final Insertion Order: **47 26 73 18 35 61 75 13 21 30 39 56 64**<br><br>
+
+<p align="center">
+    <img src="../assets/e9-q10-2.png"/>
+</p>
+  
+#### Recursive function to print post-order
+
+We can base our recursive function off the following rules:
+
+> ...
+> 
 > In general, if the tree is represented by an array T[1..n], the following are true:<br>
 > • T[1] is the root.<br>
 > • The left subtree of T[i] is T[2i] if 2i <= n and null otherwise.<br>
 > • The right subtree of T[i] is T[2i+1] if 2i+1 <= n and null otherwise.<br>
 > • The parent of T[i] is T[i/2] (integer division).
+>
+> ...
 >
 > _*Chapter 9: Introduction to Binary Trees, Page 233_
 
@@ -134,31 +148,22 @@ void post_order(int num[], int index, int length)
 ```
 
 ### S11. Sum of Levels <a name="s11"></a>
-Consider the following case:
-<p align="center">
-  <img src="../assets/e9-q11.jpg"/>
-</p>
+#### Number of null pointer in a binary tree
 
-When the root (10) is placed, there are 2 null pointers. If we choose to insert a node to the left (6), the left null pointer will be replaced by the 6, but 2 new null pointers are made (with root 6), making the total added by 1. If instead we choose to insert a node to the right (18), the right null pointer will be replaced by the 18, but 2 new null pointers are made (with root 18), making the total added by 1. In either case, for every insertion we make, we will always make 1 new null pointer. 
+Consider a binary tree of n nodes. Each node will have 2 pointers (may or may not be null). So the tree will have 2n pointers. Excluding the root node, every node must have a pointer pointing to it, i.e., n-1 not-null pointers. So, the number of null pointers = 2n - (n-1) = n+1.
 
-It can be summarized that if we have a binary tree with `𝑛` nodes, the number of null pointer or imaginary external nodes it will have is `2 + (𝑛-1)` (2 node from the first insertion, and 1 node for the next n-1 insertion) or `𝑛+1`.
+#### Sum of original nodes levels and external nodes level in a binary tree
 
-Assume a binary tree with `n` nodes has `I` as the sum of the nodes and `E` as the sum of the imaginary external nodes. Traversing from the root, there are three cases.
-1. Node has no child, thus there are 2 imaginary external nodes and `E` will be increased by 2.
-2. Node has one leaf, thus there is 1 imaginary external node and 1 internal node and both sum will be increased by 1.
-3. Node has two leaf, thus there is 2 node and `I` will be increased by 2.
-In case 2 and 3, eventually we will go back to case 1, where we add `E` by 2. In conclusion, each internal node will give 2 additional values to `E`, and since there are `n` nodes, we can write the relation as `E = I + 2n`. **(Proof by Property of Binary Trees)**
-
-Assume that `E = I + 2n` holds true for all `n ≥ 0`. Base case: `n = 0`, then `E = I = 0`, and `E = I + 2n = 0`. We will prove that `E = I + 2n` for all binary tree that has `m+1` nodes. Suppose the binary tree `T` have `m+1` node. Removing a leaf from the tree will result in a binary tree `T'` that has `m` node. Suppose the leaf that was removed was at level `d`, thus it follows that `E = E' + d + 2` and `I = I' + d`. Therefore:
+Assume that `E - I = 2n` holds true for all `n ≥ 0` where n is the number of nodes of the binary tree. Base case: `n = 0`, then `E - I = 2n = 0`. We will prove that `E - I = + 2n` for all binary tree that has `m+1` nodes. Suppose the binary tree `T` have `m+1` node. Removing a leaf from the tree will result in a binary tree `T'` that has `m` node. Suppose the leaf that was removed was at level `d`, thus it follows that `E = E' + d + 2` and `I = I' + d`. Therefore:
 
 $E = E' + d + 2$<br>
 $E = I' + 2m + d + 2$<br>
 $E = I - d + 2m + d + 2$<br>
-$E = I + 2m + 2$<br>
-$E = I + 2(m + 1)$ **(Proof by Induction)** <br>
+$E - I = 2m + 2$<br>
+$E - I =  2(m + 1)$
 
-**Recursive Implementation of finding `I` in C/C++**
-```c
+#### Recursive Implementation of computing `I` in C/C++**
+```cpp
 // typedef struct tree_node
 // {
 //     int key;
@@ -170,11 +175,11 @@ int level_sum(TreeNode* node, int level)
     if (node == NULL)
         return 0;
  
-    return node->data * level + level_sum(node->left, level + 1, sum) + level_sum(node->right, level + 1, sum);
+    return level + level_sum(node->left, level + 1, sum) + level_sum(node->right, level + 1, sum);
 }
 ```
 
-**Non-recursive Implementation of finding `I` in C++**
+#### Non-recursive Implementation of finding `I` in C++
 ```cpp
 // struct TreeNode
 // {
@@ -199,7 +204,7 @@ int level_sum(TreeNode *root)
         {
             TreeNode *current = q.front();
             q.pop();
-            sum += current->data * current_level;
+            sum += current_level;
 
             if (current->left != NULL)
                 q.push(current->left);

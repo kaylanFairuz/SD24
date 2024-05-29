@@ -26,16 +26,17 @@ $$
 M = W × K + P × (V - K)
 $$
 
+Sehingga masalah utama pada soal ini adalah mencari jumlah kepulauan yang ada. Untuk mendapatkan waktu minimal dapat dilakukan dengan membanding waktu yang dibutuhkan untuk membuat portal dan 
+
 ### Pendekatan
-Lakukan DFS terhadap seluruh node, pastikan jika sebuah node sudah pernah dikunjungi, node itu akan di-skip untuk iterasi selanjutnya.
+Hitung jumlah kepulauan dengan melakukan DFS terhadap seluruh node, pastikan jika sebuah node sudah pernah dikunjungi, node itu akan di-skip untuk iterasi selanjutnya.
 
 ### Implementasi
 ```cpp
 vector<long> dfs()
 {
     vector<bool> visited(vertexCount, false);
-    vector<long> provinces;
-
+    long islandSize = 0;
     for (int i = 0; i < vertexCount; i++)
     {
         if (!visited[i])
@@ -43,8 +44,6 @@ vector<long> dfs()
             stack<long> st;
             st.push(i);
             visited[i] = true;
-
-            long provincesSize = 0;
 
             while (!st.empty())
             {
@@ -62,10 +61,10 @@ vector<long> dfs()
                 }
             }
 
-            provinces.push_back(provincesSize);
+            islandSize++;
         }
     }
 
-    return provinces;
+    return islandSize;
 }
 ```

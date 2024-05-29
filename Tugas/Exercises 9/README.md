@@ -68,12 +68,12 @@ binary search tree:
 ### S10. Draw Binary Search Tree <a name="s10"></a>
 Binary search tree using given order of insertion:
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q10-1.png"/>
+  <img src="../assets/e9-q10-1.png"/>
 </p>
 
 Almost complete binary search tree:
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q10-2.png"/>
+  <img src="../assets/e9-q10-2.png"/>
 </p>
 
 To get the insertion order, we can traverse the tree by each level (otherwise known as _level order traversal_):
@@ -113,7 +113,7 @@ void post_order(int num[], int index, int length)
 ### S11. Sum of Levels <a name="s11"></a>
 Consider the following case:
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q11.jpg"/>
+  <img src="../assets/e9-q11.jpg"/>
 </p>
 
 When the root (10) is placed, there are 2 null pointers. If we choose to insert a node to the left (6), the left null pointer will be replaced by the 6, but 2 new null pointers are made (with root 6), making the total added by 1. If instead we choose to insert a node to the right (18), the right null pointer will be replaced by the 18, but 2 new null pointers are made (with root 18), making the total added by 1. In either case, for every insertion we make, we will always make 1 new null pointer. 
@@ -199,7 +199,7 @@ Post-order: **G P D K F N T A L** | E <br>
 (_E is the root_)<br>
 In-order: **G D P K** | E | **N F A T L**
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-1.png"/>
+  <img src="../assets/e9-q12-1.png"/>
 </p>
 
 Members of {G, D, P, K} belong to the left subtree of {E} and members of {N, F, A, T, L} belong to the right subtree of {E}:
@@ -208,7 +208,7 @@ Post-order: **G P D** | K | **F N T A** | L | E <br>
 (_K and L are each the root of their subtree_)<br>
 In-order: **G D P** | K | E | **N F A T** | L 
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-2.png"/>
+  <img src="../assets/e9-q12-2.png"/>
 </p>
 
 Members of {G, D, P} belong to the left subtree of {K} while members of {N, F, A, T} belong to the left subtree of {L}:
@@ -217,7 +217,7 @@ Post-order: **G P** | D | K | **F N T** | A | L | E <br>
 (_D and A are each the root of their subtree_)<br>
 In-order: **G** | D | **P** | K | E | **N F** | A | **T** | L 
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-3.png"/>
+  <img src="../assets/e9-q12-3.png"/>
 </p>
 
 Members of {F, N} must belong to the left subtree of {A}:
@@ -226,21 +226,21 @@ In-order: G | D | P | K | E | **N F** | A | T | L <br>
 (_G and P must be the leaves of D, while T must be the right leaf of A_)<br>
 Post-order: G | P | D | K | **F N** | T | A | L | E
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-4.png"/>
+  <img src="../assets/e9-q12-4.png"/>
 </p>
 
 Post-order: G | P | D | K | **F** | N | T | A | L | E<br>
 (_N must be the root of the left subtree of A_)<br>
 In-order: G | D | P | K | E | N | **F** | A | T | L 
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-5.png"/>
+  <img src="../assets/e9-q12-5.png"/>
 </p>
 
 In-order: G | D | P | K | E | N | F | A | T | L <br>
 (_F must be the right leaf of N_)<br>
 Post-order: G | P | D | K | F | N | T | A | L | E
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q12-6.png"/>
+  <img src="../assets/e9-q12-6.png"/>
 </p>
 
 ### S13. Draw Binary Tree From Traversal II <a name="s13"></a>
@@ -250,7 +250,7 @@ Pre-order: N | **D G K P E T F A L** <br>
 (_N is the root_)<br>
 In-order: **G D P K E** | N | **F A T L**
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q13-1.png"/>
+  <img src="../assets/e9-q13-1.png"/>
 </p>
 
 Members of {G, D, P, K, E} belong to the left subtree of {N} and members of {F, A, T, L} belong to the right subtree of {N}:
@@ -259,14 +259,14 @@ Pre-order: N | D | **G K P E** | T | **F A L** <br>
 (_D and T are each the root of their subtree_)<br>
 In-order: **G** | D | **P K E** | N | **F A** | T | **L**
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q13-2.png"/>
+  <img src="../assets/e9-q13-2.png"/>
 </p>
 
 In-order: G | D | **P K E** | N | **F A** | T | L <br>
 (_G must be the left leaf of D, while L must be the right leaf of T_)<br>
 Pre-order: N | D | G | **K P E** | T | **F A** | L
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q13-3.png"/>
+  <img src="../assets/e9-q13-3.png"/>
 </p>
 
 Members of {P, K, E} belong to the right subtree of {D} and members of {F, A} belong to the left subtree of {T}:
@@ -275,14 +275,14 @@ Pre-order: N | D | G | K | **P E** | T | F | **A** | L <br>
 (_K and F are each the root of their subtree_)<br>
 In-order: G | D | **P** | K | **E** | N | F | **A** | T | L
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q13-4.png"/>
+  <img src="../assets/e9-q13-4.png"/>
 </p>
 
 In-order: G | D | P | K | E | N | F | A | T | L <br>
 (_P and E must be the leaves of K, while A must be the right leaf of F_)<br>
 Pre-order: N | D | G | K | P | E | T | F | A | L
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q13-5.png"/>
+  <img src="../assets/e9-q13-5.png"/>
 </p>
 
 ### S14. Binary Tree Traversal <a name="s14"></a>
@@ -407,5 +407,5 @@ Final array bst[]:
 
 **40 20 78 12 34 46 90 2 15 23 37 45 53 87 91**
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Tugas/assets/e9-q16.png"/>
+  <img src="../assets/e9-q16.png"/>
 </p>

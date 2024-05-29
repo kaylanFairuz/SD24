@@ -1,4 +1,4 @@
-# Exercises 9
+![image](https://github.com/kaylanFairuz/SD24/assets/162039500/43ee8e01-f263-4bd0-b0e5-68415b5eb9ec)# Exercises 9
 > Tugas ke-7 mata kuliah Struktur Data 2024<br>
 > Reference: _Noel Kalicharan - Advanced Topics in C_<br>
 - [**Questions**](#qs)
@@ -66,7 +66,7 @@ binary search tree:
 
 ## Solutions <a name="ss"></a>
 ### S10. Draw Binary Search Tree <a name="s10"></a>
-Binary search tree using given order of insertion:
+Binary search tree using given order of insertion: 56 30 61 39 47 35 75 13 21 64 26 73 18.
 <p align="center">
   <img src="../assets/e9-q10-1.png"/>
 </p>
@@ -85,7 +85,10 @@ To get the insertion order, we can traverse the tree by each level (otherwise kn
 
 Final Insertion Order: **47 26 73 18 35 61 75 13 21 30 39 56 64**
 
-#### 
+#### Systematic Approach
+First we must sort our array into: 13 18 21	26 30 35 39 47 56 61 64 73 75.
+Then we can do the following
+- a
 
 We can base our recursive function to the following rules:
 > In general, if the tree is represented by an array T[1..n], the following are true:<br>

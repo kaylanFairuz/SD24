@@ -1,4 +1,5 @@
 # Solusi
+### Ide
 Tinjau kasus berikut:
 ```
 6 3 3 2
@@ -24,3 +25,47 @@ $$
 $$
 M = W × K + P × (V - K)
 $$
+
+### Pendekatan
+Lakukan DFS terhadap seluruh node, pastikan jika sebuah node sudah pernah dikunjungi, node itu akan di-skip untuk iterasi selanjutnya.
+
+### Implementasi
+```cpp
+vector<long> dfs()
+{
+    vector<bool> visited(vertexCount, false);
+    vector<long> provinces;
+
+    for (int i = 0; i < vertexCount; i++)
+    {
+        if (!visited[i])
+        {
+            stack<long> st;
+            st.push(i);
+            visited[i] = true;
+
+            long provincesSize = 0;
+
+            while (!st.empty())
+            {
+                long temp = st.top();
+                st.pop();
+                provincesSize++;
+
+                for (auto vertex : adjList[temp])
+                {
+                    if (!visited[vertex])
+                    {
+                        st.push(vertex);
+                        visited[vertex] = true;
+                    }
+                }
+            }
+
+            provinces.push_back(provincesSize);
+        }
+    }
+
+    return provinces;
+}
+```

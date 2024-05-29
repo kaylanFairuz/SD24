@@ -1,4 +1,4 @@
-![image](https://github.com/kaylanFairuz/SD24/assets/162039500/43ee8e01-f263-4bd0-b0e5-68415b5eb9ec)# Exercises 9
+# Exercises 9
 > Tugas ke-7 mata kuliah Struktur Data 2024<br>
 > Reference: _Noel Kalicharan - Advanced Topics in C_<br>
 - [**Questions**](#qs)

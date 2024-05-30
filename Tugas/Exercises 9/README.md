@@ -19,9 +19,6 @@
     - [S16. Complete Binary Search Tree](#s16)
 - [**References**](#ref)
 - [**Tools**](#tools)
-    - [Binary Tree Visualization (Array Input)]
-    - [Binary Search Tree Visualization]
-    - [Binary Search Tree and AVL Tree Visualization]  
 
 ## Questions <a name="qs"></a>
 ### Q10. Draw Binary Search Tree <a name="q10"></a>

@@ -17,6 +17,11 @@
     - [S14. Binary Tree Traversal](#s14)
     - [S15. Binary Search Tree Traversal](#s15)
     - [S16. Complete Binary Search Tree](#s16)
+- [**References**](#ref)
+- [**Tools**](#tools)
+    - [Binary Tree Visualization (Array Input)]
+    - [Binary Search Tree Visualization]
+    - [Binary Search Tree and AVL Tree Visualization]  
 
 ## Questions <a name="qs"></a>
 ### Q10. Draw Binary Search Tree <a name="q10"></a>
@@ -455,3 +460,9 @@ Final Insertion Order: **40 20 78 12 34 46 90 2 15 23 37 45 53 87 91**<br><br>
 <p align="center">
     <img src="../assets/e9-q16-5.png"/>
 </p>
+
+## References <a name="ref"></a>
+
+## Tools <a name="tools"></a>
+- [Binary Tree Visualization (Array Input)](https://eniac00.github.io/btv/)
+- [Binary Search Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/BST.html)

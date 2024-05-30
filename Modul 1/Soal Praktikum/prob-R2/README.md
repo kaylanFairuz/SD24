@@ -9,7 +9,7 @@ Pada suatu hari di kampus, salah satu sepuh TC bernama Alex menemukan sebuah tum
 Dengan semangat, Alex pun mulai menyelesaikan tantangan ini dengan penuh antusias karena ingin mendapatkan hadiah dari Sepuh X. Dengan setiap langkah yang diambil, stack-stack baru pun terbentuk dengan pola yang menarik. Akhirnya, hasil akhir dari tantangan ini pun tercapai, dan Alex merasa bangga dengan pencapaiannya dalam menyelesaikan permasalahan ini yang tergambar pada visualisasi dibawah ini.
 
 
-<img src="../../assets/stack-ez-2.png"/>
+<img src="../../assets/stack-ez-2.png" width=65% height=65%/>
 
 Yang dibold merupakan Top of the Stack.
 

@@ -1,3 +1,0 @@
-Indexing akan mempermudah proses mencari data dari file.
-Saat mencari data dengan index tertentu, kita hanya perlu
-mengambil sebagian data dari file.

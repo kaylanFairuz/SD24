@@ -17,8 +17,8 @@ Baris pertama berisi 𝑁. 𝑁 adalah jumlah entry todo list Joni. 𝑁 baris b
 Teks todo list yang valid yang sudah tersortir berdasarkan prioritas secara descending. Jika ada entry-entry yang prioritasnya sama, maka entry-entry tersebut diurutkan secara leksikografis descending, contoh: “main game” secara leksikografis lebih kecil dibandingkan “minum air”.
 
 #### Batasan:
-0 < 𝑁, 𝑃 <= 100
-0 < length(𝑇) <= 50
+0 < 𝑁, 𝑃 ≤ 100<br>
+0 < length(𝑇) ≤ 50
 
 #### Contoh Masukan 1:
 ```

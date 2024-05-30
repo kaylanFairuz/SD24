@@ -1,2 +1,3 @@
 # Struktur Data 2024
-Bleh
+
+### [Praktikum Modul 1](/modul-1)

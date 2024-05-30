@@ -1,6 +1,6 @@
 # Juma
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%201/assets/juma.png"/>
+  <img src="../../assets/juma.png"/>
 </p>
 
 #### Deskripsi: 

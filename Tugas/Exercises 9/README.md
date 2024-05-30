@@ -17,7 +17,6 @@
     - [S14. Binary Tree Traversal](#s14)
     - [S15. Binary Search Tree Traversal](#s15)
     - [S16. Complete Binary Search Tree](#s16)
-- [**References**](#ref)
 - [**Tools**](#tools)
 
 ## Questions <a name="qs"></a>
@@ -155,12 +154,6 @@ void post_order(int num[], int index, int length)
 Consider a binary tree of n nodes. Each node will have 2 pointers (may or may not be null). So the tree will have 2n pointers. Excluding the root node, every node must have a pointer pointing to it, i.e., n-1 not-null pointers. So, the number of null pointers = 2n - (n-1) = n+1.
 
 #### Sum of original nodes levels and external nodes level in a binary tree
-_1_. _Proof by Property of Binary Tree_
-
-
-
-_2_. _Proof by Induction_
-
 Assume that `E - I = 2n` holds true for all `n ≥ 0` where n is the number of nodes of the binary tree. Base case: `n = 0`, then `E - I = 2n = 0`. We will prove that `E - I = + 2n` for all binary tree that has `m+1` nodes. Suppose the binary tree `T` have `m+1` node. Removing a leaf from the tree will result in a binary tree `T'` that has `m` node. Suppose the leaf that was removed was at level `d`, thus it follows that `E = E' + d + 2` and `I = I' + d`. Therefore:
 
 $E = E' + d + 2$<br>
@@ -458,8 +451,6 @@ Final Insertion Order: **40 20 78 12 34 46 90 2 15 23 37 45 53 87 91**<br><br>
     <img src="../assets/e9-q16-5.png"/>
 </p>
 
-## References <a name="ref"></a>
-
 ## Tools <a name="tools"></a>
-- [Binary Tree Visualization (Array Input)](https://eniac00.github.io/btv/)
-- [Binary Search Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/BST.html)
+- [**Binary Tree Visualization (Array Input)**](https://eniac00.github.io/btv/)
+- [**Binary Search Tree Visualization**](https://www.cs.usfca.edu/~galles/visualization/BST.html)

@@ -32,14 +32,14 @@ List the keys in an order that will produce the almost complete BST.
 Assuming that the almost complete tree is stored in a one-dimensional array num[1..13], write a recursive function for printing the integers in post-order.
 
 ### Q11. Sum of Levels <a name="q11"></a>
-An imaginary “external” node is attached to each null pointer of a binary tree of `𝑛` nodes. How many external nodes are there?
+An imaginary “external” node is attached to each null pointer of a binary tree of 𝑛 nodes. How many external nodes are there?
 
-If `𝐼` is the sum of the levels of the original tree nodes and `𝐸` is the sum of the levels of the external nodes, prove that `𝐸 – 𝐼 = 2𝑛`.<br>
-(`𝐼` is called the internal path length.)
+If 𝐼 is the sum of the levels of the original tree nodes and 𝐸 is the sum of the levels of the external nodes, prove that 𝐸 – 𝐼 = 2𝑛.<br>
+(𝐼 is called the internal path length.)
 
-Write a recursive function that, given the root of a binary tree, returns `𝐼`.
+Write a recursive function that, given the root of a binary tree, returns 𝐼.
 
-Write a nonrecursive function that, given the root of a binary tree, returns `𝐼`.
+Write a nonrecursive function that, given the root of a binary tree, returns 𝐼.
 
 ### Q12. Draw Binary Tree From Traversal I <a name="q12"></a>
 Draw the binary tree whose in-order and post-order traversals of the nodes are as follows:
@@ -74,7 +74,7 @@ binary search tree:
 
 #### Almost complete binary search tree using previous keys.
 
-_1_. _Trial and Error Approach_
+**_1_. _Trial and Error Approach_**
 
 By creating the tree from scratch, we can eventually get
 <p align="center">
@@ -89,7 +89,8 @@ To get the insertion order, we can traverse the tree by each level (otherwise kn
 
 Final Insertion Order: **47 26 73 18 35 61 75 13 21 30 39 56 64**
 
-_2_. _Systematic Approach_
+**_2_. _Systematic Approach_**
+
 First we must sort our array into: 13 18 21 26 30 35 39 47 56 61 64 73 75.
 
 Then we can do the following to create an almost complete binary search tree from a sorted array:
@@ -129,7 +130,7 @@ We can base our recursive function off the following rules:
 >
 > ...
 >
-> _*Chapter 9: Introduction to Binary Trees, Page 233_
+> _Chapter 9: Introduction to Binary Trees, Page 233_
 
 **Implementation of recursive function in C/C++**:
 ```cpp
@@ -151,16 +152,16 @@ void post_order(int num[], int index, int length)
 ### S11. Sum of Levels <a name="s11"></a>
 #### Number of null pointer in a binary tree
 
-Consider a binary tree of n nodes. Each node will have 2 pointers (may or may not be null). So the tree will have 2n pointers. Excluding the root node, every node must have a pointer pointing to it, i.e., n-1 not-null pointers. So, the number of null pointers = 2n - (n-1) = n+1.
+Consider a binary tree of n nodes. Each node will have 2 pointers (may or may not be null). So the tree will have 2𝑛 pointers. Excluding the root node, every node must have a pointer pointing to it, i.e., 𝑛-1 not-null pointers. So, the number of null pointers = 2𝑛 - (𝑛-1) = 𝑛+1.
 
 #### Sum of original nodes levels and external nodes level in a binary tree
-Assume that `E - I = 2n` holds true for all `n ≥ 0` where n is the number of nodes of the binary tree. Base case: `n = 0`, then `E - I = 2n = 0`. We will prove that `E - I = + 2n` for all binary tree that has `m+1` nodes. Suppose the binary tree `T` have `m+1` node. Removing a leaf from the tree will result in a binary tree `T'` that has `m` node. Suppose the leaf that was removed was at level `d`, thus it follows that `E = E' + d + 2` and `I = I' + d`. Therefore:
+Assume that 𝐸 - 𝐼 = 2𝑛 holds true for all 𝑛 ≥ 0 where n is the number of nodes of the binary tree. Base case: 𝑛 = 0, then 𝐸 - 𝐼 = 2𝑛 = 0. We will prove that 𝐸 - 𝐼 = + 2𝑛 for all binary tree that has 𝑚 + 1 nodes. Suppose the binary tree 𝑇 have 𝑚+1 node. Removing a leaf from the tree will result in a binary tree 𝑇' that has 𝑚 node. Suppose the leaf that was removed was at level 𝑑, thus it follows that 𝐸 = 𝐸' + 𝑑 + 2 and 𝐼 = 𝐼' + 𝑑. Therefore:
 
-$E = E' + d + 2$<br>
-$E = I' + 2m + d + 2$<br>
-$E = I - d + 2m + d + 2$<br>
-$E - I = 2m + 2$<br>
-$E - I =  2(m + 1)$
+$𝐸 = 𝐸' + d + 2$<br>
+$𝐸 = 𝐼' + 2𝑚 + d + 2$<br>
+$𝐸 = 𝐼 - d + 2𝑚 + d + 2$<br>
+$𝐸 - 𝐼 = 2𝑚 + 2$<br>
+$𝐸 - 𝐼 =  2(𝑚 + 1)$
 
 #### Recursive Implementation of computing `I` in C/C++**
 ```cpp

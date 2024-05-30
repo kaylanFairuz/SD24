@@ -9,15 +9,15 @@ Kowalski baru saja pulang dari New Mexico setelah menyelesaikan penemuan reaktor
 
 Kowalski ditugaskan untuk menjadi seorang kasir. Menu di Warung Pak Hasyim sudah dikategorikan menjadi paket-paket makanan yang dinamakan menu 1 hingga menu 𝑁. Tugas Kowalski cukup mudah, yaitu ia cukup mencatat saja menu makanan yang dipesan orang-orang. Jumlah orang pada hari itu adalah 𝑄 orang. Pak Hasyim menitipkan satu tugas lagi untuk Kowalski, yaitu mencatat menu nomor berapa yang paling laris pada hari itu. Jika terdapat lebih dari satu menu yang paling laris, maka cukup laporkan menu dengan nomor yang lebih besar.
 
-#### Format Input:
+#### Batasan:
 - 0 < 𝑄 < 10<sup>5</sup> <br>
 - 0 < 𝑁 < 10<sup>4</sup>
 
-#### Format Output:
+#### Format Input:
 - Baris pertama berisi bilangan bulat 𝑄
 - Baris berikutnya berisi 𝑄 nomor menu yang dipesan pembeli
 
-#### Batasan:
+#### Format Output:
 Satu baris bilangan bulat berupa nomor menu yang paling laris sesuai dengan ketentuan soal.
 
 #### Contoh Input 0:

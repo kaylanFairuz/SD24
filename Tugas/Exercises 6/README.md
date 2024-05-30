@@ -17,7 +17,7 @@ Write a recursive function that takes an integer argument and prints the integer
 ### Q18. Cartesian Path <a name="q18"></a>
 Consider points (m, n) in the usual Cartesian coordinate system where m and n are positive integers. In a north-east path from point A to point B, one can move only up and only right (no down or left movements are allowed). Write a function that, given the coordinates of any two points A and B, returns the number of north-east paths from A to B.
 
-### Q19. Eight Queens Problem <a name="q18"></a>
+### Q19. Eight Queens Problem <a name="q19"></a>
 The eight-queens problem can be stated as follows: place 8 queens on a chess board so that no two queens attack each other. Two queens attack each other if they are in the same row, same column, or same diagonal. Clearly, any solution must have the queens in different rows and different columns.
 
 One approach to solving the problem is as follows. Place the first queen in the first column of the first row. Next, place the second queen so that it does not attack the first. If this is not possible, go back and place the first queen in the next column and try again.

@@ -1,6 +1,6 @@
 # Stack EZ Bro!
 <p align="center">
-  <img src="../../assets/stack-ez-1.png" width=75% height=75%/>
+  <img src="../../assets/stack-ez-1.png" width=50% height=50%/>
 </p>
 
 #### Deskripsi: 

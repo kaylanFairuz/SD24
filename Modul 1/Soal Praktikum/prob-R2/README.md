@@ -47,3 +47,7 @@ Isi stack 2
 3 9 3 2 8
 6 4 5 2 7
 ```
+
+<p align="center">
+  <b>SOAL HARUS DIKERJAKAN DENGAN MENGGUNAKAN STACK!</b>
+</p>

@@ -1,6 +1,6 @@
 # Stack EZ Bro!
 <p align="center">
-  <img src="../assets/r1-1.png"/>
+  <img src="../../assets/r1-1.png"/>
 </p>
 
 #### Deskripsi: 
@@ -9,7 +9,7 @@ Pada suatu hari di kampus, salah satu sepuh TC bernama Alex menemukan sebuah tum
 Dengan semangat, Alex pun mulai menyelesaikan tantangan ini dengan penuh antusias karena ingin mendapatkan hadiah dari Sepuh X. Dengan setiap langkah yang diambil, stack-stack baru pun terbentuk dengan pola yang menarik. Akhirnya, hasil akhir dari tantangan ini pun tercapai, dan Alex merasa bangga dengan pencapaiannya dalam menyelesaikan permasalahan ini yang tergambar pada visualisasi dibawah ini.
 
 <p align="center">
-  <img src="../assets/r1-2.png"/>
+  <img src="../../assets/r1-2.png"/>
 </p>
 
 Yang dibold merupakan Top of the Stack.

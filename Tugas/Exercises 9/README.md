@@ -155,7 +155,7 @@ void post_order(int num[], int index, int length)
 Consider a binary tree of n nodes. Each node will have 2 pointers (may or may not be null). So the tree will have 2𝑛 pointers. Excluding the root node, every node must have a pointer pointing to it, i.e., 𝑛 - 1 not-null pointers. So, the number of null pointers = 2𝑛 - (𝑛 - 1) = 𝑛 + 1.
 
 #### Sum of original nodes levels and external nodes level in a binary tree:
-Assume that 𝐸 - 𝐼 = 2𝑛 holds true for all 𝑛 ≥ 0 where n is the number of nodes of the binary tree. Base case: 𝑛 = 0, then 𝐸 - 𝐼 = 2𝑛 = 0. We will prove that 𝐸 - 𝐼 = + 2𝑛 for all binary tree that has 𝑚 + 1 nodes. Suppose the binary tree 𝑇 have 𝑚+1 node. Removing a leaf from the tree will result in a binary tree 𝑇' that has 𝑚 node. Suppose the leaf that was removed was at level 𝑑, thus it follows that 𝐸 = 𝐸' + 𝑑 + 2 and 𝐼 = 𝐼' + 𝑑. Therefore:
+Assume that 𝐸 - 𝐼 = 2𝑛 holds true for all 𝑛 ≥ 0 where n is the number of nodes of the binary tree. Base case: 𝑛 = 0, then 𝐸 - 𝐼 = 2𝑛 = 0. We will prove that 𝐸 - 𝐼 = 2𝑛 for all binary tree that has 𝑚 + 1 nodes. Suppose the binary tree 𝑇 have 𝑚 + 1 node. Removing a leaf from the tree will result in a binary tree 𝑇' that has 𝑚 node. Suppose the leaf that was removed was at level 𝑑, thus it follows that 𝐸 = 𝐸' + 𝑑 + 2 and 𝐼 = 𝐼' + 𝑑. Therefore:
 
 $𝐸 = 𝐸' + d + 2$<br>
 $𝐸 = 𝐼' + 2𝑚 + d + 2$<br>

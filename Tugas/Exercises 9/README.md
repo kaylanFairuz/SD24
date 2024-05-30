@@ -398,6 +398,8 @@ TreeNode *post_order(TreeNode *root, int value)
 ```
 
 ### S15. Binary Search Tree Traversal <a name="s15"></a>
+An efficient way of finding would be to compare the key with the current root's key. If it is smaller, than the value we're searching (if it exists) must be on the left subtree. Otherwise, it must be on the right subtree.
+
 **Implementation of function in C/C++**
 ```cpp
 // typedef struct tree_node
@@ -406,14 +408,14 @@ TreeNode *post_order(TreeNode *root, int value)
 //     struct tree_node *left, *right;
 // } TreeNode;
 
-int search_int(TreeNode *root, int value)
+int search_key(TreeNode *root, int value)
 {
     if (root == NULL)
         return -1;
 
     if (value < root->key)
     {
-        int left_result = search_int(root->left, value);
+        int left_result = search_key(root->left, value);
         if (left_result != -1)
             return left_result;
 
@@ -421,24 +423,35 @@ int search_int(TreeNode *root, int value)
     }
     else
     {
-        return search_int(root->right, value);
+        return search_key(root->right, value);
     }
 }
 ```
 
 ### S16. Complete Binary Search Tree <a name="s16"></a>
-We can reverse engineer the solution by doing the following.
-- Sort the array
-- Choose the middle element of the array and make it root
-- Do iteratively for every left and right subarray
+We can use a similar approach used in **Q10**.
 
-Sorted array:
+First we must sort our array into: 2 12 15 20 23 34 37 40 45 46 53 78 87 90 91.
 
-2 12 15 20 23 34 37 40 45 46 53 78 87 90 91.
+Then we can do the following to create an almost complete binary search tree from a sorted array:
+- Assume a 1-based indexing for the array
+- Let the number at $2^n$—the greatest power of 2 strictly smaller than the size of the array—th index be the root.
+- Repeat the process for the left and right subtrees.
 
-Final array bst[]:
+First, we will take the root to be 40 at index 8 (8th index of the tree).								
+<img src="../assets/e9-q16-1.png"/>
 
-**40 20 78 12 34 46 90 2 15 23 37 45 53 87 91**
+Then, we will take the index 20 (4th index of left subtree) and index 78 (4th index of right subtree).
+<img src="../assets/e9-q16-2.png"/>
+
+After that, we will take index 12, 34, 46, 90 respectively.
+<img src="../assets/e9-q16-3.png"/>
+
+Finally, we will take the remaining index: 2, 15, 23, 37, 45, 53, 87, and 91.
+<img src="../assets/e9-q16-4.png"/>
+
+Final Insertion Order: **40 20 78 12 34 46 90 2 15 23 37 45 53 87 91**<br><br>
+
 <p align="center">
-  <img src="../assets/e9-q16.png"/>
+    <img src="../assets/e9-q16-5.png"/>
 </p>

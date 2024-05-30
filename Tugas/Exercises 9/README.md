@@ -67,12 +67,12 @@ binary search tree:
 
 ## Solutions <a name="ss"></a>
 ### S10. Draw Binary Search Tree <a name="s10"></a>
-#### Binary search tree using given order of insertion: 56 30 61 39 47 35 75 13 21 64 26 73 18.
+#### Binary search tree using given order of insertion; 56 30 61 39 47 35 75 13 21 64 26 73 18:
 <p align="center">
     <img src="../assets/e9-q10-1.png"/>
 </p>
 
-#### Almost complete binary search tree using previous keys.
+#### Almost complete binary search tree using previous keys:
 
 **_1_. _Trial and Error Approach_**
 
@@ -116,7 +116,7 @@ Final Insertion Order: **47 26 73 18 35 61 75 13 21 30 39 56 64**<br><br>
     <img src="../assets/e9-q10-2.png"/>
 </p>
   
-#### Recursive function to print post-order
+#### Recursive function to print post-order:
 
 We can base our recursive function off the following rules:
 
@@ -150,11 +150,11 @@ void post_order(int num[], int index, int length)
 ```
 
 ### S11. Sum of Levels <a name="s11"></a>
-#### Number of null pointer in a binary tree
+#### Number of null pointer in a binary tree:
 
 Consider a binary tree of n nodes. Each node will have 2 pointers (may or may not be null). So the tree will have 2𝑛 pointers. Excluding the root node, every node must have a pointer pointing to it, i.e., 𝑛-1 not-null pointers. So, the number of null pointers = 2𝑛 - (𝑛-1) = 𝑛+1.
 
-#### Sum of original nodes levels and external nodes level in a binary tree
+#### Sum of original nodes levels and external nodes level in a binary tree:
 Assume that 𝐸 - 𝐼 = 2𝑛 holds true for all 𝑛 ≥ 0 where n is the number of nodes of the binary tree. Base case: 𝑛 = 0, then 𝐸 - 𝐼 = 2𝑛 = 0. We will prove that 𝐸 - 𝐼 = + 2𝑛 for all binary tree that has 𝑚 + 1 nodes. Suppose the binary tree 𝑇 have 𝑚+1 node. Removing a leaf from the tree will result in a binary tree 𝑇' that has 𝑚 node. Suppose the leaf that was removed was at level 𝑑, thus it follows that 𝐸 = 𝐸' + 𝑑 + 2 and 𝐼 = 𝐼' + 𝑑. Therefore:
 
 $𝐸 = 𝐸' + d + 2$<br>
@@ -163,7 +163,7 @@ $𝐸 = 𝐼 - d + 2𝑚 + d + 2$<br>
 $𝐸 - 𝐼 = 2𝑚 + 2$<br>
 $𝐸 - 𝐼 =  2(𝑚 + 1)$
 
-#### Recursive Implementation of computing `I` in C/C++**
+#### Recursive Implementation of computing `I` in C/C++
 ```cpp
 // typedef struct tree_node
 // {
@@ -315,7 +315,7 @@ Pre-order: N | D | G | K | P | E | T | F | A | L
 </p>
 
 ### S14. Binary Tree Traversal <a name="s14"></a>
-**Implementation of Pre-order function in C/C++**
+#### Implementation of Pre-order function in C/C++
 ```cpp
 // typedef struct tree_node
 // {
@@ -341,7 +341,7 @@ TreeNode *pre_order(TreeNode *root, int value)
 }
 ```
 
-**Implementation of In-order function in C/C++**
+#### Implementation of In-order function in C/C++
 ```cpp
 // typedef struct tree_node
 // {
@@ -367,7 +367,7 @@ TreeNode *in_order(TreeNode *root, int value)
 }
 ```
 
-**Implementation of Post-order function in C/C++**
+#### Implementation of Post-order function in C/C++
 ```cpp
 // typedef struct tree_node
 // {

@@ -1,6 +1,6 @@
 # Exercises 9
 > Tugas ke-7 mata kuliah Struktur Data 2024<br>
-> Reference: _Noel Kalicharan - Advanced Topics in C_<br>
+> Referensi: _Noel Kalicharan - Advanced Topics in C_<br>
 - [**Questions**](#qs)
     - [Q10. Draw Binary Search Tree](#q10)
     - [Q11. Sum of Levels](#q11)

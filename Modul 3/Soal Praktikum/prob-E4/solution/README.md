@@ -45,8 +45,8 @@ Hitung jumlah kepulauan dengan melakukan DFS terhadap seluruh node, pastikan jik
 
 ### Implementasi
 ```cpp
-// struct graph
-// {
+struct graph
+{
 // long vertexCount, edgeCount;
 // vector<vector<long>> adjList;
 // ⫶
@@ -100,6 +100,7 @@ int K = g.dfs();
 long M = (P > W) ? (W * P) : (W * K + P * (V - K));
 
 printf("%ld\n", M);
+
 return 0;  
 }
 ```

@@ -2,7 +2,7 @@
 
 #### Deskripsi: 
 <p align="center">
-  <img src="../../assets/thank-you-cover.png"/>
+  <img src="../../assets/thank-you-cover.png" width=75% height=75%/>
 </p>
 
 Haqqy sedang meneruskan perjalanan menggapai bintang, ditengah perjalanan Haqqy diminta seseorang untuk menghitung pulau-pulau.

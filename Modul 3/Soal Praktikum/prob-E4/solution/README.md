@@ -68,7 +68,6 @@ Hitung jumlah kepulauan dengan melakukan DFS terhadap seluruh node, pastikan jik
                   {
                       long temp = st.top();
                       st.pop();
-                      provincesSize++;
       
                       for (auto vertex : adjList[temp])
                       {

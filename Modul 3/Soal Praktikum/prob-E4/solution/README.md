@@ -47,46 +47,59 @@ Hitung jumlah kepulauan dengan melakukan DFS terhadap seluruh node, pastikan jik
 ```cpp
 // struct graph
 // {
-//    long vertexCount, edgeCount;
-//    vector<vector<long>> adjList;
-//    ⫶
-//    
+// long vertexCount, edgeCount;
+// vector<vector<long>> adjList;
+// ⫶
+//
 
-      vector<long> dfs()
-      {
-          vector<bool> visited(vertexCount, false);
-          long islandSize = 0;
-          for (int i = 0; i < vertexCount; i++)
-          {
-              if (!visited[i])
-              {
-                  stack<long> st;
-                  st.push(i);
-                  visited[i] = true;
-      
-                  while (!st.empty())
-                  {
-                      long temp = st.top();
-                      st.pop();
-      
-                      for (auto vertex : adjList[temp])
-                      {
-                          if (!visited[vertex])
-                          {
-                              st.push(vertex);
-                              visited[vertex] = true;
-                          }
-                      }
-                  }
-      
-                  islandSize++;
-              }
-          }
-      
-          return islandSize;
-      }
+long dfs()
+{
+    vector<bool> visited(vertexCount, false);
+    long islandSize = 0;
+    for (int i = 0; i < vertexCount; i++)
+    {
+        if (!visited[i])
+        {
+            stack<long> st;
+            st.push(i);
+            visited[i] = true;
+
+            while (!st.empty())
+            {
+                long temp = st.top();
+                st.pop();
+
+                for (auto vertex : adjList[temp])
+                {
+                    if (!visited[vertex])
+                    {
+                        st.push(vertex);
+                        visited[vertex] = true;
+                    }
+                }
+            }
+
+            islandSize++;
+        }
+    }
+
+    return islandSize;
+}
 
 //
 // ⫶
 // }
+
+int main()
+{
+// graph g;
+// ⫶
+//
+
+int K = g.dfs();
+long M = (P > W) ? (W * P) : (W * K + P * (V - K));
+
+printf("%ld\n", M);
+return 0;  
+}
 ```

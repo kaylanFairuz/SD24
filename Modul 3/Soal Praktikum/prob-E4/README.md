@@ -1,6 +1,6 @@
 # Isekai Warkop
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/isekai-warkop-cover.png"/>
+  <img src="../../assets/isekai-warkop-cover.png"/>
 </p>
 
 #### Deskripsi: 

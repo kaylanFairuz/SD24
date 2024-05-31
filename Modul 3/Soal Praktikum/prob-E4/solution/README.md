@@ -9,24 +9,36 @@ Tinjau kasus berikut:
 ```
 
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/e4-solution-1.png" width=75% height=75%/>
+  <img src="../../../assets/e4-solution-1.png" width=75% height=75%/>
 </p>
 
-Garis putus-putus menandakan portal yang belum diaktifkan. Agar warkop dapat selalu diakses, di setiap kepulauan (_disjoint connected components_) dari graf harus terdapat 1 warkop. Dalam kondisi ini, _value_ dari sebuah portal dan sebuah warkop setara (dalam artian pembuatan satu portal sama manfaatnya dengan pembuatan satu warkop, karena keduanya hanya menambah akses ke 1 pulau), sehingga untuk meminimalkan waktu yang diperlukan cukup dengan memperhatikan lama pembuatan warkop dan portal. Sehingga, hanya ada 2 kemungkinan cara untuk meminimalkan waktu untuk setiap case:
+*Garis putus-putus hanya untuk menandakan bahwa terdapat portal yang **dapat** diaktifkan, **bukan** berarti portal tersebut **sudah** diaktifkan.*
 
-- Ketika waktu pembuatan warkop lebih lama dari pembuatan portal, setiap pulau dibuat sebuah warkop, dan tidak ada pulau yang dihubungkan. Sehingga waktu minimal yang dibutuhkan adalah
+Agar warkop dapat selalu diakses, setiap kepulauan harus terdapat setidaknya 1 warkop. Dalam kondisi ini, _value_ dari sebuah portal dan sebuah warkop setara (dalam artian pembuatan satu portal sama manfaatnya dengan pembuatan satu warkop, dimana keduanya hanya menambah akses ke 1 pulau). Sehingga hanya ada 2 kemungkinan cara untuk meminimalkan waktu untuk setiap case:
+
+- Ketika waktu pembuatan warkop lebih lama dari pembuatan portal, setiap pulau dibangun sebuah warkop, dan tidak ada pulau yang dihubungkan dengan portal. Sehingga waktu minimal yang dibutuhkan adalah
 
 $$
 M = W × V
 $$
 
-- Ketika waktu pembuatan portal lebih lama dari pembuatan warkop, setiap kepulauan akan memiliki satu warkop, dimana setiap kepulauan akan terhubung antar pulaunya melalui `n-1` portal, dimana `n` adalah jumlah pulau dari kepulauan tersebut. Jika ada `K` kepulauan, maka waktu minimal yang dibutuhkan adalah
+𝑀 : menyatakan waktu minimum yang dibutuhkan.<br>
+𝑊 : menyatakan waktu untuk membuat sebuah warkop di sebuah pulau.<br>
+𝑉 : menyatakan banyaknya pulau.
+
+- Ketika waktu pembuatan portal lebih lama dari pembuatan warkop, setiap kepulauan akan memiliki satu warkop, warkop akan dibangun sebanyak jumlah kepulauan, dan sisa pulau sisanya akan dibangun portal untuk menghubungkan mereka ke warkop yang dapat dicapai. Sehingga waktu minimal yang dibutuhkan adalah
 
 $$
 M = W × K + P × (V - K)
 $$
 
-Sehingga masalah utama pada soal ini adalah mencari jumlah kepulauan yang ada. Untuk mendapatkan waktu minimal dapat dilakukan dengan membanding waktu yang dibutuhkan untuk membuat portal dan 
+𝑀 : menyatakan waktu minimum yang dibutuhkan.<br>
+𝑊 : menyatakan waktu untuk membuat sebuah warkop di sebuah pulau.<br>
+𝑃 : menyatakan waktu untuk menghubungkan 2 pulau dengan mengaktifkan portal.<br>
+𝑉 : menyatakan banyaknya pulau.<br>
+𝐾 : menyatakan banyaknya kepulauan (kumpulan pulau yang bisa dihubungkan).
+
+Sehingga masalah utama pada soal ini adalah mencari jumlah kepulauan yang ada. Waktu minimal dapat dicari dengan membanding waktu yang dibutuhkan untuk membuat portal dan warkop.
 
 ### Pendekatan
 Hitung jumlah kepulauan dengan melakukan DFS terhadap seluruh node, pastikan jika sebuah node sudah pernah dikunjungi, node itu akan di-skip untuk iterasi selanjutnya.

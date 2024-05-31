@@ -12,7 +12,7 @@ Tinjau kasus berikut:
   <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/e4-solution-1.png" width=75% height=75%/>
 </p>
 
-Garis putus-putus menandakan portal yang belum diaktifkan. Agar warkop dapat selalu diakses, di setiap kepulauan (_disjoint connected components_) dari graf harus terdapat 1 warkop. Dalam kondisi ini, nilai dari sebuah portal dan sebuah warkop setara, sehingga untuk meminimalkan waktu yang diperlukan bergantung kepada lama pembuatan warkop dan portal. Sehingga, hanya ada 2 kemungkinan cara untuk meminimalkan waktu untuk setiap case:
+Garis putus-putus menandakan portal yang belum diaktifkan. Agar warkop dapat selalu diakses, di setiap kepulauan (_disjoint connected components_) dari graf harus terdapat 1 warkop. Dalam kondisi ini, _value_ dari sebuah portal dan sebuah warkop setara (dalam artian pembuatan satu portal sama manfaatnya dengan pembuatan satu warkop, karena keduanya hanya menambah akses ke 1 pulau), sehingga untuk meminimalkan waktu yang diperlukan cukup dengan memperhatikan lama pembuatan warkop dan portal. Sehingga, hanya ada 2 kemungkinan cara untuk meminimalkan waktu untuk setiap case:
 
 - Ketika waktu pembuatan warkop lebih lama dari pembuatan portal, setiap pulau dibuat sebuah warkop, dan tidak ada pulau yang dihubungkan. Sehingga waktu minimal yang dibutuhkan adalah
 

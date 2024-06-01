@@ -22,58 +22,58 @@ Secara matematis, sebuah graf `𝐺` adalah pasangan terurut dari sekumpulan _ve
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/edge-types.png" width="505" height="150"/><br>
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/graph-types.png"/>
+  <img src="assets/edge-types.png" width="505" height="150"/><br>
+  <img src="assets/graph-types.png"/>
 </p>
 
 Perhatikan contoh _undirected graph_ berikut. _Vertices_ pada graf tersebut dapat dinyatakan dengan `𝑉 = {𝑣1, 𝑣2, 𝑣3, 𝑣4, 𝑣5, 𝑣6, 𝑣7, 𝑣8}`, sedangkan _edges_ pada graf tersebut dinyatakan dengan pasangan tidak terurut dari _vertices_-nya, yaitu `𝐸 = {{𝑣1, 𝑣2}, {𝑣1, 𝑣3}, {𝑣1, 𝑣4},` `{𝑣2, 𝑣5}, {𝑣2, 𝑣6}, {𝑣3, 𝑣7}, {𝑣4, 𝑣8}, {𝑣7, 𝑣8}, {𝑣6, 𝑣8}, {𝑣5, 𝑣8}}`. Selain itu jumlah dari _vertex_ dan _edge_ dapat dituliskan masing-masing sebagai `|𝑉| = 8` dan `|𝐸| = 10` 
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/graph_example-1.png"/>
+  <img src="assets/graph_example-1.png"/>
 </p>
 
 Selain bersifat **_directed_** dan **_undirected_**, graf juga dapat bersifat **_weighted_** dan **_unweighted_**. Sebuah **_weighted graph_** adalah graf dimana setiap _edge_ memiliki bobot nilai atau _weight_. Sedangkan sebuah **_unweighted graph_** adalah graf dimana _weight_ dari setiap _edge_ bernilai sama atau umumnya bernilai 1. Salah satu contoh dari _weighted graph_ yang paling umum adalah graf yang menunjukkan hubungan antar kota, seperti contoh berikut.
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/weighted-graph_example-1.png"/>
+  <img src="assets/weighted-graph_example-1.png"/>
 </p>
 
 Pada graf tersebut, _weight_ setiap _edge_ menyatakan panjang jalan yang menghubungkan dua kota dalam km. Dengan adanya _weight_, rute terbaik belum tentu rute dengan _edges_ paling sedikit. Perhatikan gambar di bawah. Rute kuning umumnya merupakan rute terbaik karena hanya melalui 2 _edges_, sedangkan rute hijau dan merah sama baiknya karena masing-masing melalui 3 _edges_. Akan tetapi, dalam kasus ini, rute hijau adalah rute terbaik karena memiliki total _weight_ terkecil.
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/weighted-graph_example-2.png"/>
+  <img src="assets/weighted-graph_example-2.png"/>
 </p>
 
 ### Properti Khusus Graf <a name="properties"></a>
 #### 1. Self-loop Edges dan Parallel Edges <a name="p1"></a>
 **Self-loop edges**: Sebuah _edge_ yang _origin vertex_ dan _destination vertex_ dari _edge_ tersebut sama.
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/self-loop-edges.png"/>
+  <img src="assets/self-loop-edges.png"/>
 </p>
 
 Contoh dari kasus yang memerlukan jenis _edge_ ini adalah representasi hubungan antara satu _webpage_ dengan _webpage_ lainnya sebagai graf. Pada kebanyakan _webpage_, terdapat link untuk melakukan navigasi dari satu bagian _web_ ke bagian _web_ lainnya. Jika link yang sama ditekan dua kali, maka tidak akan terjadi perubahan.
 
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/self-loop-edges_example.png"/>
+  <img src="assets/self-loop-edges_example.png"/>
 </p>
 
 **Parallel edges**: Sebuah _edge_ yang muncul lebih dari sekali dalam sebuah graf, disebut juga _multi-edge_.
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/parallel-edges.png"/>
+  <img src="assets/parallel-edges.png"/>
 </p>
 
 Contoh dari kasus yang memerlukan jenis _edge_ ini adalah representasi dari jalur penerbangan pesawat dengan graf. Pada umumnya, terdapat lebih dari satu pesawat yang melakukan penerbangan dari satu kota ke kota lainnya. Dengan kata lain, _edge_ yang sama dapat menyimpan harga penerbangan yang berbeda. Sehingga dapat dicari pesawat apa saja yang harus diambil untuk berpergian dengan harga termurah.
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/parallel-edges_example.png"/>
+  <img src="assets/parallel-edges_example.png"/>
 </p>
 
 #### 2. Simple Graph <a name="p2"></a>
 **_Simple graph_** adalah graf yang tidak memiliki jenis _edge_ khusus diatas (_self-loop_ dan _parallel_). Dalam sebuah _simple directed graph_ kita dapat mencari jumlah maksimal _edge_ yang dapat dibentuk jika jumlah _vertices_-nya diketahui. Perhatikan contoh berikut untuk graph dengan `𝑛 = 4` _vertices_. Jumlah _edge_ minimal dicapai saat setiap _vertex_ tidak memiliki satupun _edge_, yaitu 0. Sedangkan jumlah _edge_ maksimal dicapai saat setiap _vertex_ terhubung dengan _vertex_ lainnya. Karena ada 4 _vertex_, maka setiap _vertex_ akan memiliki 3 atau (4 - 1) _edges_ untuk terhubung dengan setiap vertex lainnya. 
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/number-of-edges.png"/>
+  <img src="assets/number-of-edges.png"/>
 </p>
 
 Jika digeneralisasi, untuk **_simple directed graph_** dengan `𝑛` vertices (dimana `𝑛 ≥ 0`) maka jumlah _edge_ `|𝐸|` pada graf tersebut berada pada interval `0 ≤ |𝐸| ≤ 𝑛(𝑛-1)`. Untuk **_simple undirected graph_** dari graf yang sama, jumlah maksimal akan berkurang sebanyak setengahnya, karena setiap 2 pasangan dianggap menjadi 1, atau `0 ≤ |𝐸| ≤ 𝑛(𝑛-1)/2`.
@@ -83,53 +83,53 @@ Sebuah graf disebut **_dense_** jika jumlah _edge_-nya mendekati nilai maksimal,
 #### 3. Walk, Path, dan Trail <a name="p3"></a>
 **Walk**: Sebuah urutan _vertices_ dimana setiap _vertex_ yang berurut terhubung oleh sebuah _edge_. Pada _directed graph_, setiap _edge_ yang dilalui harus searah. `<𝐴, 𝐵, 𝐹, 𝐻, 𝐸, 𝐵, 𝐴, 𝐷>` adalah sebuah _walk_.
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/walk.png"/>
+  <img src="assets/walk.png"/>
 </p>
 
 **Path**: Sebuah _walk_ dimana tidak ada _vertex_ yang dikunjungi lebih dari sekali (akibatnya **tidak ada** _edge_ yang dikunjungi lebih dari sekali juga).<br>
 `<𝐴, 𝐵, 𝐹, 𝐻>` adalah sebuah _path_.
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/path.png"/>
+  <img src="assets/path.png"/>
 </p>
 
 **Trail**: Sebuah _walk_ dimana tidak ada _edge_ yang dikunjungi lebih dari sekali (tetapi **bisa ada** _vertex_ yang dikunjungi lebih dari sekali).<br>
 `<𝐴, 𝐵, 𝐸, 𝐻, 𝐷, 𝐴, 𝐶>` adalah sebuah _trail_.
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/trail.png"/>
+  <img src="assets/trail.png"/>
 </p>
 
 #### 4. Connected Graph <a name="p4"></a>
 **Connected**: Sebuah urutan _vertices_ dimana setiap _vertex_ yang berurut terhubung oleh sebuah _edge_. Pada _directed graph_, setiap _edge_ yang dilalui harus searah.
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/walk.png"/>
+  <img src="assets/walk.png"/>
 </p>
 
 **Strongly Connected Graph**: Sebuah _walk_ dimana tidak ada _vertex_ yang dikunjungi lebih dari sekali (akibatnya **tidak ada** _edge_ yang dikunjungi lebih dari sekali juga).
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/path.png"/>
+  <img src="assets/path.png"/>
 </p>
 
 **Weakly Connected Graph**: Sebuah _walk_ dimana tidak ada _edge_ yang dikunjungi lebih dari sekali (tetapi **bisa ada** _vertex_ yang dikunjungi lebih dari sekali).
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/trail.png"/>
+  <img src="assets/trail.png"/>
 </p>
 
 #### 5. Cyclic Graph <a name="p5"></a>
 **Walk**: Sebuah urutan _vertices_ dimana setiap _vertex_ yang berurut terhubung oleh sebuah _edge_. Pada _directed graph_, setiap _edge_ yang dilalui harus searah. `<𝐴, 𝐵, 𝐹, 𝐻, 𝐸, 𝐵, 𝐴, 𝐷>` adalah sebuah _walk_.
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/walk.png"/>
+  <img src="assets/walk.png"/>
 </p>
 
 **Path**: Sebuah _walk_ dimana tidak ada _vertex_ yang dikunjungi lebih dari sekali (akibatnya **tidak ada** _edge_ yang dikunjungi lebih dari sekali juga).<br>
 `<𝐴, 𝐵, 𝐹, 𝐻>` adalah sebuah _path_.
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/path.png"/>
+  <img src="assets/path.png"/>
 </p>
 
 **Trail**: Sebuah _walk_ dimana tidak ada _edge_ yang dikunjungi lebih dari sekali (tetapi **bisa ada** _vertex_ yang dikunjungi lebih dari sekali).<br>
 `<𝐴, 𝐵, 𝐸, 𝐻, 𝐷, 𝐴, 𝐶>` adalah sebuah _trail_.
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/trail.png"/>
+  <img src="assets/trail.png"/>
 </p>
 
 ### Representasi Graf <a name="representation"></a>
@@ -137,7 +137,7 @@ Terdapat 3 cara yang sering digunakan untuk merepresentasikan graf. Akan digunak
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/graph_example-2.png"/>
+  <img src="assets/graph_example-2.png"/>
 </p>
 
 #### 1. Edge List <a name="r1"></a>
@@ -154,7 +154,7 @@ struct Edge
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/edge-list_example.png"/>
+  <img src="assets/edge-list_example.png"/>
 </p>
 
 
@@ -166,7 +166,7 @@ Adjacency Matrix adalah representasi graf yang menggunakan matrix berukuran `|V|
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/adjacency-matrix_example.png"/>
+  <img src="assets/adjacency-matrix_example.png"/>
 </p>
 
 #### 3. Adjacency List <a name="r3"></a>
@@ -174,7 +174,7 @@ Adjacency Matrix adalah representasi graf yang dilakukan dengan hanya menyimpan 
 
 <br>
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%203/assets/adjacency-list_example.png" width="274" height="386"/>
+  <img src="assets/adjacency-list_example.png" width="274" height="386"/>
 </p>
 
 ## Traversal Graf <a name="traversal"></a>

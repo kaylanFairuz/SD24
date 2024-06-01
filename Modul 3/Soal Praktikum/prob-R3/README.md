@@ -1,6 +1,6 @@
 # Hapus Edge (HE)
 <p align="center">
-  <img src="../../assets/he.png"/>
+  <img src="../../assets/he.png" width=75% height=75%/>
 </p>
 
 #### Deskripsi: 

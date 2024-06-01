@@ -41,7 +41,7 @@ $$
 Sehingga masalah utama pada soal ini adalah mencari jumlah kepulauan yang ada. Waktu minimal dapat dicari dengan membanding waktu yang dibutuhkan untuk membuat portal dan warkop.
 
 ### Pendekatan
-Hitung jumlah kepulauan dengan melakukan DFS terhadap seluruh node, pastikan jika sebuah node sudah pernah dikunjungi, node itu akan di-skip untuk iterasi selanjutnya.
+Hitung jumlah kepulauan dengan union find disjoint sets.
 
 ### Implementasi
 ```cpp
@@ -52,39 +52,7 @@ struct graph
 // ⫶
 //
 
-long dfs()
-{
-    vector<bool> visited(vertexCount, false);
-    long islandSize = 0;
-    for (int i = 0; i < vertexCount; i++)
-    {
-        if (!visited[i])
-        {
-            stack<long> st;
-            st.push(i);
-            visited[i] = true;
-
-            while (!st.empty())
-            {
-                long temp = st.top();
-                st.pop();
-
-                for (auto vertex : adjList[temp])
-                {
-                    if (!visited[vertex])
-                    {
-                        st.push(vertex);
-                        visited[vertex] = true;
-                    }
-                }
-            }
-
-            islandSize++;
-        }
-    }
-
-    return islandSize;
-}
+...
 
 //
 // ⫶

@@ -2,8 +2,7 @@
 <p align="center">
   Time Limit : 1 detik<br>
   Memory Limit : 256 MB<br>
-  Author: Richie Seputro<br><br>
-  <b>SOAL HARUS DIKERJAKAN DENGAN MENGGUNAKAN PRIORITY QUEUE!</b>
+  Author: Richie Seputro
 </p>
 
 

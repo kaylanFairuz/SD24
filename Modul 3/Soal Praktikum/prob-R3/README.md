@@ -1,46 +1,49 @@
-# Tobat1
+# Hapus Edge (HE)
+<p align="center">
+  <img src="../../assets/he.png"/>
+</p>
 
 #### Deskripsi: 
-
+Terdapat sebuah graf dengan 𝑁 node (bernomor 1 hingga 𝑁) dan 𝑀 edge. Setiap node pada graf tersebut saling terhubung. Akan dilakukan penghapusan beberapa edge untuk mengubah graf tersebut menjadi sebuah tree. Terdapat biaya yang dibutuhkan utnuk menghapus sebuah edge. Tentukan biaya penghapusan minimum supaya bisa terbentuk tree dari graf tersebut.
 
 #### Format Masukan:
+Baris pertama berisi 𝑁 dan 𝑀.
+
+Pada setiap 𝑀 baris berikutnya berisi 𝑈, 𝑉, dan 𝑊 (edge yang menghubungkan node 𝑈 dan 𝑉, dengan biaya penghapusan sebesar 𝑊).
 
 #### Format Keluaran:
-
+Keluarkan biaya penghapusan minimum supaya bisa terbentuk tree dari graf tersebut.
 
 #### Batasan:
-
+1 ≤ 𝑁 ≤ 1000
+𝑁 − 1 ≤ 𝑀 ≤ 10<sup>5</sup>
+1 ≤ 𝑈, 𝑉 ≤ 𝑁
+1 ≤ 𝑊 ≤ 10<sup>4</sup>
 
 #### Contoh Masukan 1:
 ```
-
+6 8
+1 2 8
+2 3 3
+3 4 7
+1 4 2
+2 5 9
+3 5 4
+3 6 6
+5 6 1
 ```
 
-#### Contoh Keluaran 1:
+#### Contoh Keluaran:
+```
+6
 ```
 
-```
+#### Penjelasan:
+<p align="center">
+  <img src="../../assets/he_explanation-1.png"/>
+</p>
 
-#### Penjelasan Keluaran 1:
-
-
-#### Contoh Masukan 2:
-```
-
-```
-
-#### Contoh Keluaran 2:
-```
-
----
-```
-
-#### Contoh Masukan 3:
-```
-
-```
-
-#### Contoh Keluaran 3:
-```
-
-```
+Dari graf di atas, untuk membentuk tree dengan biaya minimum, maka edge-edge yang perlu dihapus adalah (1, 4, 2), (2, 3, 3), dan (5, 6, 1). Sehingga terbentuk tree seperti berikut:
+<p align="center">
+  <img src="../../assets/he_explanation-2.png"/>
+</p>

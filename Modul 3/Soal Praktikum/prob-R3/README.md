@@ -15,9 +15,9 @@ Pada setiap 𝑀 baris berikutnya berisi 𝑈, 𝑉, dan 𝑊 (edge yang menghub
 Keluarkan biaya penghapusan minimum supaya bisa terbentuk tree dari graf tersebut.
 
 #### Batasan:
-1 ≤ 𝑁 ≤ 1000
-𝑁 − 1 ≤ 𝑀 ≤ 10<sup>5</sup>
-1 ≤ 𝑈, 𝑉 ≤ 𝑁
+1 ≤ 𝑁 ≤ 1000<br>
+𝑁 − 1 ≤ 𝑀 ≤ 10<sup>5</sup><br>
+1 ≤ 𝑈, 𝑉 ≤ 𝑁<br>
 1 ≤ 𝑊 ≤ 10<sup>4</sup>
 
 #### Contoh Masukan 1:

@@ -133,7 +133,12 @@ Sebuah graf disebut **_dense_** jika jumlah _edge_-nya mendekati nilai maksimal,
 </p>
 
 ### Representasi Graf <a name="representation"></a>
-Terdapat 3 cara yang sering digunakan untuk merepresentasikan graf. Akan digunakan _undirected graph_ berikut untuk contoh dibawah.
+Untuk menyimpan sebuah graf dalam memori komputer, terdapat 3 cara yang paling sering digunakan, yaitu _edge list_, _adjacency matrix_, dan _adjacency list_. Representasi graf yang berbeda dapat berpengaruh pada:
+- Jumlah memori yang digunakan
+- Kecepatan saat melakukan _search_ atau manipulasi data
+- Kesesuaian dengan jenis graf
+
+Terdapat 3 cara yang sering digunakan untuk merepresentasikan graf. Akan digunakan _undirected graph_ dibawah sebagai contoh graf.
 
 <br>
 <p align="center">
@@ -141,15 +146,17 @@ Terdapat 3 cara yang sering digunakan untuk merepresentasikan graf. Akan digunak
 </p>
 
 #### 1. Edge List <a name="r1"></a>
-Edge List adalah representasi graf dilakukan dengan menyimpan semua daftar _edge_ yang ada dalam suatu graf. Penyimpanan dapat dilakukan di dalam sebuah array statis maupun dinamis seperti **vector**. Pengimplementasiannya dapat menggunakan struct yang berisi _vertex_ yang berada diujung _edge_ tersebut beserta _weight_-nya.
+Edge List adalah representasi graf dilakukan dengan menyimpan semua daftar _edge_ yang ada dalam suatu graf. Penyimpanan dapat dilakukan di dalam sebuah array statis maupun dinamis seperti **vector**. Pengimplementasiannya dapat menggunakan struct yang berisi _vertex_ yang berada diujung _edge_ tersebut beserta _weight_-nya (jika ada).
 
 ```cpp
 struct Edge
 {
-  string start_vertex;
-  string end_vertex;
-  int weight;
-};
+    string startVertex;
+    string endVertex;
+    int weight;
+}
+
+Edge edgeList[MAX_SIZE];
 ```
 
 <br>
@@ -164,6 +171,10 @@ Adjacency Matrix adalah representasi graf yang menggunakan matrix berukuran `|V|
 - **1** jika terdapat _unweighted edge_ yang menghubungkan _vertex_ i dengan _vertex_ j.
 - **_weight_** jika terdapat _weighted edge_ yang menghubungkan _vertex_ i dengan _vertex_ j.
 
+```cpp
+int adjacencyMatrix[V][V];
+```
+
 <br>
 <p align="center">
   <img src="assets/adjacency-matrix_example.png"/>
@@ -171,6 +182,10 @@ Adjacency Matrix adalah representasi graf yang menggunakan matrix berukuran `|V|
 
 #### 3. Adjacency List <a name="r3"></a>
 Adjacency Matrix adalah representasi graf yang dilakukan dengan hanya menyimpan daftar dari _vertex_-_vertex_ lain yang memiliki _edge_ yang terhubung dengan suatu _vertex_. Penyimpanan dapat dilakukan di dalam sebuah array statis maupun dinamis seperti **vector**
+
+```cpp
+vector<pair<int, int>> adjacencyList;
+```
 
 <br>
 <p align="center">

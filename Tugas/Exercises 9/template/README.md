@@ -1,4 +1,4 @@
-# Sample Input
+# Sample Inputs
 - [**Binary Tree**](#bt)
 - [**Binary Search Tree**](#bst)
 

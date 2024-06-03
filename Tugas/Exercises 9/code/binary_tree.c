@@ -4,6 +4,7 @@
 
 #define MaxLineSize 100
 #define MaxWordSize 20
+#define max(a, b) ((a) > (b) ? (a) : (b))
 
 typedef struct
 {
@@ -28,6 +29,10 @@ void preOrder(TreeNodePtr node);
 void inOrder(TreeNodePtr node);
 void postOrder(TreeNodePtr node);
 void visit(TreeNodePtr node);
+int numNodes(TreeNodePtr root);
+int numLeaves(TreeNodePtr root);
+int height(TreeNodePtr root);
+
 void freeTree(TreeNodePtr node);
 
 int main()
@@ -41,11 +46,13 @@ int main()
 
     printf("\nThe pre-order traversal is: ");
     preOrder(bt.root);
-    printf("\n\nThe in-order traversal is: ");
+    printf("\nThe in-order traversal is: ");
     inOrder(bt.root);
-    printf("\n\nThe post-order traversal is: ");
+    printf("\nThe post-order traversal is: ");
     postOrder(bt.root);
-    printf("\n\n");
+    printf("\n\nThe number of nodes is: %d", numNodes(bt.root));
+    printf("\nThe number of leaves is: %d", numLeaves(bt.root));
+    printf("\nThe height of the tree is: %d", height(bt.root));
 
     freeTree(bt.root);
     return 0;
@@ -72,7 +79,7 @@ TreeNodePtr buildTree(char **linePtr)
 
 void visit(TreeNodePtr node)
 {
-    printf("%s/%d ", node->data.word, node->data.key);
+    printf("%s ", node->data.word);
 }
 
 void preOrder(TreeNodePtr node)
@@ -103,6 +110,29 @@ void postOrder(TreeNodePtr node)
         postOrder(node->right);
         visit(node);
     }
+}
+
+int numNodes(TreeNodePtr root)
+{
+    if (root == NULL)
+        return 0;
+    return 1 + numNodes(root->left) + numNodes(root->right);
+}
+
+int numLeaves(TreeNodePtr root)
+{
+    if (root == NULL)
+        return 0;
+    if (root->left == NULL && root->right == NULL)
+        return 1;
+    return numLeaves(root->left) + numLeaves(root->right);
+}
+
+int height(TreeNodePtr root)
+{
+    if (root == NULL)
+        return 0;
+    return 1 + max(height(root->left), height(root->right));
 }
 
 void freeTree(TreeNodePtr node)

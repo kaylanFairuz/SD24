@@ -2,7 +2,7 @@
 - [**Binary Tree**](#bt)
 - [**Binary Search Tree**](#bst)
 
-### Binary Tree <a name="bt"></a>
+### [Binary Tree](binary_tree.c) <a name="bt"></a>
 Sample Input 1:
 ```
 A B @ C @ @ @
@@ -27,4 +27,4 @@ Sample Input 3:
     <img src="../../assets/bt-3.png"/>
 </p>
 
-### Binary Search Tree <a name="bst"></a>
+### [Binary Search Tree](binary_search_tree.c) <a name="bst"></a>

@@ -451,7 +451,7 @@ We can use a similar approach used in **Q10**.
 
 First we must sort our array into: 2 12 15 20 23 34 37 40 45 46 53 78 87 90 91.
 
-Then we can do the following to create an almost complete binary search tree from a sorted array:
+Then we can do the following to create a complete binary search tree from a sorted array:
 - Assume a 1-based indexing for the array
 - Let the number at $2^n$—the greatest power of 2 strictly smaller than the size of the array—th index be the root.
 - Repeat the process for the left and right subtrees.

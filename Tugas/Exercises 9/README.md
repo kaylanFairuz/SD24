@@ -343,13 +343,13 @@ Pre-order: N | D | G | K | P | E | T | F | A | L
 //     struct tree_node *left, *right;
 // } TreeNode;
 
-TreeNode *pre_order(TreeNode *root, int value)
+TreeNode* pre_order(TreeNode* root, int value)
 {
     if (root != NULL)
     {
         if (value == root->key)
             return root;
-        TreeNode *left_branch = pre_order(root->left, value);
+        TreeNode* left_branch = pre_order(root->left, value);
         if (left_branch != NULL)
             return left_branch;
         TreeNode *right_branch = pre_order(root->right, value);
@@ -369,16 +369,16 @@ TreeNode *pre_order(TreeNode *root, int value)
 //     struct tree_node *left, *right;
 // } TreeNode;
 
-TreeNode *in_order(TreeNode *root, int value)
+TreeNode* in_order(TreeNode* root, int value)
 {
     if (root != NULL)
     {
-        TreeNode *left_branch = in_order(root->left, value);
+        TreeNode* left_branch = in_order(root->left, value);
         if (left_branch != NULL)
             return left_branch;
         if (value == root->key)
             return root;
-        TreeNode *right_branch = in_order(root->right, value);
+        TreeNode* right_branch = in_order(root->right, value);
         if (right_branch != NULL)
             return right_branch;
     }
@@ -395,14 +395,14 @@ TreeNode *in_order(TreeNode *root, int value)
 //     struct tree_node *left, *right;
 // } TreeNode;
 
-TreeNode *post_order(TreeNode *root, int value)
+TreeNode* post_order(TreeNode* root, int value)
 {
     if (root != NULL)
     {
-        TreeNode *left_branch = post_order(root->left, value);
+        TreeNode* left_branch = post_order(root->left, value);
         if (left_branch != NULL)
             return left_branch;
-        TreeNode *right_branch = post_order(root->right, value);
+        TreeNode* right_branch = post_order(root->right, value);
         if (right_branch != NULL)
             return right_branch;
         if (value == root->key)
@@ -425,7 +425,7 @@ An efficient way of finding would be to compare the key with the current root's 
 //     struct tree_node *left, *right;
 // } TreeNode;
 
-int search_key(TreeNode *root, int value)
+int search_key(TreeNode* root, int value)
 {
     if (root == NULL)
         return -1;

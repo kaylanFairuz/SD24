@@ -193,7 +193,7 @@ int level_sum(TreeNode* node, int level)
         return 0;
 
     int sum = 0;
-    return level + level_sum(node->left, level + 1, sum) + level_sum(node->right, level + 1, sum);
+    return level + level_sum(node->left, level + 1) + level_sum(node->right, level + 1);
 }
 ```
 

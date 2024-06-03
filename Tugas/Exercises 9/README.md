@@ -31,6 +31,8 @@ List the keys in an order that will produce the almost complete BST.
 
 Assuming that the almost complete tree is stored in a one-dimensional array num[1..13], write a recursive function for printing the integers in post-order.
 
+#### [Solution](#s10)
+
 ### Q11. Sum of Levels <a name="q11"></a>
 An imaginary “external” node is attached to each null pointer of a binary tree of 𝑛 nodes. How many external nodes are there?
 
@@ -41,11 +43,15 @@ Write a recursive function that, given the root of a binary tree, returns 𝐼.
 
 Write a nonrecursive function that, given the root of a binary tree, returns 𝐼.
 
+#### [Solution](#s11)
+
 ### Q12. Draw Binary Tree From Traversal I <a name="q12"></a>
 Draw the binary tree whose in-order and post-order traversals of the nodes are as follows:
 
     In-order: G D P K E N F A T L<br>
     Post-order: G P D K F N T A L E
+
+#### [Solution](#s12)
 
 ### Q13. Draw Binary Tree From Traversal II <a name="q13"></a>
 Draw the binary tree whose in-order and pre-order traversals of the nodes are as follows:
@@ -53,11 +59,17 @@ Draw the binary tree whose in-order and pre-order traversals of the nodes are as
     In-order: G D P K E N F A T L<br>
     Pre-order: N D G K P E T F A L
 
+#### [Solution](#s13)
+
 ### Q14. Binary Tree Traversal <a name="q14"></a>
 Write a recursive function that, given the root of a binary tree and a key, searches for the key using (i) a pre-order, (ii) an in-order, and (iii) a post-order traversal. If found, return the node containing the key; otherwise, return `null`.
 
+#### [Solution](#s14)
+
 ### Q15. Binary Search Tree Traversal <a name="q15"></a>
 Each node of a binary search tree contains three fields—`left`, `right`, and `data`—with their usual meanings; `data` is a positive integer field. Write an **efficient** function that, given the root of the tree and `key`, returns the smallest number in the tree that is greater than `key`. If there is no such number, return `-1`.
+
+#### [Solution](#s15)
 
 ### Q16. Complete Binary Search Tree <a name="q16"></a>
 Store the following integers in an array bst[1..15] such that bst represents a complete
@@ -65,8 +77,11 @@ binary search tree:
 
 34 23 45 46 37 78 90 2 40 20 87 53 12 15 91.
 
+#### [Solution](#s16)
+
 ## Solutions <a name="ss"></a>
 ### S10. Draw Binary Search Tree <a name="s10"></a>
+#### [Question](#q10)
 #### Binary search tree using given order of insertion; 56 30 61 39 47 35 75 13 21 64 26 73 18:
 <p align="center">
     <img src="../assets/e9-q10-1.png"/>
@@ -150,12 +165,13 @@ void post_order(int num[], int index, int length)
 ```
 
 ### S11. Sum of Levels <a name="s11"></a>
+#### [Question](#q11)
 #### Number of null pointer in a binary tree:
 
-Consider a binary tree of n nodes. Each node will have 2 pointers (may or may not be null). So the tree will have 2𝑛 pointers. Excluding the root node, every node must have a pointer pointing to it, i.e., 𝑛 - 1 not-null pointers. So, the number of null pointers = 2𝑛 - (𝑛 - 1) = 𝑛 + 1.
+Consider a binary tree of n nodes. Each node will have 2 pointers (may or may not be null), so the tree will have 2𝑛 pointers. Excluding the root node, every node must have a pointer pointing to it, i.e., 𝑛 - 1 not-null pointers. Thus, the number of null pointers of a binary tree is = 2𝑛 - (𝑛 - 1) = 𝑛 + 1.
 
 #### Sum of original nodes levels and external nodes level in a binary tree:
-Assume that 𝐸 - 𝐼 = 2𝑛 holds true for all 𝑛 ≥ 0 where n is the number of nodes of the binary tree. Base case: 𝑛 = 0, then 𝐸 - 𝐼 = 2𝑛 = 0. We will prove that 𝐸 - 𝐼 = 2𝑛 for all binary tree that has 𝑚 + 1 nodes. Suppose the binary tree 𝑇 have 𝑚 + 1 node. Removing a leaf from the tree will result in a binary tree 𝑇' that has 𝑚 node. Suppose the leaf that was removed was at level 𝑑, thus it follows that 𝐸 = 𝐸' + 𝑑 + 2 and 𝐼 = 𝐼' + 𝑑. Therefore:
+Assume that 𝐸 - 𝐼 = 2𝑛 holds true for all 𝑛 ≥ 0 where n is the number of nodes of the binary tree. Base case: 𝑛 = 0, then 𝐸 - 𝐼 = 2𝑛 = 0. We will prove that 𝐸 - 𝐼 = 2𝑛 holds for all binary tree that has 𝑚 + 1 nodes. Suppose the binary tree 𝑇 have 𝑚 + 1 nodes. Removing a leaf from the tree will result in a binary tree 𝑇' that has 𝑚 node. Suppose the leaf that was removed was at level 𝑑, thus it follows that 𝐸 = 𝐸' + 𝑑 + 2 and 𝐼 = 𝐼' + 𝑑. Therefore:
 
 $𝐸 = 𝐸' + d + 2$<br>
 $𝐸 = 𝐼' + 2𝑚 + d + 2$<br>
@@ -222,6 +238,7 @@ int level_sum(TreeNode *root)
 ```
 
 ### S12. Draw Binary Tree From Traversal I <a name="s12"></a>
+#### [Question](#q12)
 At post-order traversal, the root is always visited last, while at in-order, the root is always visited in the middle:
 
 Post-order: **G P D K F N T A L** | E <br>
@@ -273,6 +290,7 @@ Post-order: G | P | D | K | F | N | T | A | L | E
 </p>
 
 ### S13. Draw Binary Tree From Traversal II <a name="s13"></a>
+#### [Question](#q13)
 At pre-order traversal, the root is always visited first, while at in-order, the root is always visited in the middle:
 
 Pre-order: N | **D G K P E T F A L** <br>
@@ -315,6 +333,7 @@ Pre-order: N | D | G | K | P | E | T | F | A | L
 </p>
 
 ### S14. Binary Tree Traversal <a name="s14"></a>
+#### [Question](#q14)
 #### Implementation of Pre-order function in C/C++
 ```cpp
 // typedef struct tree_node
@@ -394,6 +413,7 @@ TreeNode *post_order(TreeNode *root, int value)
 ```
 
 ### S15. Binary Search Tree Traversal <a name="s15"></a>
+#### [Question](#q15)
 An efficient way of finding would be to compare the key with the current root's key. If it is smaller, than the value we're searching (if it exists) must be on the left subtree. Otherwise, it must be on the right subtree.
 
 **Implementation of function in C/C++**
@@ -425,6 +445,7 @@ int search_key(TreeNode *root, int value)
 ```
 
 ### S16. Complete Binary Search Tree <a name="s16"></a>
+#### [Question](#q16)
 We can use a similar approach used in **Q10**.
 
 First we must sort our array into: 2 12 15 20 23 34 37 40 45 46 53 78 87 90 91.

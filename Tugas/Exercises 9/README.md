@@ -205,9 +205,9 @@ int level_sum(TreeNode* node, int level)
 //     TreeNode *left, *right;
 // };
 
-int level_sum(TreeNode *root)
+int level_sum(TreeNode* root)
 {
-    queue<TreeNode *> q;
+    queue<TreeNode*> q;
 
     int sum = 0;
     int current_level = 0;
@@ -220,7 +220,7 @@ int level_sum(TreeNode *root)
 
         for (int i = 0; i < current_level_nodes; i++)
         {
-            TreeNode *current = q.front();
+            TreeNode* current = q.front();
             q.pop();
             sum += current_level;
 

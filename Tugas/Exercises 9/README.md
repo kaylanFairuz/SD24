@@ -171,7 +171,7 @@ $𝐸 - 𝐼 =  2(𝑚 + 1)$
 //     struct tree_node *left, *right;
 // } TreeNode;
 
-int level_sum(TreeNode* node, int level, int* sum)
+int level_sum(TreeNode* node, int level, int sum)
 {
     if (node == NULL)
         return 0;

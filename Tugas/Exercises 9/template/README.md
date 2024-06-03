@@ -1,6 +1,8 @@
 # Sample Input
+- [**Binary Tree**](#bt)
+- [**Binary Search Tree**](#bst)
 
-### Binary Tree
+### Binary Tree <a name="bt"></a>
 Sample Input 1:
 ```
 A B @ C @ @ @
@@ -25,4 +27,4 @@ Sample Input 3:
     <img src="../../assets/bt-3.png"/>
 </p>
 
-### Binary Search Tree
+### Binary Search Tree <a name="bst"></a>

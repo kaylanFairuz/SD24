@@ -1,3 +1,8 @@
+### [← Soal Praktikum 3](../../)
+<hr />
+
+### [R1 - Tree or Bush (Easy-Medium)](../prob-R1)
+### [R2 - CJ5 | Versus CP5 (Easy-Medium)](../prob-R2)
 # Hapus Edge (HE)
 <p align="center">
   <img src="../../../assets/he.png" width=75% height=75%/>

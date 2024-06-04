@@ -39,6 +39,30 @@ The idea is similar to finding a path through a maze. Write a program to solve t
 
 ### S17. Separate Digits <a name="s17"></a>
 #### [Question](#q17)
+
+#### Example Implementation in C++
+[Full implementation](code/cpp/17.cpp)
+```cpp
+void separate_digit(int n, stack<int> &s)
+{
+    s.push(n % 10);
+    n /= 10;
+    if (n == 0)
+    {
+        while (!s.empty())
+        {
+            cout << s.top() << " ";
+            s.pop();
+        }
+        return;
+    }
+    else
+    {
+        separate_digit(n, s);
+    }
+}
+```
+
 ### S18. Cartesian Path <a name="s18"></a>
 #### [Question](#q18)
 ### S19. Eight Queens Problem <a name="s19"></a>

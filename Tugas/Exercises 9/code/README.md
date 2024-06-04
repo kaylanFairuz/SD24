@@ -41,7 +41,7 @@ Sample Input 2:
 47 26 18 13 21 35 30 39 73 61 56 64 75
 ```
 <p align="center">
-    <img src="../../assets/e9-q10-2.png.png"/>
+    <img src="../../assets/e9-q10-2.png"/>
 </p>
 
 Sample Input 3:

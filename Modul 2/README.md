@@ -1,3 +1,5 @@
+### [Soal Latihan](Soal%20Latihan)
+### [Soal Praktikum](Soal%20Praktikum)
 # Tree
 - [**Pengenalan Tree**](#intro)
 - [**Referensi**](#reference)

@@ -72,8 +72,65 @@ void simulate(int n)
 }
 ```
 
-### Q21. Lottery <a name="q21"></a>
+### S21. Lottery <a name="s21"></a>
 #### [Question](#q21)
+We can keep track of which number has been pulled from the lottery pool using an array.
 
-### Q22. Integral Approximation <a name="q22"></a>
+#### Example Implementation in C++
+[Full implementation](code/cpp/task21.cpp)
+```cpp
+void pull_lottery()
+{
+    // Keeping track of the pulled numbers
+    vector<int> v(LOTTERY_POOL_SIZE, 0);
+
+    for (int i = 0; i < LOTTERY_PULLS; i++)
+    {
+        cout << "Set #" << i + 1 << ": ";
+        for (int i = 0; i < LOTTERY_PULL_AMOUNT; i++)
+        {
+            int n = rand() % LOTTERY_POOL_SIZE;
+            while (v[n] != 0)
+            {
+                n = (n + 1) % LOTTERY_POOL_SIZE;
+            }
+            v[n] = 1;
+            cout << n + 1 << " ";
+        }
+        cout << endl;
+    }
+
+    return;
+}
+```
+
+### S22. Integral Approximation <a name="s22"></a>
 #### [Question](#q22)
+We can estimate the integral using the [**Riemann sum**](https://en.wikipedia.org/wiki/Riemann_sum).
+
+#### Example Implementation in C++
+[Full implementation](code/cpp/task22.cpp)
+```cpp
+void estimate_integral()
+{
+    float area = 0.0;
+    vector<int> x_points(N, 0);
+    for (int i = 0; i < N; i++)
+    {
+        int x = rand() % N, y = rand() % N;
+
+        // Avoiding an x-value having multiple y-values
+        while (x_points[x] != 0)
+        {
+            x = (x + 1) % N;
+        }
+        x_points[x] = y;
+
+        // Area = height of partitions * length of partitions
+        float height = (float)y / (float)N;
+        float length = 1.0 / (float)N;
+        area += height * length;
+    }
+    cout << "The integral of f(x) from x = 0 to x = 1 is approximately " << area << endl;
+}
+```

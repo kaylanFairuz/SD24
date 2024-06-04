@@ -148,7 +148,7 @@ We can base our recursive function off the following rules:
 > _Chapter 9: Introduction to Binary Trees, Page 233_
 
 **Implementation of recursive function in C/C++**:
-```cpp
+```c
 // int num[] = {47, 26, 73, 18, 35, 61, 75, 13, 21, 30, 39, 56, 64};
 // int length = sizeof(num) / sizeof(num[0]);
 // 1-based index is used, thus the function should be called with: post_order(num, 1, length)
@@ -361,16 +361,16 @@ Pre-order: N | D | G | K | P | E | T | F | A | L
 //     struct treeNode *left, *right;
 // } TreeNode, *TreeNodePtr;
 
-TreeNode *pre_order(TreeNode *root, NodeData d)
+TreeNodePtr preOrderSearch(TreeNodePtr root, NodeData d)
 {
     if (root != NULL)
     {
         if (strcmp(d.word, root->data.word) == 0)
             return root;
-        TreeNode *left_branch = pre_order(root->left, d);
+        TreeNode *left_branch = preOrderSearch(root->left, d);
         if (left_branch != NULL)
             return left_branch;
-        TreeNode *right_branch = pre_order(root->right, d);
+        TreeNode *right_branch = preOrderSearch(root->right, d);
         if (right_branch != NULL)
             return right_branch;
     }
@@ -393,16 +393,16 @@ TreeNode *pre_order(TreeNode *root, NodeData d)
 //     struct treeNode *left, *right;
 // } TreeNode, *TreeNodePtr;
 
-TreeNode* in_order(TreeNode* root, int value)
+TreeNodePtr inOrderSearch(TreeNodePtr root, NodeData d)
 {
     if (root != NULL)
     {
-        TreeNode* left_branch = in_order(root->left, value);
+        TreeNode *left_branch = inOrderSearch(root->left, d);
         if (left_branch != NULL)
             return left_branch;
-        if (value == root->key)
+        if (strcmp(d.word, root->data.word) == 0)
             return root;
-        TreeNode* right_branch = in_order(root->right, value);
+        TreeNode *right_branch = inOrderSearch(root->right, d);
         if (right_branch != NULL)
             return right_branch;
     }
@@ -425,17 +425,17 @@ TreeNode* in_order(TreeNode* root, int value)
 //     struct treeNode *left, *right;
 // } TreeNode, *TreeNodePtr;
 
-TreeNode* post_order(TreeNode* root, int value)
+TreeNodePtr postOrderSearch(TreeNodePtr root, NodeData d)
 {
     if (root != NULL)
     {
-        TreeNode* left_branch = post_order(root->left, value);
+        TreeNode *left_branch = postOrderSearch(root->left, d);
         if (left_branch != NULL)
             return left_branch;
-        TreeNode* right_branch = post_order(root->right, value);
+        TreeNode *right_branch = postOrderSearch(root->right, d);
         if (right_branch != NULL)
             return right_branch;
-        if (value == root->key)
+        if (strcmp(d.word, root->data.word) == 0)
             return root;
     }
 

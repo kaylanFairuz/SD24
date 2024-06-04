@@ -1,5 +1,5 @@
 /*
-    21. A function f(x) is defined for 0 <= x <= 1, and such that 0 <= f(x) < 1 for all 0 <= x < 1. Write a
+    22. A function f(x) is defined for 0 <= x <= 1, and such that 0 <= f(x) < 1 for all 0 <= x < 1. Write a
         program to estimate the integral of f(x) from 0 to 1.
 
         Hint: estimate the area under the curve by generating points (x, y), 0 <= x < 1, 0 <= y < 1.

@@ -28,3 +28,26 @@ Sample Input 3:
 </p>
 
 ### [Binary Search Tree](binary_search_tree.c) <a name="bst"></a>
+Sample Input 1:
+```
+mac tee ode era ria lea vim
+```
+<p align="center">
+    <img src="../../assets/bst-1.png"/>
+</p>
+
+Sample Input 2:
+```
+47 26 18 13 21 35 30 39 73 61 56 64 75
+```
+<p align="center">
+    <img src="../../assets/e9-q10-2.png.png"/>
+</p>
+
+Sample Input 3:
+```
+47 26 mac tee 21 35 lea
+```
+<p align="center">
+    <img src="../../assets/bst-3.png"/>
+</p>

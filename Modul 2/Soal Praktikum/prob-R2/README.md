@@ -9,7 +9,7 @@ Jika suatu bilangan 𝑋 terdapat dalam AVL, maka carilah berapa banyak perpinda
 
 **Untuk soal ini kalian diijinkan membuka**: **https://visualgo.net/en/**
 
-**HINT**: Gunain fungsi find.
+HINT: Gunain fungsi find.
 
 #### Format Masukan:
 Bilangan 𝑁 dibaris pertama.<br>

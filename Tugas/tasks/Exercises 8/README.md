@@ -1,3 +1,4 @@
+### [← Tugas Struktur Data E](../../)
 # Exercises 8
 > Tugas ke-6 mata kuliah Struktur Data 2024<br>
 > Reference: _Noel Kalicharan - Advanced Topics in C_<br>

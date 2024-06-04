@@ -32,7 +32,7 @@ A function f(x) is defined for 0 ≤ x ≤ 1, and such that 0 ≤ f(x) < 1 for a
 The problem we must be aware of is if a bottle caps has ran out (i.e all caps have been taken), it cannot be taken again. One way to handle this is to use a dynamic array to store all types of bottle caps. Make the pulling interval the index of the array (up to 4 in this case). If a certain type has ran out, than remove that cap from the array and resize the random pull interval.
 
 #### Example Implementation in C++
-[Full implementation](code/cpp/task20.cpp)
+[Full implementation](code/cpp/20.cpp)
 ```cpp
 void simulate(int n)
 {
@@ -77,7 +77,7 @@ void simulate(int n)
 We can mark which number has been pulled from the lottery pool using an array, and if that number is marked, then as the instruction said, add the next number that has not been marked.
 
 #### Example Implementation in C++
-[Full implementation](code/cpp/task21.cpp)
+[Full implementation](code/cpp/21.cpp)
 ```cpp
 void pull_lottery()
 {
@@ -109,7 +109,7 @@ void pull_lottery()
 We can estimate the integral using the [**Riemann sum**](https://en.wikipedia.org/wiki/Riemann_sum). Mark the x-values that already have a y-value, then find one that hasn't been marked yet.
 
 #### Example Implementation in C++
-[Full implementation](code/cpp/task22.cpp)
+[Full implementation](code/cpp/22.cpp)
 ```cpp
 void estimate_integral()
 {

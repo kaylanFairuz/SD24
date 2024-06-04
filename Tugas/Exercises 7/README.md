@@ -74,7 +74,7 @@ void simulate(int n)
 
 ### S21. Lottery <a name="s21"></a>
 #### [Question](#q21)
-We can keep track of which number has been pulled from the lottery pool using an array.
+We can mark which number has been pulled from the lottery pool using an array, and if that number is marked, then as the instruction said, add the next number that has not been marked.
 
 #### Example Implementation in C++
 [Full implementation](code/cpp/task21.cpp)
@@ -106,7 +106,7 @@ void pull_lottery()
 
 ### S22. Integral Approximation <a name="s22"></a>
 #### [Question](#q22)
-We can estimate the integral using the [**Riemann sum**](https://en.wikipedia.org/wiki/Riemann_sum).
+We can estimate the integral using the [**Riemann sum**](https://en.wikipedia.org/wiki/Riemann_sum). Mark the x-values that already have a y-value, then find one that hasn't been marked yet.
 
 #### Example Implementation in C++
 [Full implementation](code/cpp/task22.cpp)

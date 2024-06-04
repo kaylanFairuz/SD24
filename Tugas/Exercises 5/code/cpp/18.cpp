@@ -9,14 +9,6 @@ int main()
     {
         s1.push(v[i]);
     }
-    stack<int> test = s1;
-
-    while (!test.empty())
-    {
-        cout << test.top() << " ";
-        test.pop();
-    }
-    cout << endl;
 
     while (!s1.empty())
     {

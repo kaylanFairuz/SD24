@@ -44,19 +44,19 @@ Untuk kasus 𝑁=3 kita dapat memisalkan AVL(1,2,3), AVL(2,1,3), dan AVL(1,3,2).
 
 **AVL(2,1,3)**
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/assets/162039500/9436c9e9-aae3-40db-8220-cc3419912412"/>
+  <img src="../../../assets/little-star-1"/>
 </p>
 Tidak perlu rotasi agar menjadi AVL yang sempurna.<br><br>
 
 **AVL(1,2,3)**
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/assets/162039500/e59f2b92-3d92-45d4-a4aa-54a227dbc272"/>
+  <img src="../../../assets/little-star-2"/>
 </p>
 Perlu 1 kali rotasi agar menjadi AVL yang sempurna.<br><br>
 
 **AVL(1,3,2)**
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/Archive/assets/162039500/3a6c1bf7-8dec-4be3-a360-6cfceea04677"/>
+  <img src="../../../assets/little-star-3"/>
 </p>
 Perlu 2 kali rotasi agar menjadi AVL yang sempurna.<br><br>
 

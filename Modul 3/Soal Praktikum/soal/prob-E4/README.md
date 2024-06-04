@@ -1,3 +1,9 @@
+### [← Soal Praktikum 3](../../)
+<hr />
+
+### [E1 - Thank You (Easy-Medium)](../prob-E1)
+### [E2 - Telat Gak Ya? (Easy-Medium)](../prob-E2)
+### [E3 - Maximum Spanning Tree (Easy-Medium)](../prob-E3)
 # Isekai Warkop
 <p align="center">
   <img src="../../../assets/isekai-warkop-cover.png"/>

@@ -1,3 +1,9 @@
+### [← Soal Praktikum 2](../../)
+<hr />
+
+### [E1 - Suisei Dapat Cokelat (Easy-Medium)](../prob-E1)
+### [E3 - Child (Easy-Medium)](../prob-E3)
+### [E4 - Little Star (Medium-Hard)](../prob-E4)
 # Heavy Rotation
 <p align="center">
   Time Limit : 1 s<br>

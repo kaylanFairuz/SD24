@@ -1,3 +1,9 @@
+### [← Soal Praktikum 3](../../)
+<hr />
+
+### [E2 - Telat Gak Ya? (Easy-Medium)](../prob-E2)
+### [E3 - Maximum Spanning Tree (Easy-Medium)](../prob-E3)
+### [E4 - Isekai Warkop (Medium-Hard)](../prob-E4)
 # Thank You
 
 #### Deskripsi: 

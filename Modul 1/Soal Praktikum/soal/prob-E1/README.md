@@ -1,4 +1,4 @@
-### [Soal Praktikum 1](../../)
+### [← Soal Praktikum 1](../../)
 ### [E2 - Juma (Easy-Medium)](prob-E2)
 ### [E3 - Ulasan Buku (Easy-Medium)](prob-E3)
 ### [E4 - Sosial Media (Medium-Hard)](prob-E4)

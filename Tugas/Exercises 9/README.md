@@ -148,6 +148,7 @@ We can base our recursive function off the following rules:
 > _Chapter 9: Introduction to Binary Trees, Page 233_
 
 **Implementation of recursive function in C/C++**:
+[Full implementation](code/10.c).
 ```c
 // int num[] = {47, 26, 73, 18, 35, 61, 75, 13, 21, 30, 39, 56, 64};
 // int length = sizeof(num) / sizeof(num[0]);

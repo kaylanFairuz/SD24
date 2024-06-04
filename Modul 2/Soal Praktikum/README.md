@@ -1,4 +1,4 @@
-# Soal Praktikum 1
+# Soal Praktikum 2
 ## Soal Praktikum
 ### [E1 - Suisei Dapat Cokelat (Easy-Medium)](prob-E1)
 ### [E2 - Heavy Rotation (Easy-Medium)](prob-E2)

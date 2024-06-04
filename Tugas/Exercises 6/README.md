@@ -8,14 +8,18 @@
 - [**Solutions**](#ss)
     - [S17. Separate Digits](#s17)
     - [S18. Cartesian Path](#s18)
-    - [Q19. Eight Queens Problem](#q19)
+    - [S19. Eight Queens Problem](#s19)
 
 ## Questions <a name="qs"></a>
 ### Q17. Separate Digits <a name="q17"></a>
 Write a recursive function that takes an integer argument and prints the integer with one space after each digit. For example, given 7583, it prints 7 5 8 3 .
 
+#### [Example Solution](#s17)
+
 ### Q18. Cartesian Path <a name="q18"></a>
 Consider points (m, n) in the usual Cartesian coordinate system where m and n are positive integers. In a north-east path from point A to point B, one can move only up and only right (no down or left movements are allowed). Write a function that, given the coordinates of any two points A and B, returns the number of north-east paths from A to B.
+
+#### [Example Solution](#s18)
 
 ### Q19. Eight Queens Problem <a name="q19"></a>
 The eight-queens problem can be stated as follows: place 8 queens on a chess board so that no two queens attack each other. Two queens attack each other if they are in the same row, same column, or same diagonal. Clearly, any solution must have the queens in different rows and different columns.
@@ -29,4 +33,13 @@ queen and try the next column for that queen.
 
 The idea is similar to finding a path through a maze. Write a program to solve the eight-queens problem. Use recursion to implement the backtracking.
 
+#### [Example Solution](#s19)
+
 ## Solutions <a name="ss"></a>
+
+### S17. Separate Digits <a name="s17"></a>
+#### [Question](#q17)
+### S18. Cartesian Path <a name="s18"></a>
+#### [Question](#q18)
+### S19. Eight Queens Problem <a name="s19"></a>
+#### [Question](#q19)

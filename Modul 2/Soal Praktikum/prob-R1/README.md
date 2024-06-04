@@ -50,7 +50,7 @@ Apabila **𝑋** tidak ada di BST, keluarkan -1.
   <img src="../../assets/cari-node_explanation.png"/>
 </p>
 
-1\. Karena 32 ada di BST, maka rute yang dilewati dari root ke 32 adalah 41 20 29 32.
-2\. Karena 35 tidak ada di BST, maka dikeluarkan -1.
-3\. Karena 72 ada di BST, maka rute yang dilewati dari root ke 72 adalah 41 65 91 72.
+1\. Karena 32 ada di BST, maka rute yang dilewati dari root ke 32 adalah 41 20 29 32.<br>
+2\. Karena 35 tidak ada di BST, maka dikeluarkan -1.<br>
+3\. Karena 72 ada di BST, maka rute yang dilewati dari root ke 72 adalah 41 65 91 72.<br>
 4\. Karena 69 tidak ada di BST, maka dikeluarkan -1.

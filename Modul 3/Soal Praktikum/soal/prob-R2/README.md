@@ -1,7 +1,7 @@
 # CJ5 | Versus CP5
 <p align="center">
   <a href="https://minesweeper.ralfazza.com/">
-    <img src="../../assets/cj5.png"/>
+    <img src="../../../assets/cj5.png"/>
   </a>  
 </p>
 
@@ -43,7 +43,7 @@ Jumlah total agen CP5 paling sedikit yang harus dilawan mulai dari pulau 0 hingg
 #### Penjelasan Keluaran 1:
 Ada total 6 jalur yang mungkin, jalur di mana kau melawan dengan jumlah agen paling sedikit adalah dengan pergi dari pulau 0 ke pulau 2 (melawan 5 agen) dan lalu terbang dari pulau 2 ke pulau 3 (tidak melawan karena terbang).
 <p align="center">
-    <img src="../../assets/cj5_explanation-1.png"/>
+    <img src="../../../assets/cj5_explanation-1.png"/>
 </p>
 
 #### Hint

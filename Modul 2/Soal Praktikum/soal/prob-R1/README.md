@@ -1,6 +1,6 @@
 # Cari Node (CN)
 <p align="center">
-  <img src="../../assets/cari-node.png" width=75% height=75%/>
+  <img src="../../../assets/cari-node.png" width=75% height=75%/>
 </p>
 
 #### Deskripsi: 
@@ -47,7 +47,7 @@ Apabila **𝑋** tidak ada di BST, keluarkan -1.
 
 #### Penjelasan Keluaran:
 <p align="center">
-  <img src="../../assets/cari-node_explanation.png"/>
+  <img src="../../../assets/cari-node_explanation.png"/>
 </p>
 
 1\. Karena 32 ada di BST, maka rute yang dilewati dari root ke 32 adalah 41 20 29 32.<br>

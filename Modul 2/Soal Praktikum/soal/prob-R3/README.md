@@ -1,6 +1,6 @@
 # Intermission
 <p align="center">
-  <img src="../../assets/intermission.png"/>
+  <img src="../../../assets/intermission.png"/>
 </p>
 
 #### Deskripsi: 
@@ -34,7 +34,7 @@ A B R a Y U
 
 #### Visualisasi Sample 0:
 <p align="center">
-  <img src="../../assets/intermission_visualization.png"/>
+  <img src="../../../assets/intermission_visualization.png"/>
 </p>
 
 Note: Gambar diambil dari [link](https://www.cs.usfca.edu/~galles/visualization/BST.html) ini, kalian dapat membuka website tersebut untuk membantu kalian :D

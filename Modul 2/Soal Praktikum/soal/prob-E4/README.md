@@ -1,6 +1,6 @@
 # Little Star
 <p align="center">
-  <img src="../../assets/little-star.png"/>
+  <img src="../../../assets/little-star.png"/>
 </p>
 
 #### Deskripsi: 

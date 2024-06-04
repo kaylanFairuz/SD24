@@ -67,12 +67,12 @@ void separate_digit(int n, stack<int> &s)
 #### [Question](#q18)
 Consider the point A(0, 0) and B(2, 4) on a 3 × 5 grid.
 <p align="center">
-    <img src="../assets/e6-q18-1.png"/>
+    <img src="../../assets/e6-q18-1.png"/>
 </p>
 
 Observe that the number of path from A to B will be sum of the number of path from (1, 0) to B and the number of path from (0, 1) to B, which respectively is 2 × 5 grid and 3 × 4 grid.
 <p align="center">
-    <img src="../assets/e6-q18-2.png"/>
+    <img src="../../assets/e6-q18-2.png"/>
 </p>
 
 In general, if we let $M(D_x, \text{ }D_y)$ denote the total number of path from point A($x_1, y_1$) to B($x_2, y_2$) where $Dx = x_2 - x_1$ and $Dy = y_2 - y_1$ then 

@@ -1,6 +1,6 @@
 # Juma
 <p align="center">
-  <img src="../../assets/juma.png"/>
+  <img src="../../../assets/juma.png"/>
 </p>
 
 #### Deskripsi: 

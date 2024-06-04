@@ -1,6 +1,6 @@
 # Hapus Edge (HE)
 <p align="center">
-  <img src="../../assets/he.png" width=75% height=75%/>
+  <img src="../../../assets/he.png" width=75% height=75%/>
 </p>
 
 #### Deskripsi: 
@@ -40,10 +40,10 @@ Keluarkan biaya penghapusan minimum supaya bisa terbentuk tree dari graf tersebu
 
 #### Penjelasan:
 <p align="center">
-  <img src="../../assets/he_explanation-1.png"/>
+  <img src="../../../assets/he_explanation-1.png"/>
 </p>
 
 Dari graf di atas, untuk membentuk tree dengan biaya minimum, maka edge-edge yang perlu dihapus adalah (1, 4, 2), (2, 3, 3), dan (5, 6, 1). Sehingga terbentuk tree seperti berikut:
 <p align="center">
-  <img src="../../assets/he_explanation-2.png"/>
+  <img src="../../../assets/he_explanation-2.png"/>
 </p>

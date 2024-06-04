@@ -40,7 +40,7 @@ Kanan : 2
 
 #### Penjelasan Contoh 1:
 <p align="center">
-  <img src="../../assets/avl-kanan-kiri_explanation-1.png"/>
+  <img src="../../../assets/avl-kanan-kiri_explanation-1.png"/>
 </p>
 
 Dapat dilihat ada nilai 12 dalam AVL maka print(“ADA”).
@@ -52,7 +52,7 @@ Node 31 → kiri → node 12<br>
 Kanan 2 kali<br>
 Kiri 1 kali<br>
 <p align="center">
-  <img src="../../assets/avl-kanan-kiri_explanation-2.png"/>
+  <img src="../../../assets/avl-kanan-kiri_explanation-2.png"/>
 </p>
 
 #### Contoh Masukan 2:

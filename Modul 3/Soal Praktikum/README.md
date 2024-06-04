@@ -1,4 +1,4 @@
-# Soal Praktikum 2
+# Soal Praktikum 3
 ## Soal Praktikum
 ### [E1 - Thank You (Easy-Medium)](prob-E1)
 ### [E2 - Telat Gak Ya? (Easy-Medium)](prob-E2)

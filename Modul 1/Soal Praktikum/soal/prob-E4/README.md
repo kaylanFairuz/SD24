@@ -1,3 +1,9 @@
+### [← Soal Praktikum 1](../../)
+<hr />
+
+### [E1 - Tobat1 (Easy-Medium)](../prob-E1)
+### [E2 - Juma (Easy-Medium)](../prob-E2)
+### [E3 - Ulasan Buku (Easy-Medium)](../prob-E3)
 # Sosial Media
 <p align="center">
   Time Limit : 1 s<br>

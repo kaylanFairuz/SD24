@@ -183,7 +183,7 @@ $𝐸 - 𝐼 =  2(𝑚 + 1)$
 ```c
 // typedef struct
 // {
-//     char word[MaxWordSize + 1];
+//     char word[21];
 //     int key;
 // } NodeData;
 //
@@ -207,7 +207,7 @@ int level_sum(TreeNodePtr node, int level)
 ```cpp
 // typedef struct
 // {
-//     char word[MaxWordSize + 1];
+//     char word[21];
 //     int key;
 // } NodeData;
 //
@@ -351,7 +351,7 @@ Pre-order: N | D | G | K | P | E | T | F | A | L
 ```c
 // typedef struct
 // {
-//     char word[MaxWordSize + 1];
+//     char word[21];
 //     int key;
 // } NodeData;
 //
@@ -383,7 +383,7 @@ TreeNodePtr preOrderSearch(TreeNodePtr root, NodeData d)
 ```c
 // typedef struct
 // {
-//     char word[MaxWordSize + 1];
+//     char word[21];
 //     int key;
 // } NodeData;
 //
@@ -415,7 +415,7 @@ TreeNodePtr inOrderSearch(TreeNodePtr root, NodeData d)
 ```c
 // typedef struct
 // {
-//     char word[MaxWordSize + 1];
+//     char word[21];
 //     int key;
 // } NodeData;
 //
@@ -451,7 +451,7 @@ An efficient way of finding would be to compare the key with the current root's 
 ```c
 // typedef struct
 // {
-//     char word[MaxWordSize + 1];
+//     char word[21];
 //     int key;
 // } NodeData;
 //

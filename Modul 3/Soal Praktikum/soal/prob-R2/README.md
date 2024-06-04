@@ -1,3 +1,8 @@
+### [← Soal Praktikum 3](../../)
+<hr />
+
+### [R1 - Tree or Bush (Easy-Medium)](../prob-R1)
+### [R3 - Hapus Edge (HE) (Easy-Medium)](../prob-R3)
 # CJ5 | Versus CP5
 <p align="center">
   <a href="https://minesweeper.ralfazza.com/">

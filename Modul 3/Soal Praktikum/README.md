@@ -1,5 +1,5 @@
 # Soal Praktikum 3
-## Soal Praktikum
+## Soal Praktikum Kelas E
 ### [E1 - Thank You (Easy-Medium)](soal/prob-E1)
 ### [E2 - Telat Gak Ya? (Easy-Medium)](soal/prob-E2)
 ### [E3 - Maximum Spanning Tree (Easy-Medium)](soal/prob-E3)

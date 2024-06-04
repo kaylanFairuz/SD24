@@ -1,5 +1,5 @@
 # Soal Praktikum 1
-## Soal Praktikum
+## Soal Praktikum Struktur Data E
 ### [E1 - Tobat1 (Easy-Medium)](soal/prob-E1)
 ### [E2 - Juma (Easy-Medium)](soal/prob-E2)
 ### [E3 - Ulasan Buku (Easy-Medium)](soal/prob-E3)

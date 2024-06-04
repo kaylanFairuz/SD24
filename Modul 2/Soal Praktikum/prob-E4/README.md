@@ -1,6 +1,6 @@
 # Little Star
 <p align="center">
-  <img src="https://github.com/kaylanFairuz/SD24/blob/main/Modul%202/assets/little-star.png"/>
+  <img src="../../assets/little-star.png"/>
 </p>
 
 #### Deskripsi: 

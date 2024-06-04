@@ -1,5 +1,5 @@
 # Soal Praktikum 2
-## Soal Praktikum
+## Soal Praktikum Struktur Data E
 ### [E1 - Suisei Dapat Cokelat (Easy-Medium)](soal/prob-E1)
 ### [E2 - Heavy Rotation (Easy-Medium)](soal/prob-E2)
 ### [E3 - Child (Easy-Medium)](soal/prob-E3)

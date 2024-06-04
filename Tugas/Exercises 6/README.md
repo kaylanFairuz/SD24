@@ -111,3 +111,4 @@ int paths(pair<int, int> &p1, pair<int, int> &p2)
 
 ### S19. Eight Queens Problem <a name="s19"></a>
 #### [Question](#q19)
+The Eight Queens problem can be looked up [here](https://www.geeksforgeeks.org/8-queen-problem/).

@@ -1,3 +1,8 @@
+### [← Soal Praktikum 2](../../)
+<hr />
+
+### [R1 - Cari Node (Easy-Medium)](../prob-R1)
+### [R3 - Intermission (Easy-Medium)](../prob-R3)
 # AVL_KANAN_KIRI
 
 #### Deskripsi: 

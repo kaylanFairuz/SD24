@@ -180,14 +180,20 @@ $𝐸 - 𝐼 = 2𝑚 + 2$<br>
 $𝐸 - 𝐼 =  2(𝑚 + 1)$
 
 #### Recursive Implementation of computing `I` in C/C++
-```cpp
-// typedef struct tree_node
+```c
+// typedef struct
 // {
+//     char word[MaxWordSize + 1];
 //     int key;
-//     struct tree_node *left, *right;
-// } TreeNode;
+// } NodeData;
+//
+// typedef struct treeNode
+// {
+//     NodeData data;
+//     struct treeNode *left, *right;
+// } TreeNode, *TreeNodePtr;
 
-int level_sum(TreeNode* node, int level)
+int level_sum(TreeNodePtr node, int level)
 {
     if (node == NULL)
         return 0;
@@ -199,11 +205,17 @@ int level_sum(TreeNode* node, int level)
 
 #### Non-recursive Implementation of finding `I` in C++
 ```cpp
-// struct TreeNode
+// typedef struct
 // {
-//     int data;
-//     TreeNode *left, *right;
-// };
+//     char word[MaxWordSize + 1];
+//     int key;
+// } NodeData;
+//
+// typedef struct treeNode
+// {
+//     NodeData data;
+//     struct treeNode *left, *right;
+// } TreeNode, *TreeNodePtr;
 
 int level_sum(TreeNode* root)
 {
@@ -336,23 +348,29 @@ Pre-order: N | D | G | K | P | E | T | F | A | L
 ### S14. Binary Tree Traversal <a name="s14"></a>
 #### [Question](#q14)
 #### Implementation of Pre-order function in C/C++
-```cpp
-// typedef struct tree_node
+```c
+// typedef struct
 // {
+//     char word[MaxWordSize + 1];
 //     int key;
-//     struct tree_node *left, *right;
-// } TreeNode;
+// } NodeData;
+//
+// typedef struct treeNode
+// {
+//     NodeData data;
+//     struct treeNode *left, *right;
+// } TreeNode, *TreeNodePtr;
 
-TreeNode* pre_order(TreeNode* root, int value)
+TreeNode *pre_order(TreeNode *root, NodeData d)
 {
     if (root != NULL)
     {
-        if (value == root->key)
+        if (strcmp(d.word, root->data.word) == 0)
             return root;
-        TreeNode* left_branch = pre_order(root->left, value);
+        TreeNode *left_branch = pre_order(root->left, d);
         if (left_branch != NULL)
             return left_branch;
-        TreeNode *right_branch = pre_order(root->right, value);
+        TreeNode *right_branch = pre_order(root->right, d);
         if (right_branch != NULL)
             return right_branch;
     }
@@ -362,12 +380,18 @@ TreeNode* pre_order(TreeNode* root, int value)
 ```
 
 #### Implementation of In-order function in C/C++
-```cpp
-// typedef struct tree_node
+```c
+// typedef struct
 // {
+//     char word[MaxWordSize + 1];
 //     int key;
-//     struct tree_node *left, *right;
-// } TreeNode;
+// } NodeData;
+//
+// typedef struct treeNode
+// {
+//     NodeData data;
+//     struct treeNode *left, *right;
+// } TreeNode, *TreeNodePtr;
 
 TreeNode* in_order(TreeNode* root, int value)
 {
@@ -388,12 +412,18 @@ TreeNode* in_order(TreeNode* root, int value)
 ```
 
 #### Implementation of Post-order function in C/C++
-```cpp
-// typedef struct tree_node
+```c
+// typedef struct
 // {
+//     char word[MaxWordSize + 1];
 //     int key;
-//     struct tree_node *left, *right;
-// } TreeNode;
+// } NodeData;
+//
+// typedef struct treeNode
+// {
+//     NodeData data;
+//     struct treeNode *left, *right;
+// } TreeNode, *TreeNodePtr;
 
 TreeNode* post_order(TreeNode* root, int value)
 {
@@ -418,12 +448,18 @@ TreeNode* post_order(TreeNode* root, int value)
 An efficient way of finding would be to compare the key with the current root's key. If it is smaller, than the value we're searching (if it exists) must be on the left subtree. Otherwise, it must be on the right subtree.
 
 **Implementation of function in C/C++**
-```cpp
-// typedef struct tree_node
+```c
+// typedef struct
 // {
+//     char word[MaxWordSize + 1];
 //     int key;
-//     struct tree_node *left, *right;
-// } TreeNode;
+// } NodeData;
+//
+// typedef struct treeNode
+// {
+//     NodeData data;
+//     struct treeNode *left, *right;
+// } TreeNode, *TreeNodePtr;
 
 int search_key(TreeNode* root, int value)
 {

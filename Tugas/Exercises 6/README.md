@@ -65,5 +65,49 @@ void separate_digit(int n, stack<int> &s)
 
 ### S18. Cartesian Path <a name="s18"></a>
 #### [Question](#q18)
+Consider the point A(0, 0) and B(2, 4) on a 3 × 5 grid.
+<p align="center">
+    <img src="../assets/e6-q18-1.png"/>
+</p>
+
+Observe that the number of path from A to B will be sum of the number of path from (1, 0) to B and the number of path from (0, 1) to B, which respectively is 2 × 5 grid and 3 × 4 grid.
+<p align="center">
+    <img src="../assets/e6-q18-2.png"/>
+</p>
+
+In general, if we let $M(D_x, \text{ }D_y)$ denote the total number of path from point A($x_1, y_1$) to B($x_2, y_2$) where $Dx = x_2 - x_1$ and $Dy = y_2 - y_1$ then 
+
+$$
+M(D_x, \text{ }D_y) = M(D_x - 1, \text{ }D_y) + M(D_x, \text{ }D_y - 1) \text{ while } D_x ≥ 1 \text{ and } D_y ≥ 1.
+$$
+
+Don't forget to check whether there is a valid path from A to B (i.e B is located south-west of A).
+
+#### Example Implementation in C++
+[Full implementation](code/cpp/18.cpp)
+```cpp
+int paths(pair<int, int> &p1, pair<int, int> &p2)
+{
+    // Checking if the points are possible to traverse
+    if ((p1.first < p2.first && p1.second > p2.second) || (p1.first > p2.first && p1.second < p2.second))
+    {
+        return 0;
+    }
+
+    int d_x = abs(p1.first - p2.first), d_y = abs(p1.second - p2.second);
+
+    // Base case
+    if ((d_x >= 1 && p1.second == p2.second) || (d_y >= 1 && p1.first == p2.first))
+    {
+        return 1;
+    }
+    else
+    {
+        pair<int, int> center(0, 0), n_p1(d_x - 1, d_y), n_p2(d_x, d_y - 1);
+        return paths(center, n_p1) + paths(center, n_p2);
+    }
+}
+```
+
 ### S19. Eight Queens Problem <a name="s19"></a>
 #### [Question](#q19)

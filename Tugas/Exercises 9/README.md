@@ -195,18 +195,6 @@ int level_sum(TreeNodePtr node, int level)
 #### Non-recursive Implementation of finding `I` in C++
 [Full implementation](code/11-non-recursive.c).
 ```cpp
-// typedef struct
-// {
-//     char word[21];
-//     int key;
-// } NodeData;
-//
-// typedef struct treeNode
-// {
-//     NodeData data;
-//     struct treeNode *left, *right;
-// } TreeNode, *TreeNodePtr;
-
 int level_sum(TreeNode* root)
 {
     queue<TreeNode*> q;
@@ -340,18 +328,6 @@ Pre-order: N | D | G | K | P | E | T | F | A | L
 [Full implementation](code/14.c).
 #### Implementation of Pre-order function in C/C++
 ```c
-// typedef struct
-// {
-//     char word[21];
-//     int key;
-// } NodeData;
-//
-// typedef struct treeNode
-// {
-//     NodeData data;
-//     struct treeNode *left, *right;
-// } TreeNode, *TreeNodePtr;
-
 TreeNodePtr preOrderSearch(TreeNodePtr root, NodeData d)
 {
     if (root != NULL)
@@ -372,18 +348,6 @@ TreeNodePtr preOrderSearch(TreeNodePtr root, NodeData d)
 
 #### Implementation of In-order function in C/C++
 ```c
-// typedef struct
-// {
-//     char word[21];
-//     int key;
-// } NodeData;
-//
-// typedef struct treeNode
-// {
-//     NodeData data;
-//     struct treeNode *left, *right;
-// } TreeNode, *TreeNodePtr;
-
 TreeNodePtr inOrderSearch(TreeNodePtr root, NodeData d)
 {
     if (root != NULL)
@@ -404,18 +368,6 @@ TreeNodePtr inOrderSearch(TreeNodePtr root, NodeData d)
 
 #### Implementation of Post-order function in C/C++
 ```c
-// typedef struct
-// {
-//     char word[21];
-//     int key;
-// } NodeData;
-//
-// typedef struct treeNode
-// {
-//     NodeData data;
-//     struct treeNode *left, *right;
-// } TreeNode, *TreeNodePtr;
-
 TreeNodePtr postOrderSearch(TreeNodePtr root, NodeData d)
 {
     if (root != NULL)
@@ -440,18 +392,6 @@ An efficient way of finding would be to compare the key with the current root's 
 
 **Implementation of function in C/C++**
 ```c
-// typedef struct
-// {
-//     char word[21];
-//     int key;
-// } NodeData;
-//
-// typedef struct treeNode
-// {
-//     NodeData data;
-//     struct treeNode *left, *right;
-// } TreeNode, *TreeNodePtr;
-
 int searchKey(TreeNodePtr root, int value)
 {
     if (root == NULL)

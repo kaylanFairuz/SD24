@@ -389,9 +389,10 @@ TreeNodePtr postOrderSearch(TreeNodePtr root, NodeData d)
 
 ### S15. Binary Search Tree Traversal <a name="s15"></a>
 #### [Question](#q15)
-An efficient way of finding would be to compare the key with the current root's key. If it is smaller, than the value we're searching (if it exists) must be on the left subtree. Otherwise, it must be on the right subtree. [Full implementation](code/15.c).
+An efficient way of finding would be to compare the key with the current root's key. If it is smaller, than the value we're searching (if it exists) must be on the left subtree. Otherwise, it must be on the right subtree. 
 
 **Implementation of function in C/C++**
+[Full implementation](code/15.c).
 ```c
 int searchKey(TreeNodePtr root, int value)
 {

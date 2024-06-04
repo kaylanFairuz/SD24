@@ -461,22 +461,22 @@ An efficient way of finding would be to compare the key with the current root's 
 //     struct treeNode *left, *right;
 // } TreeNode, *TreeNodePtr;
 
-int search_key(TreeNode* root, int value)
+int searchKey(TreeNodePtr root, int value)
 {
     if (root == NULL)
         return -1;
 
-    if (value < root->key)
+    if (value < root->data.key)
     {
-        int left_result = search_key(root->left, value);
+        int left_result = searchKey(root->left, value);
         if (left_result != -1)
             return left_result;
 
-        return root->key;
+        return root->data.key;
     }
     else
     {
-        return search_key(root->right, value);
+        return searchKey(root->right, value);
     }
 }
 ```

@@ -1,6 +1,6 @@
 # Cari Node (CN)
 <p align="center">
-  <img src="../../assets/cari-node.png"/>
+  <img src="../../assets/cari-node.png" width=75% height=75%/>
 </p>
 
 #### Deskripsi: 

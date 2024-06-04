@@ -1,3 +1,9 @@
+### [← Soal Praktikum 2](../../)
+<hr />
+
+### [E1 - Suisei Dapat Cokelat (Easy-Medium)](../prob-E1)
+### [E2 - Heavy Rotation (Easy-Medium)](../prob-E2)
+### [E3 - Child (Easy-Medium)](../prob-E3)
 # Little Star
 <p align="center">
   <img src="../../../assets/little-star.png"/>

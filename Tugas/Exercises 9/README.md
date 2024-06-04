@@ -180,19 +180,8 @@ $𝐸 - 𝐼 = 2𝑚 + 2$<br>
 $𝐸 - 𝐼 =  2(𝑚 + 1)$
 
 #### Recursive Implementation of computing `I` in C/C++
+[Full implementation](code/11-recursive.c).
 ```c
-// typedef struct
-// {
-//     char word[21];
-//     int key;
-// } NodeData;
-//
-// typedef struct treeNode
-// {
-//     NodeData data;
-//     struct treeNode *left, *right;
-// } TreeNode, *TreeNodePtr;
-
 int level_sum(TreeNodePtr node, int level)
 {
     if (node == NULL)
@@ -204,6 +193,7 @@ int level_sum(TreeNodePtr node, int level)
 ```
 
 #### Non-recursive Implementation of finding `I` in C++
+[Full implementation](code/11-non-recursive.c).
 ```cpp
 // typedef struct
 // {
@@ -347,6 +337,7 @@ Pre-order: N | D | G | K | P | E | T | F | A | L
 
 ### S14. Binary Tree Traversal <a name="s14"></a>
 #### [Question](#q14)
+[Full implementation](code/14.c).
 #### Implementation of Pre-order function in C/C++
 ```c
 // typedef struct
@@ -445,7 +436,7 @@ TreeNodePtr postOrderSearch(TreeNodePtr root, NodeData d)
 
 ### S15. Binary Search Tree Traversal <a name="s15"></a>
 #### [Question](#q15)
-An efficient way of finding would be to compare the key with the current root's key. If it is smaller, than the value we're searching (if it exists) must be on the left subtree. Otherwise, it must be on the right subtree.
+An efficient way of finding would be to compare the key with the current root's key. If it is smaller, than the value we're searching (if it exists) must be on the left subtree. Otherwise, it must be on the right subtree. [Full implementation](code/15.c).
 
 **Implementation of function in C/C++**
 ```c

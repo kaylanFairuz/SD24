@@ -1,3 +1,6 @@
+### [← Back](../README.md)
+<hr />
+
 # Soal Praktikum 3
 ## Soal Praktikum Struktur Data E
 ### [E1 - Thank You (Easy-Medium)](soal/prob-E1)

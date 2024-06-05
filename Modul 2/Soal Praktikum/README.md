@@ -1,3 +1,6 @@
+### [← Back](../README.md)
+<hr />
+
 # Soal Praktikum 2
 ## Soal Praktikum Struktur Data E
 ### [E1 - Suisei Dapat Cokelat (Easy-Medium)](soal/prob-E1/README.md)

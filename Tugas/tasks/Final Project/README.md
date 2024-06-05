@@ -1,6 +1,7 @@
 ### [← Back](../../README.md)
 <hr />
 
+### [References](References/README.md)
 # Final Project Struktur Data E 2024
 <p align="center">
   <b>Nama :</b> Kaylan Fairuza Aqila<br>

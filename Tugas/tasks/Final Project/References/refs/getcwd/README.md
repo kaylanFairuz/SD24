@@ -1,8 +1,8 @@
 # How to Get Current Working Directory
-### [C/CPP](#c)
+### [C/C++](#c)
 ### [References](#ref)
 
-## How to Get Current Working Directory in C/CPP (Windows) <a name="c"></a>
+## How to Get Current Working Directory in C/C++ (Windows) <a name="c"></a>
 In C, we can use the `_getcwd()` function from the `direct.h` library.
 
 ```c

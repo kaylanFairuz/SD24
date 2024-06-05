@@ -1,4 +1,4 @@
-### [← Back](../../)
+### [← Back](../../README.md)
 # How to Get Current Working Directory
 ### [C/C++](#c)
 ### [References](#ref)

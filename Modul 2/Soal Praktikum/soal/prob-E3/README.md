@@ -1,9 +1,9 @@
-### [← Soal Praktikum 2](../../)
+### [← Soal Praktikum 2](../../README.md)
 <hr />
 
-### [E1 - Suisei Dapat Cokelat (Easy-Medium)](../prob-E1)
-### [E2 - Heavy Rotation (Easy-Medium)](../prob-E2)
-### [E4 - Little Star (Medium-Hard)](../prob-E4)
+### [E1 - Suisei Dapat Cokelat (Easy-Medium)](../prob-E1/README.md)
+### [E2 - Heavy Rotation (Easy-Medium)](../prob-E2/README.md)
+### [E4 - Little Star (Medium-Hard)](../prob-E4/README.md)
 # Child
 <p align="center">
   Time Limit : 1 s<br>

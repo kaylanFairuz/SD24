@@ -1,8 +1,8 @@
-### [← Soal Praktikum 2](../../)
+### [← Soal Praktikum 2](../../README.md)
 <hr />
 
-### [R2 - AVL_KANAN_KIRI (Easy-Medium)](../prob-R2)
-### [R3 - Intermission (Easy-Medium)](../prob-R3)
+### [R2 - AVL_KANAN_KIRI (Easy-Medium)](../prob-R2/README.md)
+### [R3 - Intermission (Easy-Medium)](../prob-R3/README.md)
 # Cari Node (CN)
 <p align="center">
   <img src="../../../assets/cari-node.png" width=75% height=75%/>

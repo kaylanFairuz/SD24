@@ -1,9 +1,9 @@
-### [← Soal Praktikum 2](../../)
+### [← Soal Praktikum 2](../../README.md)
 <hr />
 
-### [E2 - Heavy Rotation (Easy-Medium)](../prob-E2)
-### [E3 - Child (Easy-Medium)](../prob-E3)
-### [E4 - Little Star (Medium-Hard)](../prob-E4)
+### [E2 - Heavy Rotation (Easy-Medium)](../prob-E2/README.md)
+### [E3 - Child (Easy-Medium)](../prob-E3/README.md)
+### [E4 - Little Star (Medium-Hard)](../prob-E4/README.md)
 # Suisei Dapat Cokelat
 
 #### Deskripsi: 

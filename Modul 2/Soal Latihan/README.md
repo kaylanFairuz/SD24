@@ -1,3 +1,6 @@
+### [← Back](../README.md)
+<hr />
+
 # Soal Latihan
 
 ## Question 1

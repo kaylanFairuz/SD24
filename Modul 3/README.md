@@ -1,7 +1,7 @@
-### [← Back](../)
+### [← Back](../README.md)
 <hr />
 
-### [Soal Latihan](Soal%20Latihan/README.md)
+### [Soal Latihan](Soal%20Latihan/)
 ### [Soal Praktikum ](Soal%20Praktikum/README.md)
 # Graf
 - [**Pengenalan Graf**](#intro)

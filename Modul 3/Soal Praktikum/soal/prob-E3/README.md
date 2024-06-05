@@ -1,9 +1,9 @@
-### [← Soal Praktikum 3](../../)
+### [← Soal Praktikum 3](../../README.md)
 <hr />
 
-### [E1 - Thank You (Easy-Medium)](../prob-E1)
-### [E2 - Telat Gak Ya? (Easy-Medium)](../prob-E2)
-### [E4 - Isekai Warkop (Medium-Hard)](../prob-E4)
+### [E1 - Thank You (Easy-Medium)](../prob-E1/README.md)
+### [E2 - Telat Gak Ya? (Easy-Medium)](../prob-E2/README.md)
+### [E4 - Isekai Warkop (Medium-Hard)](../prob-E4/README.md)
 # Maximum Spanning Tree
 <p align="center">
   Time Limit : 1 s<br>

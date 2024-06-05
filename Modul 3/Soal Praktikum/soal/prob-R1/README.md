@@ -1,8 +1,8 @@
-### [← Soal Praktikum 3](../../)
+### [← Soal Praktikum 3](../../README.md)
 <hr />
 
-### [R2 - CJ5 | Versus CP5 (Easy-Medium)](../prob-R2)
-### [R3 - Hapus Edge (HE) (Easy-Medium)](../prob-R3)
+### [R2 - CJ5 | Versus CP5 (Easy-Medium)](../prob-R2/README.md)
+### [R3 - Hapus Edge (HE) (Easy-Medium)](../prob-R3/README.md)
 # Tree or Bush
 <p align="center">
   Time Limit : 1 detik<br>

@@ -1,3 +1,6 @@
+### [← Back](../../README.md)
+<hr />
+
 # Soal Latihan
 - [Dynamic Array dan Linked List](#darray&llist)
 - [Stack and Queues](#stack&queue)

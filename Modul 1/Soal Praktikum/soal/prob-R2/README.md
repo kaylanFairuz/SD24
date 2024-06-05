@@ -1,8 +1,8 @@
-### [← Soal Praktikum 1](../../)
+### [← Soal Praktikum 1](../../README.md)
 <hr />
 
-### [R1 - Kowalski Seorang Kasir (Easy-Medium)](../prob-R1)
-### [R3 - Joni Si Tidak Disiplin (Easy-Medium)](../prob-R3)
+### [R1 - Kowalski Seorang Kasir (Easy-Medium)](../prob-R1/README.md)
+### [R3 - Joni Si Tidak Disiplin (Easy-Medium)](../prob-R3/README.md)
 # Stack EZ Bro!
 <p align="center">
   <img src="../../../assets/stack-ez-1.png" width=50% height=50%/>

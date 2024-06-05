@@ -1,9 +1,9 @@
-### [← Soal Praktikum 1](../../)
+### [← Soal Praktikum 1](../../README.md)
 <hr />
 
-### [E1 - Tobat1 (Easy-Medium)](../prob-E1)
-### [E3 - Ulasan Buku (Easy-Medium)](../prob-E3)
-### [E4 - Sosial Media (Medium-Hard)](../prob-E4)
+### [E1 - Tobat1 (Easy-Medium)](../prob-E1/README.md)
+### [E3 - Ulasan Buku (Easy-Medium)](../prob-E3/README.md)
+### [E4 - Sosial Media (Medium-Hard)](../prob-E4/README.md)
 # Juma
 <p align="center">
   <img src="../../../assets/juma.png"/>

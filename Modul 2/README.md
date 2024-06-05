@@ -1,3 +1,8 @@
+### [← Back](../README.md)
+<hr />
+
+### [Soal Latihan](Soal%20Latihan/README.md)
+### [Soal Praktikum ](Soal%20Praktikum/README.md)
 # Tree
 - [**Pengenalan Tree**](#intro)
 - [**Referensi**](#reference)

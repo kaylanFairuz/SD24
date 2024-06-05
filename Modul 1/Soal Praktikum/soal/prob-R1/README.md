@@ -1,8 +1,8 @@
-### [← Soal Praktikum 1](../../)
+### [← Soal Praktikum 1](../../README.md)
 <hr />
 
-### [R2 - Stack EZ Bro! (Easy-Medium)](../prob-R2)
-### [R3 - Joni Si Tidak Disiplin (Easy-Medium)](../prob-R3)
+### [R2 - Stack EZ Bro! (Easy-Medium)](../prob-R2/README.md)
+### [R3 - Joni Si Tidak Disiplin (Easy-Medium)](../prob-R3/README.md)
 # Kowalski Seorang Kasir
 <p align="center">
   Time Limit : 1s<br>

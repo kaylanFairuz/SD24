@@ -1,4 +1,4 @@
-### [← Soal Praktikum 1](../../)
+### [← Soal Praktikum 1](../../README.md)
 <hr />
 
 ### [E2 - Juma (Easy-Medium)](../prob-E2)

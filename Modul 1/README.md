@@ -1,4 +1,4 @@
-### [← Back](../../README.md)
+### [← Back](../README.md)
 <hr />
 
 ### [Soal Latihan](Soal%20Latihan/README.md)

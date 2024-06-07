@@ -13,7 +13,7 @@ using namespace std;
 void error_msg(int code)
 {
     printf("Error: ");
-    if (code == 1) printf("Input file not opened.\n");
+    if (code == 1) printf("Input file cannot opened.\n");
     exit(1);
 }
 
@@ -35,7 +35,33 @@ int main()
 
 ## Terminal input | Text file output <a name="t-f"></a>
 ```cpp
+#include <iostream>
+#include <fstream>
+using namespace std;
 
+void error_msg(int code)
+{
+    printf("Error: ");
+    if (code == 1) printf("Input file not opened.\n");
+    else if (code == 2) printf("Output file not opened.\n");
+    exit(1);
+}
+
+int main()
+{
+    string name_1 = "example.txt", name_2 = "example_out.txt";
+
+    ifstream in(name_1);
+    if (!in) error_msg(1);
+
+    ofstream out(name_2);
+    if (!out) error_msg(2);
+
+    char ch;
+    while (in.get(ch)) out.put(ch);
+
+    return 0;
+}
 ```
 
 ## Text file input | Text file output <a name="f-f"></a>

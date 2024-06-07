@@ -28,6 +28,8 @@ int main()
     char ch;
     while (in.get(ch)) result += ch;
 
+    in.close();
+
     cout << result << "\n";
     return 0;
 }
@@ -59,6 +61,9 @@ int main()
 
     char ch;
     while (in.get(ch)) out.put(ch);
+
+    in.close();
+    out.close();
 
     return 0;
 }

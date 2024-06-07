@@ -13,8 +13,7 @@ using namespace std;
 void error_msg(int code)
 {
     printf("Error: ");
-    if (code == 1)
-        printf("Input file not opened.\n");
+    if (code == 1) printf("Input file not opened.\n");
     exit(1);
 }
 
@@ -23,13 +22,11 @@ int main()
     string name = "example.txt";
 
     ifstream in(name);
-    if (!in)
-        error_msg(1);
+    if (!in) error_msg(1);
 
     string result;
     char ch;
-    while (in.get(ch))
-        result += ch;
+    while (in.get(ch)) result += ch;
 
     cout << result << "\n";
     return 0;

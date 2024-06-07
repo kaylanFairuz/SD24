@@ -12,8 +12,8 @@ using namespace std;
 
 void error_msg(int code)
 {
-    printf("Error: ");
-    if (code == 1) printf("Input file cannot opened.\n");
+    cout << "Error: ";
+    if (code == 1) cout << "Input file not opened.\n";
     exit(1);
 }
 
@@ -43,9 +43,9 @@ using namespace std;
 
 void error_msg(int code)
 {
-    printf("Error: ");
-    if (code == 1) printf("Input file not opened.\n");
-    else if (code == 2) printf("Output file not opened.\n");
+    cout << "Error: ";
+    if (code == 1) cout << "Input file not opened.\n";
+    else if (code == 2) cout << "Output file not opened.\n";
     exit(1);
 }
 
@@ -71,5 +71,38 @@ int main()
 
 ## Text file input | Text file output <a name="f-f"></a>
 ```cpp
+#include <iostream>
+#include <fstream>
+using namespace std;
 
+void error_msg(int code)
+{
+    cout << "Error: ";
+    if (code == 2) cout << "Output file not opened.\n";
+    exit(1);
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    string name = "example_out.txt";
+
+    ofstream out(name);
+    if (!out) error_msg(2);
+
+    string line;
+    while (getline(cin, line))
+    {
+        if (line.empty())
+            break;
+        out.write(line.c_str(), line.size());
+        out.put('\n');
+    };
+
+    out.close();
+
+    return 0;
+}
 ```

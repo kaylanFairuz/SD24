@@ -84,9 +84,6 @@ void error_msg(int code)
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
     string name = "example_out.txt";
 
     ofstream out(name);

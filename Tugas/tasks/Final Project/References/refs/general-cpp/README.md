@@ -1,10 +1,15 @@
 ### [← Back](../../README.md)
 # File Handling in C++
-- [**Text file input | Terminal output**](#f-t)
-- [**Terminal input | Text file output**](#t-f)
-- [**Text file input | Text file output**](#f-f)
+- [**Text files**](#txt)
+    - [Text file input | Terminal output](#f-t)
+    - [Terminal input | Text file output](#t-f)
+    - [Text file input | Text file output](#f-f)
+- [**Binary files**](#txt)
+    - [Text file input | Binary output](#t-b)
+    - [Binary input | Text file output](#b-t)
 
-## Text file input | Terminal output <a name="f-t"></a>
+## Text files <a name="txt"></a>
+### Text file input | Terminal output <a name="f-t"></a>
 ```cpp
 #include <iostream>
 #include <fstream>
@@ -35,7 +40,7 @@ int main()
 }
 ```
 
-## Terminal input | Text file output <a name="t-f"></a>
+### Terminal input | Text file output <a name="t-f"></a>
 ```cpp
 #include <iostream>
 #include <fstream>
@@ -69,7 +74,7 @@ int main()
 }
 ```
 
-## Text file input | Text file output <a name="f-f"></a>
+### Text file input | Text file output <a name="f-f"></a>
 ```cpp
 #include <iostream>
 #include <fstream>
@@ -103,3 +108,5 @@ int main()
     return 0;
 }
 ```
+
+## Binary files <a name="bin"></a>

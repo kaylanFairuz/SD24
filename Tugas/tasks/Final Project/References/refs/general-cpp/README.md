@@ -1,5 +1,6 @@
 ### [← Back](../../README.md)
 # File Handling in C++
+- [**File opening mode**](#op)
 - [**Text files**](#txt)
     - [Text file input | Terminal output](#f-t)
     - [Terminal input | Text file output](#t-f)

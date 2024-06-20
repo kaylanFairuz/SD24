@@ -136,10 +136,9 @@ Keterangan:
 2. Metode paling gampang memang bruteforce :D
 
 NOTES
-- Print sesuai urutan, jika Furina ketemu Navia duluan output Navia dulu, dan
-sebaliknya.
-- Speedboost oleh Clorinde dan penghancuran tembok oleh Navia bersifat
-PERMANEN setelah Furina mengunjungi mereka.
+- Print sesuai urutan, jika Furina ketemu Navia duluan output Navia dulu, dan sebaliknya.
+- Speedboost oleh Clorinde dan penghancuran tembok oleh Navia bersifat PERMANEN setelah Furina mengunjungi mereka.
+- Dapat dipastikan semua case hanya ada 1 rute yang optimal
 - Berusahalah lebih teliti pada kondisinya
 
 Setelah Furina dan teman-temannya menyelesaikan performance yang telah disiapkan hingga saat ini, Mereka telah berhasil dan menjadi sebuah bintang, "A Star", seperti kalian yang setelah ini akan menaklukkan FP strukdat ini 😊.

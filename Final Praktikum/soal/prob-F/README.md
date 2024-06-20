@@ -84,13 +84,13 @@ Untuk membuat jalan Furina menjadi lebih efisien, Furina mengunjungi Clorinde te
 Setelah itu, langkah yang diambil Furina setiap tile menjadi 1. Lalu Furina memilih untuk mengunjungi Navia dengan (7 langkah) x 1 untuk menghancurkan semua tembok. Karena Furina mengunjungi Navia, keluarkan “Navia: Fire!!! ...Well, with rocks.”.
 
 <p align="center">
-    <img src="../../assets/F-2.png" />
+    <img src="../../assets/F-2.png" width=50% height=50%/>
 </p>
 
 Berikut adalah kondisi grid setelah Furina mengunjungi Navia dan setelah Furina mengunjungi Arlecchino dengan (5 langkah) x 1.
 
 <p align="center">
-    <img src="../../assets/F-3.png" />
+    <img src="../../assets/F-3.png" width=50% height=50%/>
 </p>
 
 Total langkah yang diperlukan Furina adalah (5 x 2) + (12 x 1) = 22
@@ -114,7 +114,7 @@ Furina: With 8 steps, let my name echo in song!
 #### Penjelasan Sampel 1:
 Rute paling efisien adalah langsung mengunjungi Arlecchino dengan (4 langkah) x 2.
 <p align="center">
-    <img src="../../assets/F-4.png" />
+    <img src="../../assets/F-4.png" width=30% height=30%/>
 </p>
 
 Keterangan:

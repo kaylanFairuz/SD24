@@ -11,7 +11,7 @@
 
 ###### Ilustrasi dan soal oleh: Rakha Fathin
 #### Deskripsi: 
-Akhirnya masa yang telah ditunggu-tunggu telah tiba. Setelah Furina dan teaternya membahas ide, mengumpulkan ide, latihan, promosi, dan semua kerja keras oleh Furina dan teman-temannya, datanglah performance di Opera Epiclese yang sangat megah. Performance ini berjudul "A Star Is Reborn". Performance ini menceritakan tentang seseorang seniman yang telah jatuh dan gagal dalam kehidupannya. Namun, dia harus bangkit dan menghadapi kesulitan yang ada di dunia ini. Dia akan berusaha menghadapi lagi suatu hal yang membuat dia gagal. "**Something worse than failing, is giving up**".
+Akhirnya masa yang telah ditunggu-tunggu telah tiba. Setelah Furina dan teaternya membahas ide, mengumpulkan ide, latihan, promosi, dan semua kerja keras oleh Furina dan teman-temannya, datanglah performance di Opera Epiclese yang sangat megah. Performance ini berjudul "A Star Is Reborn". Performance ini menceritakan tentang seseorang seniman yang telah jatuh dan gagal dalam kehidupannya. Namun, dia harus bangkit dan menghadapi kesulitan yang ada di dunia ini. Dia akan berusaha menghadapi lagi suatu hal yang membuat dia gagal. "*Something worse than failing, is giving up*".
 
 Furina mengundang 3 bintang tamu yang akan tampil dalam performancenya, yaitu Navia, Clorinde, dan Arlecchino. Furina awalnya takut untuk mengundang Arlecchino karena alasan yang jelas. Namun, performance ini merupakan refleksi dirinya dan dia harus membangun keberanian untuk melakukan itu. Arlecchino pun juga bersedia karena dia merasa ini adalah salah satu cara untuk menebus kesalahan yang dia telah lakukan kepada Furina.
 
@@ -130,7 +130,15 @@ Keterangan:
 </p>
 
 #### Hint:
-**Segera Datang!**<br><br>
+1. Algoritma bisa dijkstra/bfs tanpa time limit. Tapi jika memang time limit, bisa menggunakan yang lain, nama algonya ada di judul performance.
+2. Metode paling gampang memang bruteforce :D
+
+NOTES
+- Print sesuai urutan, jika Furina ketemu Navia duluan output Navia dulu, dan
+sebaliknya.
+- Speedboost oleh Clorinde dan penghancuran tembok oleh Navia bersifat
+PERMANEN setelah Furina mengunjungi mereka.
+- Berusahalah lebih teliti pada kondisinya
 
 Setelah Furina dan teman-temannya menyelesaikan performance yang telah disiapkan hingga saat ini, Mereka telah berhasil dan menjadi sebuah bintang, "A Star", seperti kalian yang setelah ini akan menaklukkan FP strukdat ini 😊.
 

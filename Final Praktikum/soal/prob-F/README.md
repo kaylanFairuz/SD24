@@ -107,7 +107,9 @@ N . . . . .
 ```
 
 #### Sampel Output 1:
+```
 Furina: With 8 steps, let my name echo in song!
+```
 
 #### Penjelasan Sampel 1:
 Rute paling efisien adalah langsung mengunjungi Arlecchino dengan (4 langkah) x 2.
